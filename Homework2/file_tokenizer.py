@@ -10,7 +10,7 @@ WILDE = 3
 nltk.download('punkt')
 tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
 
-def parseFile(filename: str) -> List[str]:
+def parse_file(filename: str) -> List[str]:
     """Parse a txt file and return a list of strings."""
     s = ''
     f = open(filename, "r")
@@ -23,12 +23,12 @@ def parseFile(filename: str) -> List[str]:
                 s += " " + line
     return tokenizer.tokenize(s)
 
-def tokenizeFiles() -> Dict[str, List[str]]:
+def tokenize_files(authorlistFilename: str) -> Dict[str, List[str]]:
     """Parse the local authorlist.txt file into lists of sentences.
     Returns a dictionary as follows:"""
     ascii = True
     utf8 = False
-    authorfile = open("authorlist.txt", "r")
+    authorfile = open(authorlistFilename, "r")
     authorList = [False, False, False, False]
     authorFileList = authorfile.read().splitlines()
     print(authorFileList)
@@ -53,12 +53,6 @@ def tokenizeFiles() -> Dict[str, List[str]]:
     print("UTF8: ", utf8)
     authorfile.close()
 
-    # Pairs of author name and all corresponding strings. The "None" will be a list of strings after parsing.
-    austen = ['Austen', None]
-    dickens = ['Dickens', None]
-    tolstoy = ['Tolstoy', None]
-    wilde = ['Wilde', None]
-
     austenLines = []
     dickensLines = []
     tolstoyLines = []
@@ -66,19 +60,19 @@ def tokenizeFiles() -> Dict[str, List[str]]:
 
     if(authorList[AUSTEN]):
         #We need the Austen Lines
-        austenLines = parseFile("ngram_authorship_train/austen.txt")
+        austenLines = parse_file("ngram_authorship_train/austen.txt")
 
     if(authorList[DICKENS]):
         #We need the dickens Lines
-        dickensLines = parseFile("ngram_authorship_train/dickens.txt")
+        dickensLines = parse_file("ngram_authorship_train/dickens.txt")
 
     if(authorList[TOLSTOY]):
         #We need the tolstoy Lines
-        tolstoyLines = parseFile("ngram_authorship_train/tolstoy.txt")
+        tolstoyLines = parse_file("ngram_authorship_train/tolstoy.txt")
         
     if(authorList[WILDE]):
         #We need the wilde Lines
-        wildeLines = parseFile("ngram_authorship_train/wilde.txt")
+        wildeLines = parse_file("ngram_authorship_train/wilde.txt")
 
     encoding = 'utf8' if utf8 else 'ascii'
     print(f'Used {encoding} to tokenize files')
@@ -95,5 +89,3 @@ def tokenizeFiles() -> Dict[str, List[str]]:
 
     authors_dict = {k: v for k, v in authors_dict.items() if v}
     return authors_dict
-
-tokenizeFiles()

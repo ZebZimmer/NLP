@@ -1,10 +1,22 @@
 import argparse
 import random
-from typing import Dict, List
+from typing import Dict, List, Type
+from nltk.lm.preprocessing import padded_everygram_pipeline
+from nltk.lm.models import MLE
 from file_tokenizer import tokenize_files
 
 random.seed(1234)
 
+def generate_n_gram_model(text: List[str], n: int) -> MLE:
+    """Returns an MLE n-gram model which has been trained on parameter text."""
+    train, vocab = padded_everygram_pipeline(n, text)
+
+    # Maximum Likelihood Estimation based model.
+    lm = MLE(n)
+    lm.fit(train, vocab)
+
+    # Debugging
+    print(f'Vocab length is: {len(lm.vocab)}')
 
 def parse_args() -> argparse.Namespace:
     """Parse the command line input and return the arguments object."""
@@ -46,23 +58,35 @@ def train_dev_split(authors_dict: Dict[str, List[str]]) -> Dict[str, Dict[str, L
         dev_len = len(train_dev_dict[author]['dev'])
 
         print(
-            f'{author} train length: {train_len}, dev: {dev_len}, dev_len / train_len: {dev_len / train_len}'
+            f'{author} train length: {train_len}, dev: {dev_len}, (dev_len / train_len): {dev_len / train_len}'
         )
 
     return train_dev_dict
 
 
 def main():
-    # parse the program arguments
-    # access like args.authorlist, args.testfile (optional, may be None)
+    # Require args.authorlist, args.testfile is optional, may be None.
     args = parse_args()
 
+    # parse all the files and train/dev split as necessary.
     authors_dict = tokenize_files(args.authorlist)
     train_dev_dict = None
     if args.testfile is None:
         train_dev_dict = train_dev_split(authors_dict)
+
+        # example of generating a wilde language model w/ train data
+        # but this only generates a vocab length of "84", which doesn't make sense to me.
+        wilde = train_dev_dict['Wilde']
+        wilde_lm = generate_n_gram_model(wilde['train'], 2)
+
+    # The test flag exists. Use ALL of the lines for each author as training data (no dev data).
     else:
+        # TODO
         pass
+
+    # TODO: Generate an n-gram language model for each dataset accordingly (based on args.testfile)
+    # Use smoothing / backoff / interpolation to see which has the best performance
+    # test different values of "n" in n-gram
 
 
 if __name__ == "__main__":

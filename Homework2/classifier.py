@@ -17,6 +17,7 @@ def generate_n_gram_model(text: List[str], n: int) -> MLE:
 
     # Debugging
     print(f'Vocab length is: {len(lm.vocab)}')
+    return lm
 
 def parse_args() -> argparse.Namespace:
     """Parse the command line input and return the arguments object."""

@@ -21,7 +21,9 @@ def parse_file(filename: str) -> List[str]:
                 s = line
             else:
                 s += " " + line
-    return tokenizer.tokenize(s)
+    list_of_sentences = tokenizer.tokenize(s)
+    list_of_split_sentences = [nltk.word_tokenize(line) for line in list_of_sentences]
+    return list_of_split_sentences
 
 def tokenize_files(authorlistFilename: str) -> Dict[str, List[str]]:
     """Parse the local authorlist.txt file into lists of sentences.

@@ -7,6 +7,7 @@ from file_tokenizer import tokenize_files
 
 random.seed(1234)
 
+
 def generate_n_gram_model(text: List[str], n: int) -> MLE:
     """Returns an MLE n-gram model which has been trained on parameter text."""
     train, vocab = padded_everygram_pipeline(n, text)
@@ -18,6 +19,7 @@ def generate_n_gram_model(text: List[str], n: int) -> MLE:
     # Debugging
     print(f'Vocab length is: {len(lm.vocab)}')
     return lm
+
 
 def parse_args() -> argparse.Namespace:
     """Parse the command line input and return the arguments object."""
@@ -76,7 +78,6 @@ def main():
         train_dev_dict = train_dev_split(authors_dict)
 
         # example of generating a wilde language model w/ train data
-        # but this only generates a vocab length of "84", which doesn't make sense to me.
         wilde = train_dev_dict['Wilde']
         wilde_lm = generate_n_gram_model(wilde['train'], 2)
 

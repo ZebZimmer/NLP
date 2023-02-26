@@ -51,7 +51,7 @@ def parse_file(filename: str, encoding: str) -> List[List[str]]:
         )
 
     # append "_utf8" to the filename when necessary.
-    if encoding == "utf-8":
+    if encoding == "utf-8" or encoding == 'utf8':
         basename, extension = os.path.splitext(filename)
         filename = basename + "_utf8" + extension
 

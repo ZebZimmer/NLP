@@ -2,7 +2,12 @@ import argparse
 import random
 from typing import Dict, List, Tuple
 from nltk.lm.preprocessing import padded_everygram_pipeline
-from nltk.lm.models import MLE, LanguageModel
+from nltk.lm.models import (
+    MLE,
+    LanguageModel,
+    StupidBackoff,
+    Lidstone,
+)
 from file_tokenizer import tokenize_files, parse_file, process_test_file
 from tqdm import tqdm
 
@@ -10,13 +15,28 @@ random.seed(1234)
 
 
 def generate_n_gram_model(
-    text: List[List[str]], n: int, model_type: LanguageModel
+    text: List[List[str]],
+    n: int,
+    model_type: LanguageModel,
+    alpha: float = 0.4,
+    gamma: float = 0.5,
 ) -> LanguageModel:
     """Returns an n-gram model which has been trained on the text provided.
     Text should be a list of split sentences.
     model_type is an nltk language model class which has a supports .fit()."""
     train, vocab = padded_everygram_pipeline(n, text)
-    lm = model_type(n)
+
+    # handle the special models.
+    if model_type == StupidBackoff:
+        lm = StupidBackoff(alpha=alpha, order=n)
+
+    elif model_type == Lidstone:
+        lm = Lidstone(gamma=gamma, order=n)
+    
+    # otherwise every other model should work here.
+    else:
+        lm = model_type(n)
+
     lm.fit(train, vocab)
     return lm
 
@@ -26,9 +46,12 @@ def generate_list_of_models(
     train_dev_dict: Dict[str, Dict[str, List[List[str]]]],
     n: int,
     model_class: LanguageModel,
+    alpha: float = 0.4,
+    gamma: float = 0.5,
 ) -> List[Tuple[str, LanguageModel]]:
     """Return a list of Tuples. Tuple[0] is a string for the author name, like 'austen'.
-    Tuple[1] is a trained language model based on each author's respective train data."""
+    Tuple[1] is a trained language model based on each author's respective train data.
+    """
     print()
     models = []
     for author in tqdm(
@@ -36,7 +59,9 @@ def generate_list_of_models(
     ):
         lm = generate_n_gram_model(train_dev_dict[author]["train"], n, model_class)
         models.append((author, lm))
-        print(f"\n{model_class.__name__} Model for {author} has vocab length of {len(lm.vocab)}")
+        print(
+            f"\n{model_class.__name__} Model for {author} has vocab length of {len(lm.vocab)}"
+        )
     return models
 
 
@@ -99,9 +124,10 @@ def main():
     if args.testfile is None:
         train_dev_dict = train_dev_split(authors_dict)
 
-        # Let's generate some MLE bigram language models.
+        # Let's generate some language models.
         # Each item in this list is a tuple of (authorname: str, model: MLE)
-        bigram_mle_models = generate_list_of_models(train_dev_dict, 2, MLE)
+        # bigram_mle_models = generate_list_of_models(train_dev_dict, 2, MLE)
+        bigram_stupidbackoff_models = generate_list_of_models(train_dev_dict, 2, StupidBackoff)
 
     # The test flag exists. Use ALL of the lines for each author as training data (no dev data).
     else:
@@ -113,6 +139,7 @@ def main():
 
     # TODO Use smoothing / backoff / interpolation to see which has the best performance
     # test different values of "n" in n-gram. We can record these in a spreadsheet and make graphs / charts.
+
 
 if __name__ == "__main__":
     main()

@@ -1,25 +1,43 @@
 import argparse
 import random
-from typing import Dict, List, Type
+from typing import Dict, List, Tuple
 from nltk.lm.preprocessing import padded_everygram_pipeline
-from nltk.lm.models import MLE, InterpolatedLanguageModel
-from file_tokenizer import tokenize_files, parse_file
+from nltk.lm.models import MLE, LanguageModel
+from file_tokenizer import tokenize_files, parse_file, process_test_file
 from tqdm import tqdm
 
 random.seed(1234)
 
 
 def generate_n_gram_model(
-    text: List[List[str]], n: int, model_type: Type[InterpolatedLanguageModel]
-) -> Type[InterpolatedLanguageModel]:
+    text: List[List[str]], n: int, model_type: LanguageModel
+) -> LanguageModel:
     """Returns an n-gram model which has been trained on the text provided.
     Text should be a list of split sentences.
     model_type is an nltk language model class which has a supports .fit()."""
     train, vocab = padded_everygram_pipeline(n, text)
-
     lm = model_type(n)
     lm.fit(train, vocab)
     return lm
+
+
+# function from ChatGPT
+def generate_list_of_models(
+    train_dev_dict: Dict[str, Dict[str, List[List[str]]]],
+    n: int,
+    model_class: LanguageModel,
+) -> List[Tuple[str, LanguageModel]]:
+    """Return a list of Tuples. Tuple[0] is a string for the author name, like 'austen'.
+    Tuple[1] is a trained language model based on each author's respective train data."""
+    print()
+    models = []
+    for author in tqdm(
+        train_dev_dict.keys(), desc=f"Generating {n}-gram Language Models"
+    ):
+        lm = generate_n_gram_model(train_dev_dict[author]["train"], n, model_class)
+        models.append((author, lm))
+        print(f"\n{model_class.__name__} Model for {author} has vocab length of {len(lm.vocab)}")
+    return models
 
 
 def parse_args() -> argparse.Namespace:
@@ -39,13 +57,14 @@ def parse_args() -> argparse.Namespace:
 
 
 def train_dev_split(
-    authors_dict: Dict[str, List[str]]
-) -> Dict[str, Dict[str, List[str]]]:
-    """Split our parsed file dictionary into 90% train and 10% dev. Example of an entry is as follows:\n
+    authors_dict: Dict[str, List[List[str]]]
+) -> Dict[str, Dict[str, List[List[str]]]]:
+    """Split our parsed file dictionary into 90% train and 10% dev.
+    Example of an entry in the return dict is as follows:\n
     {'austen': {'train': train_lines, 'dev': dev_lines}}.
     To access Austen's train set, do: train_dev_dict['austen']['train']"""
-    
-    print(f'Splitting data into training and development sets...')
+
+    print("\nSplitting data into training and development sets...")
     # code from ChatGPT
     # Split each list into train and dev sets
     train_dev_dict = {}
@@ -80,24 +99,20 @@ def main():
     if args.testfile is None:
         train_dev_dict = train_dev_split(authors_dict)
 
-        # Generate some MLE bigram language models.
+        # Let's generate some MLE bigram language models.
         # Each item in this list is a tuple of (authorname: str, model: MLE)
-        bigram_mle_models = []
-        for author in tqdm(
-            train_dev_dict.keys(), desc="\nGenerating MLE bigram Language Models"
-        ):
-            lm = generate_n_gram_model(train_dev_dict[author]["train"], 2, MLE)
-            bigram_mle_models.append((author, lm))
-            print(f"\nModel for {author} has vocab length of {len(lm.vocab)}")
+        bigram_mle_models = generate_list_of_models(train_dev_dict, 2, MLE)
 
     # The test flag exists. Use ALL of the lines for each author as training data (no dev data).
     else:
         encoding = "utf8" if "utf8" in args.testfile else "ascii"
-        test_data = parse_file(args.testfile, encoding)
 
-    # Use smoothing / backoff / interpolation to see which has the best performance
-    # test different values of "n" in n-gram
+        # I don't know what our test file is supposed to be, but I'll assume it's not a problem for now.
+        # TODO there's a process_test_file function in file_tokenizer.py that needs to be done ig
+        test_data = process_test_file(args.testfile, encoding)
 
+    # TODO Use smoothing / backoff / interpolation to see which has the best performance
+    # test different values of "n" in n-gram. We can record these in a spreadsheet and make graphs / charts.
 
 if __name__ == "__main__":
     main()

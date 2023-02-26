@@ -1,6 +1,8 @@
 import nltk
 import os
-from typing import Dict, List
+import string
+from nltk.corpus import stopwords
+from typing import Dict, List, Tuple
 
 AUSTEN = 0
 DICKENS = 1
@@ -10,10 +12,20 @@ WILDE = 3
 # nltk.download('punkt')
 # tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
 
+# Load stopwords
+nltk.download('stopwords')
+stopwords = set(nltk.corpus.stopwords.words('english'))
+
+def process_test_file(filename: str, encoding: str) -> Tuple[List[List[str]], List[str]]:
+    pass
 
 def parse_file(filename: str, encoding: str) -> List[List[str]]:
     """Parse a txt file and return a list of strings.
     Encoding should be either "utf-8" or "ascii" depending on file type."""
+    # ChatGPT code. Make sure encoding is a valid type.
+    if encoding.lower() not in ['ascii', 'utf8', 'utf-8']:
+        raise ValueError(f"Unsupported encoding: {encoding}. Only 'ascii' and 'utf8' are supported.")
+    
     # append "_utf8" to the filename when necessary.
     if encoding == "utf-8":
         basename, extension = os.path.splitext(filename)
@@ -22,14 +34,28 @@ def parse_file(filename: str, encoding: str) -> List[List[str]]:
     with open(filename, "r", encoding=encoding) as f:
         text = f.read()
 
-    # get a list of sentences from the text.
+    # Split text into sentences
     sentences = nltk.sent_tokenize(text)
 
-    # Each item in tokenized_sentences is a list of strings itself.
-    # For example, tokenized_sentences[0] for austen is: ['family', 'may', 'be', '.']
-    tokenized_sentences = [nltk.word_tokenize(sentence) for sentence in sentences]
-    
-    return tokenized_sentences
+    # Preprocess each sentence (code from ChatGPT below to process sentences).
+    preprocessed_sentences = []
+    for sentence in sentences:
+        # Remove punctuation
+        sentence = sentence.translate(str.maketrans('', '', string.punctuation))
+
+        # Lowercase sentence
+        sentence = sentence.lower()
+
+        # Tokenize sentence into words
+        words = nltk.word_tokenize(sentence)
+
+        # Remove stopwords
+        words = [word for word in words if word not in stopwords]
+
+        preprocessed_sentences.append(words)
+
+    print(f'example of preprocessed_sentences[0]: {preprocessed_sentences[0]}')
+    return preprocessed_sentences
 
 
 def tokenize_files(authorlistFilename: str) -> Dict[str, List[str]]:
@@ -38,10 +64,10 @@ def tokenize_files(authorlistFilename: str) -> Dict[str, List[str]]:
     will be present in the dictionary.
 
     {
-        'Austen': austenLines,
-        'Dickens': dickensLines,
-        'Tolstoy': tolstoyLines,
-        'Wilde': wildeLines,
+        'austen': austenLines,
+        'dickens': dickensLines,
+        'tolstoy': tolstoyLines,
+        'wilde': wildeLines,
     }"""
 
     encoding = "ascii"
@@ -90,10 +116,10 @@ def tokenize_files(authorlistFilename: str) -> Dict[str, List[str]]:
 
     # ChatGPT code below to generate authors_dict (our return value).
     authors_dict = {
-        "Austen": austenLines,
-        "Dickens": dickensLines,
-        "Tolstoy": tolstoyLines,
-        "Wilde": wildeLines,
+        "austen": austenLines,
+        "dickens": dickensLines,
+        "tolstoy": tolstoyLines,
+        "wilde": wildeLines,
     }
 
     authors_dict = {k: v for k, v in authors_dict.items() if v}

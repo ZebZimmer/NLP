@@ -10,7 +10,7 @@ WILDE = 3
 nltk.download('punkt')
 tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
 
-def parse_file(filename: str) -> List[str]:
+def parse_file(filename: str) -> List[List[str]]:
     """Parse a txt file and return a list of strings."""
     s = ''
     f = open(filename, "r")

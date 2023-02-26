@@ -13,19 +13,43 @@ WILDE = 3
 # tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
 
 # Load stopwords
-nltk.download('stopwords')
-stopwords = set(nltk.corpus.stopwords.words('english'))
+nltk.download("stopwords")
+stopwords = set(nltk.corpus.stopwords.words("english"))
 
-def process_test_file(filename: str, encoding: str) -> Tuple[List[List[str]], List[str]]:
+
+def process_test_file(
+    filename: str, encoding: str
+) -> Tuple[List[List[str]], List[str]]:
     pass
+
+
+def process_sentence(sentence: str) -> List[str]:
+    """Process the string to remove punctuation, make it lower case,
+    tokenize it by word, and remove all stopwords."""
+    # code from ChatGPT below to process sentences.
+    # Remove punctuation
+    sentence = sentence.translate(str.maketrans("", "", string.punctuation))
+
+    # Lowercase sentence
+    sentence = sentence.lower()
+
+    # Tokenize sentence into words
+    words = nltk.word_tokenize(sentence)
+
+    # Remove stopwords
+    words = [word for word in words if word not in stopwords]
+    return words
+
 
 def parse_file(filename: str, encoding: str) -> List[List[str]]:
     """Parse a txt file and return a list of strings.
     Encoding should be either "utf-8" or "ascii" depending on file type."""
     # ChatGPT code. Make sure encoding is a valid type.
-    if encoding.lower() not in ['ascii', 'utf8', 'utf-8']:
-        raise ValueError(f"Unsupported encoding: {encoding}. Only 'ascii' and 'utf8' are supported.")
-    
+    if encoding.lower() not in ["ascii", "utf8", "utf-8"]:
+        raise ValueError(
+            f"Unsupported encoding: {encoding}. Only 'ascii' and 'utf8' are supported."
+        )
+
     # append "_utf8" to the filename when necessary.
     if encoding == "utf-8":
         basename, extension = os.path.splitext(filename)
@@ -34,27 +58,10 @@ def parse_file(filename: str, encoding: str) -> List[List[str]]:
     with open(filename, "r", encoding=encoding) as f:
         text = f.read()
 
-    # Split text into sentences
+    # Split text into sentences then process each one.
     sentences = nltk.sent_tokenize(text)
-
-    # Preprocess each sentence (code from ChatGPT below to process sentences).
-    preprocessed_sentences = []
-    for sentence in sentences:
-        # Remove punctuation
-        sentence = sentence.translate(str.maketrans('', '', string.punctuation))
-
-        # Lowercase sentence
-        sentence = sentence.lower()
-
-        # Tokenize sentence into words
-        words = nltk.word_tokenize(sentence)
-
-        # Remove stopwords
-        words = [word for word in words if word not in stopwords]
-
-        preprocessed_sentences.append(words)
-
-    print(f'example of preprocessed_sentences[0]: {preprocessed_sentences[0]}')
+    preprocessed_sentences = [process_sentence(sentence) for sentence in sentences]
+    print(f"example of preprocessed_sentences[0]: {preprocessed_sentences[0]}")
     return preprocessed_sentences
 
 

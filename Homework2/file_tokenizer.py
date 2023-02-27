@@ -23,7 +23,7 @@ def process_test_file(
     pass
 
 
-def process_sentence(sentence: str) -> List[str]:
+def process_sentence(sentence: str, stop: bool) -> List[str]:
     """Process the string to remove punctuation, make it lower case,
     tokenize it by word, and remove all stopwords."""
     # code from ChatGPT below to process sentences.
@@ -37,7 +37,9 @@ def process_sentence(sentence: str) -> List[str]:
     words = nltk.word_tokenize(sentence)
 
     # Remove stopwords
-    words = [word for word in words if word not in stopwords]
+    if stop:
+        words = [word for word in words if word not in stopwords]
+
     return words
 
 
@@ -60,9 +62,14 @@ def parse_file(filename: str, encoding: str) -> List[List[str]]:
 
     # Split text into sentences then process each one.
     sentences = nltk.sent_tokenize(text)
-    preprocessed_sentences = [process_sentence(sentence) for sentence in sentences]
-    print(f"example of preprocessed_sentences[0]: {preprocessed_sentences[0]}")
-    return preprocessed_sentences
+    preprocessed_sentences_with_stopwords = [process_sentence(sentence, False) for sentence in sentences]
+    preprocessed_sentences = [process_sentence(sentence, True) for sentence in sentences]
+    # print(f"example of preprocessed_sentences_with_stopwords[0]: {preprocessed_sentences_with_stopwords[0]}")
+    # print(f"example of preprocessed_sentences[0]: {preprocessed_sentences[0]}")
+    
+
+    return preprocessed_sentences_with_stopwords
+    # return preprocessed_sentences
 
 
 def tokenize_files(authorlistFilename: str) -> Dict[str, List[str]]:
@@ -116,10 +123,10 @@ def tokenize_files(authorlistFilename: str) -> Dict[str, List[str]]:
         wildeLines = parse_file("ngram_authorship_train/wilde.txt", encoding)
 
     print(f"Used {encoding} to read and tokenize files")
-    print(
-        f"lens: wildeLines - {len(wildeLines)}, austen: {len(austenLines)}, tolstoy: {len(tolstoyLines)}, dickens: {len(dickensLines)}"
-    )
-    print(f"wildeLines[0]: {wildeLines[0]}")
+    # print(
+    #     f"lens: wildeLines - {len(wildeLines)}, austen: {len(austenLines)}, tolstoy: {len(tolstoyLines)}, dickens: {len(dickensLines)}"
+    # )
+    # print(f"wildeLines[0]: {wildeLines[0]}")
 
     # ChatGPT code below to generate authors_dict (our return value).
     authors_dict = {

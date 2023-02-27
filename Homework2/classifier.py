@@ -1,12 +1,16 @@
 import argparse
 import random
 from typing import Dict, List, Tuple
-from nltk.lm.preprocessing import padded_everygram_pipeline
-from nltk.lm.models import MLE, LanguageModel
+from nltk import pad_sequence
+from nltk.lm import Vocabulary
+from nltk.util import bigrams, ngrams, everygrams
+from nltk.lm.preprocessing import padded_everygram_pipeline, pad_both_ends
+from nltk.lm.models import MLE, LanguageModel, Laplace
 from file_tokenizer import tokenize_files, parse_file, process_test_file
 from tqdm import tqdm
 
 random.seed(1234)
+NGRAM = 2
 
 
 def generate_n_gram_model(
@@ -89,6 +93,74 @@ def train_dev_split(
 
     return train_dev_dict
 
+def hamzas_func(line, model, n):
+    temp = []
+    test_ngram = list(everygrams(pad_sequence(line,n, pad_left=True, pad_right=True, left_pad_symbol='<s>', right_pad_symbol='</s>'), max_len=n))
+    for ngram in test_ngram:
+        if model.perplexity([ngram]) !=  float('inf'):
+            temp.append(ngram)
+    if(len(temp) == 0):
+        # print("we removed all ngrams")
+        # print(test_ngram)
+        return []
+    test_ngram = temp
+
+
+    return test_ngram
+
+def test_dev_set(
+        bigram_mle_models: List[Tuple[str, LanguageModel]],
+        train_dev_dict: Dict[str, Dict[str, List[List[str]]]],
+        n: int
+):
+    """Test each sentence in the development set of the train_dev_dict.
+    We should find the perplexity of that sentence in each language model
+    and pick the lowest one.  Then we will need to print out the accuracy scores"""
+
+
+    # print(austenLine)
+    correctNames = []
+    for model in bigram_mle_models:
+        correctNames.append(model[0])
+
+
+    totalLines = 0
+    correctLines = 0
+    # correctNames = ["austen","dickens","tolstoy","wilde"]
+    for correctName in correctNames:
+
+        for line in train_dev_dict[correctName]["dev"]:
+            totalLines += 1
+            # print("the line is: ", line)
+            lowest = float('inf')
+            lowest_name = "NA"
+            for model in bigram_mle_models:
+                name = model[0]
+                # print(name)
+                model = model[1]
+                # temp = []
+                # test_ngram = list(everygrams(pad_sequence(line,n, pad_left=True, pad_right=True, left_pad_symbol='<s>', right_pad_symbol='</s>'), max_len=n))
+                # for ngram in test_ngram:
+                #     if model.perplexity([ngram]) !=  float('inf'):
+                #         temp.append(ngram)
+                # if(len(temp) == 0):
+                #     # print("we removed all ngrams")
+                #     # print(test_ngram)
+                #     continue
+                # test_ngram = temp
+                test_ngram = hamzas_func(line, model, n)
+                if(len(test_ngram)==0):
+                    print("test_ngram empty")
+                    continue
+                value = model.perplexity(test_ngram)
+                if(value < lowest):
+                    lowest = value
+                    lowest_name = name
+            if(lowest_name == correctName):
+                correctLines += 1
+            # print(lowest_name)
+        print(correctName, " accuracy: ", correctLines/totalLines)
+    return
 
 def main():
     # args.authorlist is required, args.testfile is optional (may be None).
@@ -96,12 +168,18 @@ def main():
 
     # parse all the files and train/dev split as necessary.
     authors_dict = tokenize_files(args.authorlist)
+    # print(authors_dict['austen'][0])
     if args.testfile is None:
         train_dev_dict = train_dev_split(authors_dict)
 
+        # print(train_dev_dict["austen"]["dev"][1])
+
         # Let's generate some MLE bigram language models.
         # Each item in this list is a tuple of (authorname: str, model: MLE)
-        bigram_mle_models = generate_list_of_models(train_dev_dict, 2, MLE)
+        bigram_mle_models = generate_list_of_models(train_dev_dict, NGRAM, Laplace)
+        test_dev_set(bigram_mle_models, train_dev_dict, NGRAM)
+
+
 
     # The test flag exists. Use ALL of the lines for each author as training data (no dev data).
     else:

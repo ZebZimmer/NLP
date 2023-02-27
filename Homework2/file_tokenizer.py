@@ -1,6 +1,11 @@
 import nltk
 import os
 import string
+import re, pprint, string
+from nltk import word_tokenize, sent_tokenize
+
+string.punctuation = string.punctuation + "“" + "”" + "-" + "’" + "‘" + "—"
+string.punctuation = string.punctuation.replace(".", "")
 from nltk.corpus import stopwords
 from typing import Dict, List, Tuple
 
@@ -14,7 +19,7 @@ WILDE = 3
 
 # Load stopwords
 nltk.download("stopwords")
-stopwords = set(nltk.corpus.stopwords.words("english"))
+stop_words = set(stopwords.words('english'))
 
 
 def process_test_file(
@@ -55,14 +60,40 @@ def parse_file(filename: str, encoding: str) -> List[List[str]]:
         basename, extension = os.path.splitext(filename)
         filename = basename + "_utf8" + extension
 
+    print(f'Opening and parsing {filename} with {encoding}')
     with open(filename, "r", encoding=encoding) as f:
         text = f.read()
 
-    # Split text into sentences then process each one.
-    sentences = nltk.sent_tokenize(text)
-    preprocessed_sentences = [process_sentence(sentence) for sentence in sentences]
-    print(f"example of preprocessed_sentences[0]: {preprocessed_sentences[0]}")
-    return preprocessed_sentences
+    # Clean and tokenize text.
+    text = text.lower()  # Convert to lowercase.
+    text = re.sub(r'\d+', '', text)  # Remove numbers.
+    text = text.translate(str.maketrans("", "", string.punctuation))  # Remove punctuation.
+    tokenized = [word_tokenize(sent) for sent in sent_tokenize(text)]
+
+    return tokenized
+
+
+# def parse_file(filename: str, encoding: str) -> List[List[str]]:
+#     """Parse a txt file and return a list of strings.
+#     Encoding should be either "utf-8" or "ascii" depending on file type."""
+#     # ChatGPT code. Make sure encoding is a valid type.
+#     if encoding.lower() not in ["ascii", "utf8", "utf-8"]:
+#         raise ValueError(
+#             f"Unsupported encoding: {encoding}. Only 'ascii' and 'utf8' are supported."
+#         )
+
+#     # append "_utf8" to the filename when necessary.
+#     if encoding == "utf-8" or encoding == "utf8":
+#         basename, extension = os.path.splitext(filename)
+#         filename = basename + "_utf8" + extension
+
+#     with open(filename, encoding=encoding) as f:
+#         text = f.read()
+
+#     sentences = nltk.sent_tokenize(text)
+#     preprocessed_sentences = [process_sentence(sentence) for sentence in sentences]
+#     print(f"example of preprocessed_sentences[0]: {preprocessed_sentences[0]}")
+#     return preprocessed_sentences
 
 
 def tokenize_files(authorlistFilename: str) -> Dict[str, List[str]]:
@@ -76,7 +107,7 @@ def tokenize_files(authorlistFilename: str) -> Dict[str, List[str]]:
         'tolstoy': tolstoyLines,
         'wilde': wildeLines,
     }"""
-
+    print("\nTokenizing and parsing files author files...")
     encoding = "ascii"
     authorList = [False, False, False, False]
     with open(authorlistFilename, "r") as f:
@@ -98,6 +129,7 @@ def tokenize_files(authorlistFilename: str) -> Dict[str, List[str]]:
     dickensLines = []
     tolstoyLines = []
     wildeLines = []
+    encoding = 'utf8'
 
     if authorList[AUSTEN]:
         # We need the Austen Lines
@@ -119,6 +151,10 @@ def tokenize_files(authorlistFilename: str) -> Dict[str, List[str]]:
     print(
         f"lens: wildeLines - {len(wildeLines)}, austen: {len(austenLines)}, tolstoy: {len(tolstoyLines)}, dickens: {len(dickensLines)}"
     )
+    
+    print(f'austenLines[0]: {austenLines[0]}')
+    print(f"dickensLines[0]: {dickensLines[0]}")
+    print(f"tolstoyLines[0]: {tolstoyLines[0]}")
     print(f"wildeLines[0]: {wildeLines[0]}")
 
     # ChatGPT code below to generate authors_dict (our return value).

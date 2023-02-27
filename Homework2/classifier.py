@@ -1,5 +1,7 @@
 import argparse
 import random
+import nltk
+import numpy as np
 from typing import Dict, List, Tuple
 from nltk.lm.preprocessing import padded_everygram_pipeline
 from nltk.lm.models import (
@@ -7,6 +9,8 @@ from nltk.lm.models import (
     LanguageModel,
     StupidBackoff,
     Lidstone,
+    KneserNeyInterpolated,
+    Laplace
 )
 from file_tokenizer import tokenize_files, parse_file, process_test_file
 from tqdm import tqdm
@@ -32,7 +36,7 @@ def generate_n_gram_model(
 
     elif model_type == Lidstone:
         lm = Lidstone(gamma=gamma, order=n)
-    
+
     # otherwise every other model should work here.
     else:
         lm = model_type(n)
@@ -55,7 +59,7 @@ def generate_list_of_models(
     print()
     models = []
     for author in tqdm(
-        train_dev_dict.keys(), desc=f"Generating {n}-gram Language Models"
+        train_dev_dict.keys(), desc=f"Generating {n}-gram {model_class.__name__} Language Models"
     ):
         lm = generate_n_gram_model(train_dev_dict[author]["train"], n, model_class)
         models.append((author, lm))
@@ -114,6 +118,58 @@ def train_dev_split(
 
     return train_dev_dict
 
+def evaluate_models(
+    train_dev_dict: Dict[str, Dict[str, List[List[str]]]],
+    model_list: List[Tuple[str, LanguageModel]],
+) -> None:
+    """Evaluate the models on the development set and print the results"""
+    # function from ChatGPT
+    print("Results on dev set:")
+    for author in train_dev_dict.keys():
+        dev_data = train_dev_dict[author]["dev"]
+        correct_count = 0
+        total_count = 0
+
+        for sentence in dev_data:
+            total_count += 1
+            predicted_author = get_best_perplexity(sentence, model_list)
+            if predicted_author == author:
+                correct_count += 1
+
+        accuracy = correct_count / total_count * 100
+        print(f"{author} {accuracy:.1f}% correct")
+        
+    print('\n')
+
+
+def get_best_perplexity(
+    test_record: List[str], model_list: List[Tuple[str, LanguageModel]]
+) -> str:
+    """Returns the author's name of the model which has the lowest perplexity on test_record.\n
+    test_record is just a list of strings like ['I', 'Am', 'Cool']\n
+    model_list is a list of (authorname, model) tuples, likely created by generate_list_of_models(...)
+    This function assumes all models in model_list are the same order.
+    """
+    # received ChatGPT help to complete this.
+    # Convert test record into a sequence of n-grams
+    # this includes all n-grams up to and including n.
+    n = model_list[0][1].order
+    text_ngrams = list(nltk.everygrams(test_record, max_len=n))
+
+    # run through all authors in model_list and get lowest perplexity author.
+    best_author = model_list[0][0]
+    best_perplexity = np.inf
+
+    for author, lm in model_list:
+        current_model_perplexity = lm.perplexity(text_ngrams)
+        if current_model_perplexity == np.inf:
+            print(f'GOT NP.INF! {author}, {text_ngrams}')
+        if current_model_perplexity < best_perplexity:
+            best_perplexity = current_model_perplexity
+            best_author = author
+
+    return best_author
+
 
 def main():
     # args.authorlist is required, args.testfile is optional (may be None).
@@ -124,10 +180,13 @@ def main():
     if args.testfile is None:
         train_dev_dict = train_dev_split(authors_dict)
 
-        # Let's generate some language models.
-        # Each item in this list is a tuple of (authorname: str, model: MLE)
-        # bigram_mle_models = generate_list_of_models(train_dev_dict, 2, MLE)
-        bigram_stupidbackoff_models = generate_list_of_models(train_dev_dict, 2, StupidBackoff)
+        bigram_laplace_models = generate_list_of_models(train_dev_dict, 2, Laplace)
+        print('\nTesting Laplace models, ', end='')
+        evaluate_models(train_dev_dict, bigram_laplace_models)
+
+        bigram_lidstone_models = generate_list_of_models(train_dev_dict, 2, Lidstone)
+        print('\nTesting Lidstone models, ', end='')
+        evaluate_models(train_dev_dict, bigram_lidstone_models)
 
     # The test flag exists. Use ALL of the lines for each author as training data (no dev data).
     else:

@@ -10,9 +10,9 @@ from nltk.lm.models import (
     StupidBackoff,
     Lidstone,
     KneserNeyInterpolated,
-    Laplace
+    Laplace,
 )
-from file_tokenizer import tokenize_files, parse_file, process_test_file
+from file_tokenizer import tokenize_files, parse_file, process_sentence
 from tqdm import tqdm
 
 random.seed(1234)
@@ -59,7 +59,8 @@ def generate_list_of_models(
     print()
     models = []
     for author in tqdm(
-        train_dev_dict.keys(), desc=f"Generating {n}-gram {model_class.__name__} Language Models"
+        train_dev_dict.keys(),
+        desc=f"Generating {n}-gram {model_class.__name__} Language Models",
     ):
         lm = generate_n_gram_model(train_dev_dict[author]["train"], n, model_class)
         models.append((author, lm))
@@ -118,11 +119,12 @@ def train_dev_split(
 
     return train_dev_dict
 
+
 def evaluate_models(
     train_dev_dict: Dict[str, Dict[str, List[List[str]]]],
     model_list: List[Tuple[str, LanguageModel]],
 ) -> None:
-    """Evaluate the models on the development set and print the results"""
+    """Evaluate the models on the development set and print the results."""
     # function from ChatGPT
     print("Results on dev set:")
     for author in train_dev_dict.keys():
@@ -138,8 +140,8 @@ def evaluate_models(
 
         accuracy = correct_count / total_count * 100
         print(f"{author} {accuracy:.1f}% correct")
-        
-    print('\n')
+
+    print("\n")
 
 
 def get_best_perplexity(
@@ -148,7 +150,7 @@ def get_best_perplexity(
     """Returns the author's name of the model which has the lowest perplexity on test_record.\n
     test_record is just a list of strings like ['I', 'Am', 'Cool']\n
     model_list is a list of (authorname, model) tuples, likely created by generate_list_of_models(...)
-    This function assumes all models in model_list are the same order.
+    This function assumes all models in model_list are the same n-gram order.
     """
     # received ChatGPT help to complete this.
     # Convert test record into a sequence of n-grams
@@ -163,12 +165,35 @@ def get_best_perplexity(
     for author, lm in model_list:
         current_model_perplexity = lm.perplexity(text_ngrams)
         if current_model_perplexity == np.inf:
-            print(f'GOT NP.INF! {author}, {text_ngrams}')
+            print(f"GOT NP.INF! {author}, {text_ngrams}")
         if current_model_perplexity < best_perplexity:
             best_perplexity = current_model_perplexity
             best_author = author
 
     return best_author
+
+
+def testfile_evaluation(
+    filename: str, encoding: str, authors_dict: Dict[str, List[List[str]]]
+) -> None:
+    """Given a testfile name which is either ascii or utf encoded and a dictionary of author names
+    and processed sentences. For each sentence in the testfile, the most likely author is printed to the terminal.
+    """
+    # create a "train_dict" that only has train data and no dev data.
+    # these models will be trained on ALL of our processed file data.
+    train_dict = {}
+    for author, lines in authors_dict.items():
+        train_dict[author] = {"train": lines, "dev": []}
+
+    # generate some 2-gram laplace models
+    bigram_laplace_models = generate_list_of_models(train_dict, 2, Laplace)
+
+    with open(filename, encoding=encoding) as f:
+        # each line in the testfile should will be a sentence.
+        for test_record in f:
+            processed_test_record = process_sentence(test_record)
+            best_author = get_best_perplexity(processed_test_record, bigram_laplace_models)
+            print(best_author)
 
 
 def main():
@@ -181,24 +206,16 @@ def main():
         train_dev_dict = train_dev_split(authors_dict)
 
         bigram_laplace_models = generate_list_of_models(train_dev_dict, 2, Laplace)
-        print('\nTesting Laplace models, ', end='')
+        print("\nTesting Laplace models, ", end="")
         evaluate_models(train_dev_dict, bigram_laplace_models)
 
         bigram_lidstone_models = generate_list_of_models(train_dev_dict, 2, Lidstone)
-        print('\nTesting Lidstone models, ', end='')
+        print("\nTesting Lidstone models, ", end="")
         evaluate_models(train_dev_dict, bigram_lidstone_models)
 
-    # The test flag exists. Use ALL of the lines for each author as training data (no dev data).
     else:
         encoding = "utf8" if "utf8" in args.testfile else "ascii"
-
-        # I don't know what our test file is supposed to be, but I'll assume it's not a problem for now.
-        # TODO there's a process_test_file function in file_tokenizer.py that needs to be done ig
-        test_data = process_test_file(args.testfile, encoding)
-
-    # TODO Use smoothing / backoff / interpolation to see which has the best performance
-    # test different values of "n" in n-gram. We can record these in a spreadsheet and make graphs / charts.
-
+        testfile_evaluation(args.testfile, encoding, authors_dict)
 
 if __name__ == "__main__":
     main()

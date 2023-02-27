@@ -156,16 +156,19 @@ def get_best_perplexity(
     # Convert test record into a sequence of n-grams
     # this includes all n-grams up to and including n.
     n = model_list[0][1].order
-    text_ngrams = list(nltk.everygrams(test_record, max_len=n))
+    # text_ngrams = list(nltk.everygrams(test_record, max_len=n))
 
     # run through all authors in model_list and get lowest perplexity author.
-    best_author = model_list[0][0]
+    best_author = None
     best_perplexity = np.inf
 
     for author, lm in model_list:
-        current_model_perplexity = lm.perplexity(text_ngrams)
-        if current_model_perplexity == np.inf:
-            print(f"GOT NP.INF! {author}, {text_ngrams}")
+        test_ngrams = hamzas_func(test_record, lm, n)
+        if not test_ngrams:
+            continue
+
+        current_model_perplexity = lm.perplexity(test_ngrams)
+
         if current_model_perplexity < best_perplexity:
             best_perplexity = current_model_perplexity
             best_author = author
@@ -173,11 +176,43 @@ def get_best_perplexity(
     return best_author
 
 
+def hamzas_func(line, model, n):
+    temp = []
+    test_ngram = list(
+        nltk.everygrams(
+            nltk.pad_sequence(
+                line,
+                n,
+                pad_left=True,
+                pad_right=True,
+                left_pad_symbol="<s>",
+                right_pad_symbol="</s>",
+            ),
+            max_len=n,
+        )
+    )
+    for ngram in test_ngram:
+        if model.perplexity([ngram]) != float("inf"):
+            temp.append(ngram)
+    if len(temp) == 0:
+        # print("we removed all ngrams")
+        # print(test_ngram)
+        return []
+    test_ngram = temp
+
+    return test_ngram
+
+
 def testfile_evaluation(
-    filename: str, encoding: str, authors_dict: Dict[str, List[List[str]]]
+    filename: str,
+    authors_dict: Dict[str, List[List[str]]],
+    model_class: LanguageModel = Laplace,
+    n: int = 2,
 ) -> None:
     """Given a testfile name which is either ascii or utf encoded and a dictionary of author names
-    and processed sentences. For each sentence in the testfile, the most likely author is printed to the terminal.
+    and processed sentences. For each sentence in the testfile, the most likely author is printed to the terminal.\n
+    Param model_class specifies which type of nltk model will be used for evaluation.\n
+    Param n specifies the order of the n-gram models to be created.
     """
     # create a "train_dict" that only has train data and no dev data.
     # these models will be trained on ALL of our processed file data.
@@ -185,14 +220,16 @@ def testfile_evaluation(
     for author, lines in authors_dict.items():
         train_dict[author] = {"train": lines, "dev": []}
 
-    # generate some 2-gram laplace models
-    bigram_laplace_models = generate_list_of_models(train_dict, 2, Laplace)
 
+    # generate some 2-gram models
+    models = generate_list_of_models(train_dict, n, model_class)
+
+    encoding = "utf8" if "utf8" in filename else "ascii"
     with open(filename, encoding=encoding) as f:
         # each line in the testfile should will be a sentence.
         for test_record in f:
             processed_test_record = process_sentence(test_record)
-            best_author = get_best_perplexity(processed_test_record, bigram_laplace_models)
+            best_author = get_best_perplexity(processed_test_record, models)
             print(best_author)
 
 
@@ -205,6 +242,10 @@ def main():
     if args.testfile is None:
         train_dev_dict = train_dev_split(authors_dict)
 
+        bigram_mle_models = generate_list_of_models(train_dev_dict, 2, MLE)
+        print("\nTesting MLE models, ", end="")
+        evaluate_models(train_dev_dict, bigram_mle_models)
+
         bigram_laplace_models = generate_list_of_models(train_dev_dict, 2, Laplace)
         print("\nTesting Laplace models, ", end="")
         evaluate_models(train_dev_dict, bigram_laplace_models)
@@ -214,8 +255,8 @@ def main():
         evaluate_models(train_dev_dict, bigram_lidstone_models)
 
     else:
-        encoding = "utf8" if "utf8" in args.testfile else "ascii"
-        testfile_evaluation(args.testfile, encoding, authors_dict)
+        testfile_evaluation(args.testfile, authors_dict, MLE)
+
 
 if __name__ == "__main__":
     main()

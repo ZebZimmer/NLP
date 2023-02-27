@@ -22,12 +22,6 @@ nltk.download("stopwords")
 stop_words = set(stopwords.words('english'))
 
 
-def process_test_file(
-    filename: str, encoding: str
-) -> Tuple[List[List[str]], List[str]]:
-    pass
-
-
 def process_sentence(sentence: str) -> List[str]:
     """Process the string to remove punctuation, make it lower case,
     tokenize it by word, and remove all stopwords."""
@@ -42,7 +36,7 @@ def process_sentence(sentence: str) -> List[str]:
     words = nltk.word_tokenize(sentence)
 
     # Remove stopwords
-    words = [word for word in words if word not in stopwords]
+    # words = [word for word in words if word not in stop_words]
     return words
 
 
@@ -56,47 +50,19 @@ def parse_file(filename: str, encoding: str) -> List[List[str]]:
         )
 
     # append "_utf8" to the filename when necessary.
-    if encoding == "utf-8" or encoding == 'utf8':
+    if encoding == "utf-8" or encoding == "utf8":
         basename, extension = os.path.splitext(filename)
         filename = basename + "_utf8" + extension
 
-    print(f'Opening and parsing {filename} with {encoding}')
-    with open(filename, "r", encoding=encoding) as f:
+    with open(filename, encoding=encoding) as f:
         text = f.read()
 
-    # Clean and tokenize text.
-    text = text.lower()  # Convert to lowercase.
-    text = re.sub(r'\d+', '', text)  # Remove numbers.
-    text = text.translate(str.maketrans("", "", string.punctuation))  # Remove punctuation.
-    tokenized = [word_tokenize(sent) for sent in sent_tokenize(text)]
-
-    return tokenized
+    sentences = nltk.sent_tokenize(text)
+    processed_sentences = [process_sentence(sentence) for sentence in sentences]
+    return processed_sentences
 
 
-# def parse_file(filename: str, encoding: str) -> List[List[str]]:
-#     """Parse a txt file and return a list of strings.
-#     Encoding should be either "utf-8" or "ascii" depending on file type."""
-#     # ChatGPT code. Make sure encoding is a valid type.
-#     if encoding.lower() not in ["ascii", "utf8", "utf-8"]:
-#         raise ValueError(
-#             f"Unsupported encoding: {encoding}. Only 'ascii' and 'utf8' are supported."
-#         )
-
-#     # append "_utf8" to the filename when necessary.
-#     if encoding == "utf-8" or encoding == "utf8":
-#         basename, extension = os.path.splitext(filename)
-#         filename = basename + "_utf8" + extension
-
-#     with open(filename, encoding=encoding) as f:
-#         text = f.read()
-
-#     sentences = nltk.sent_tokenize(text)
-#     preprocessed_sentences = [process_sentence(sentence) for sentence in sentences]
-#     print(f"example of preprocessed_sentences[0]: {preprocessed_sentences[0]}")
-#     return preprocessed_sentences
-
-
-def tokenize_files(authorlistFilename: str) -> Dict[str, List[str]]:
+def tokenize_files(authorlistFilename: str) -> Dict[str, List[List[str]]]:
     """Parse the local authorlist.txt file into lists of sentences.
     Returns a dictionary as follows. However, only authors specified in authorListFilename
     will be present in the dictionary.
@@ -147,7 +113,6 @@ def tokenize_files(authorlistFilename: str) -> Dict[str, List[str]]:
         # We need the wilde Lines
         wildeLines = parse_file("ngram_authorship_train/wilde.txt", encoding)
 
-    print(f"Used {encoding} to read and tokenize files")
     print(
         f"lens: wildeLines - {len(wildeLines)}, austen: {len(austenLines)}, tolstoy: {len(tolstoyLines)}, dickens: {len(dickensLines)}"
     )

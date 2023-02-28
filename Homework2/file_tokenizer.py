@@ -22,7 +22,7 @@ def generate_testfile(
     """Create a testfile, which consists of randomly selected lines from all authors.
     These lines have been preprocessed using tokenize_files().
     Return true when file has been created, False otherwise.
-    Each line in the file followws this format:\n
+    Each line in the generated file follows this format:\n
     f"{line}@{author}"
     """
     if os.path.exists(testfile_name):

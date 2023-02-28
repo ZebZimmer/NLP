@@ -4,7 +4,14 @@ from typing import Dict, List, Tuple
 from nltk import pad_sequence
 from nltk.util import everygrams
 from nltk.lm.preprocessing import padded_everygram_pipeline
-from nltk.lm.models import MLE, LanguageModel, Laplace, StupidBackoff, Lidstone
+from nltk.lm.models import (
+    MLE,
+    LanguageModel,
+    Laplace,
+    StupidBackoff,
+    Lidstone,
+    WittenBellInterpolated,
+)
 from file_tokenizer import tokenize_files, process_sentence, generate_testfile
 from tqdm import tqdm
 
@@ -144,33 +151,6 @@ def get_valid_ngrams(
     return valid_ngrams
 
 
-def test_dev_set(
-    train_dev_dict: Dict[str, Dict[str, List[List[str]]]],
-    model_list: List[Tuple[str, LanguageModel]],
-) -> None:
-    """Test each sentence in the development set of the train_dev_dict.
-    We should find the perplexity of that sentence in each language model
-    and pick the lowest one.  Then we will need to print out the accuracy scores"""
-    print("Results on dev set:")
-    total_lines = 0
-    correct_lines = 0
-    author_names = [model[0] for model in model_list]
-    for author in author_names:
-        for line in train_dev_dict[author]["dev"]:
-            total_lines += 1
-            best_author = get_best_perplexity(line, model_list)
-
-            if not best_author:
-                best_author = random.choice(author_names)
-
-            if best_author == author:
-                correct_lines += 1
-
-        accuracy = correct_lines / total_lines * 100
-        # print(f'correct_lines: {correct_lines}, total_lines: {total_lines}')
-        print(f"{author} {accuracy:.1f}% correct")
-
-
 def evaluate_models(
     train_dev_dict: Dict[str, Dict[str, List[List[str]]]],
     model_list: List[Tuple[str, LanguageModel]],
@@ -258,7 +238,9 @@ def testfile_evaluation(
     encoding = "utf8" if "utf8" in filename else "ascii"
     total_lines, correct_predictions = 0, 0
     correct_author = None
-    print(f"\nEvaluating testfile using {model_class.__name__} models. Classifications:")
+    print(
+        f"\nEvaluating testfile using {model_class.__name__} models. Classifications:"
+    )
     with open(filename, encoding=encoding) as f:
         # each line in the CUSTOM testfile is in the format of f"{sentence}@{correct_author}"
         # this is not the case for the testfile used in the grading script.
@@ -276,7 +258,7 @@ def testfile_evaluation(
                 print(f"predicted {best_author}, correct author is {correct_author}")
                 if best_author == correct_author:
                     correct_predictions += 1
-            
+
             else:
                 print(best_author)
 
@@ -296,15 +278,21 @@ def main():
     if args.testfile is None:
         train_dev_dict = train_dev_split(authors_dict)
 
-        # Let's generate some ngram language models and evaluate them
-        # bigram_mle_models = generate_list_of_models(train_dev_dict, NGRAM, MLE)
-        # evaluate_models(train_dev_dict, bigram_mle_models)
+        # Let's generate some ngram language models and evaluate them. Here are some examples:
+        ngram_mle_models = generate_list_of_models(train_dev_dict, NGRAM, MLE)
+        evaluate_models(train_dev_dict, ngram_mle_models)
 
-        bigram_laplace_models = generate_list_of_models(train_dev_dict, 2, Laplace)
-        evaluate_models(train_dev_dict, bigram_laplace_models)
+        ngram_laplace_models = generate_list_of_models(train_dev_dict, NGRAM, Laplace)
+        evaluate_models(train_dev_dict, ngram_laplace_models)
 
-        bigram_lidstone_models = generate_list_of_models(train_dev_dict, 2, Lidstone)
-        evaluate_models(train_dev_dict, bigram_lidstone_models)
+        ngram_lidstone_models = generate_list_of_models(train_dev_dict, NGRAM, Lidstone)
+        evaluate_models(train_dev_dict, ngram_lidstone_models)
+
+        # ngram_stupidbackoff_models = generate_list_of_models(train_dev_dict, NGRAM, StupidBackoff)
+        # evaluate_models(train_dev_dict, ngram_stupidbackoff_models)
+
+        # ngram_wittenbell_interp_models = generate_list_of_models(train_dev_dict, NGRAM, WittenBellInterpolated)
+        # evaluate_models(train_dev_dict, ngram_wittenbell_interp_models)
 
     else:
         generated = generate_testfile(args.authorlist, args.testfile, num_lines=10)

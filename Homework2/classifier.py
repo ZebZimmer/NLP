@@ -1,21 +1,15 @@
-import argparse
-import random
-import nltk
 import numpy as np
+import argparse, random, os
 from typing import Dict, List, Tuple
+from nltk import pad_sequence
+from nltk.util import everygrams
 from nltk.lm.preprocessing import padded_everygram_pipeline
-from nltk.lm.models import (
-    MLE,
-    LanguageModel,
-    StupidBackoff,
-    Lidstone,
-    KneserNeyInterpolated,
-    Laplace,
-)
-from file_tokenizer import tokenize_files, parse_file, process_sentence
+from nltk.lm.models import MLE, LanguageModel, Laplace, StupidBackoff, Lidstone
+from file_tokenizer import tokenize_files, process_sentence, generate_testfile
 from tqdm import tqdm
 
 random.seed(1234)
+NGRAM = 2
 
 
 def generate_n_gram_model(
@@ -62,7 +56,9 @@ def generate_list_of_models(
         train_dev_dict.keys(),
         desc=f"Generating {n}-gram {model_class.__name__} Language Models",
     ):
-        lm = generate_n_gram_model(train_dev_dict[author]["train"], n, model_class)
+        lm = generate_n_gram_model(
+            train_dev_dict[author]["train"], n, model_class, alpha, gamma
+        )
         models.append((author, lm))
         print(
             f"\n{model_class.__name__} Model for {author} has vocab length of {len(lm.vocab)}"
@@ -120,67 +116,17 @@ def train_dev_split(
     return train_dev_dict
 
 
-def evaluate_models(
-    train_dev_dict: Dict[str, Dict[str, List[List[str]]]],
-    model_list: List[Tuple[str, LanguageModel]],
-) -> None:
-    """Evaluate the models on the development set and print the results."""
-    # function from ChatGPT
-    print("Results on dev set:")
-    for author in train_dev_dict.keys():
-        dev_data = train_dev_dict[author]["dev"]
-        correct_count = 0
-        total_count = 0
-
-        for sentence in dev_data:
-            total_count += 1
-            predicted_author = get_best_perplexity(sentence, model_list)
-            if predicted_author == author:
-                correct_count += 1
-
-        accuracy = correct_count / total_count * 100
-        print(f"{author} {accuracy:.1f}% correct")
-
-    print("\n")
-
-
-def get_best_perplexity(
-    test_record: List[str], model_list: List[Tuple[str, LanguageModel]]
-) -> str:
-    """Returns the author's name of the model which has the lowest perplexity on test_record.\n
-    test_record is just a list of strings like ['I', 'Am', 'Cool']\n
-    model_list is a list of (authorname, model) tuples, likely created by generate_list_of_models(...)
-    This function assumes all models in model_list are the same n-gram order.
+def get_valid_ngrams(
+    line: List[str], model: LanguageModel, n: int
+) -> List[Tuple[str, ...]]:
+    """Given a line, return a list of all valid test_ngrams (of size up to and including n).
+    The model must already have been trained using .fit(trian, vocab).
+    Returns a list of ngrams. This is ready to be used as such: model.perplexity(test_ngram)
     """
-    # received ChatGPT help to complete this.
-    # Convert test record into a sequence of n-grams
-    # this includes all n-grams up to and including n.
-    n = model_list[0][1].order
-    # text_ngrams = list(nltk.everygrams(test_record, max_len=n))
-
-    # run through all authors in model_list and get lowest perplexity author.
-    best_author = None
-    best_perplexity = np.inf
-
-    for author, lm in model_list:
-        test_ngrams = hamzas_func(test_record, lm, n)
-        if not test_ngrams:
-            continue
-
-        current_model_perplexity = lm.perplexity(test_ngrams)
-
-        if current_model_perplexity < best_perplexity:
-            best_perplexity = current_model_perplexity
-            best_author = author
-
-    return best_author
-
-
-def hamzas_func(line, model, n):
-    temp = []
+    valid_ngrams = []
     test_ngram = list(
-        nltk.everygrams(
-            nltk.pad_sequence(
+        everygrams(
+            pad_sequence(
                 line,
                 n,
                 pad_left=True,
@@ -193,26 +139,112 @@ def hamzas_func(line, model, n):
     )
     for ngram in test_ngram:
         if model.perplexity([ngram]) != float("inf"):
-            temp.append(ngram)
-    if len(temp) == 0:
-        # print("we removed all ngrams")
-        # print(test_ngram)
-        return []
-    test_ngram = temp
+            valid_ngrams.append(ngram)
 
-    return test_ngram
+    return valid_ngrams
+
+
+def test_dev_set(
+    train_dev_dict: Dict[str, Dict[str, List[List[str]]]],
+    model_list: List[Tuple[str, LanguageModel]],
+) -> None:
+    """Test each sentence in the development set of the train_dev_dict.
+    We should find the perplexity of that sentence in each language model
+    and pick the lowest one.  Then we will need to print out the accuracy scores"""
+    print("Results on dev set:")
+    total_lines = 0
+    correct_lines = 0
+    author_names = [model[0] for model in model_list]
+    for author in author_names:
+        for line in train_dev_dict[author]["dev"]:
+            total_lines += 1
+            best_author = get_best_perplexity(line, model_list)
+
+            if not best_author:
+                best_author = random.choice(author_names)
+
+            if best_author == author:
+                correct_lines += 1
+
+        accuracy = correct_lines / total_lines * 100
+        # print(f'correct_lines: {correct_lines}, total_lines: {total_lines}')
+        print(f"{author} {accuracy:.1f}% correct")
+
+
+def evaluate_models(
+    train_dev_dict: Dict[str, Dict[str, List[List[str]]]],
+    model_list: List[Tuple[str, LanguageModel]],
+) -> None:
+    """Evaluate the models on the development set and print the results."""
+    # function made with help from ChatGPT
+    model_type = type(model_list[0][1]).__name__
+    print(f"\nTesting {model_type} models, Results on respective dev sets:")
+
+    author_names = [model[0] for model in model_list]
+
+    # use these variables to compute the overall accuracy of all models across all dev sets.
+    total_lines, total_correct = 0, 0
+    for author in author_names:
+        dev_data = train_dev_dict[author]["dev"]
+
+        # we'll compute an author's accuracy on their respective dev set.
+        dev_set_count = len(dev_data)
+        dev_correct_count = 0
+        for sentence in dev_data:
+            total_lines += 1
+            predicted_author = get_best_perplexity(sentence, model_list)
+            if predicted_author == author:
+                total_correct += 1
+                dev_correct_count += 1
+
+        accuracy = dev_correct_count / dev_set_count * 100
+        print(f"{author} {accuracy:.1f}% correct")
+
+    overall_accuracy = total_correct / total_lines * 100
+    print(
+        f"Overall accuracy across all models and dev sets: {overall_accuracy:.1f}% correct"
+    )
+
+
+def get_best_perplexity(
+    test_record: List[str], model_list: List[Tuple[str, LanguageModel]]
+) -> str:
+    """Returns the author's name of the model which has the lowest perplexity on test_record.\n
+    test_record is just a list of strings like ['I', 'Am', 'Cool']\n
+    model_list is a list of (authorname, model) tuples, likely created by generate_list_of_models(...)
+    This function assumes all models in model_list are the same n-gram order.
+    """
+    # received ChatGPT help to complete this.
+    n = model_list[0][1].order
+
+    # run through all authors in model_list and get lowest perplexity author.
+    best_author = None
+    best_perplexity = np.inf
+    for author, lm in model_list:
+        test_ngrams = get_valid_ngrams(test_record, lm, n)
+        if not test_ngrams:
+            continue
+
+        current_model_perplexity = lm.perplexity(test_ngrams)
+        if current_model_perplexity < best_perplexity:
+            best_perplexity = current_model_perplexity
+            best_author = author
+
+    return best_author
 
 
 def testfile_evaluation(
     filename: str,
     authors_dict: Dict[str, List[List[str]]],
+    generated: bool = False,
     model_class: LanguageModel = Laplace,
     n: int = 2,
 ) -> None:
     """Given a testfile name which is either ascii or utf encoded and a dictionary of author names
     and processed sentences. For each sentence in the testfile, the most likely author is printed to the terminal.\n
-    Param model_class specifies which type of nltk model will be used for evaluation.\n
-    Param n specifies the order of the n-gram models to be created.
+    Param generated: Specifies if we created the test file or not. Alters testfile parsing.
+    Param model_class: specifies which type of nltk model will be used for evaluation.\n
+    Param n: specifies the order of the n-gram models to be created.
     """
     # create a "train_dict" that only has train data and no dev data.
     # these models will be trained on ALL of our processed file data.
@@ -220,42 +252,65 @@ def testfile_evaluation(
     for author, lines in authors_dict.items():
         train_dict[author] = {"train": lines, "dev": []}
 
-
-    # generate some 2-gram models
+    # generate some n-gram models
     models = generate_list_of_models(train_dict, n, model_class)
 
     encoding = "utf8" if "utf8" in filename else "ascii"
+    total_lines, correct_predictions = 0, 0
+    correct_author = None
+    print(f"\nEvaluating testfile using {model_class.__name__} models. Classifications:")
     with open(filename, encoding=encoding) as f:
-        # each line in the testfile should will be a sentence.
-        for test_record in f:
-            processed_test_record = process_sentence(test_record)
+        # each line in the CUSTOM testfile is in the format of f"{sentence}@{correct_author}"
+        # this is not the case for the testfile used in the grading script.
+        for line in f:
+            total_lines += 1
+
+            if generated:
+                line, correct_author = line.rstrip("\n").split("@")
+
+            processed_test_record = process_sentence(line, stop=False)
             best_author = get_best_perplexity(processed_test_record, models)
-            print(best_author)
+
+            # print the terminal output
+            if correct_author is not None:
+                print(f"predicted {best_author}, correct author is {correct_author}")
+                if best_author == correct_author:
+                    correct_predictions += 1
+            
+            else:
+                print(best_author)
+
+    if correct_author is not None:
+        print(
+            f"{correct_predictions} correct classifications out of {total_lines} lines. Accuracy: {correct_predictions / total_lines}"
+        )
 
 
 def main():
     # args.authorlist is required, args.testfile is optional (may be None).
     args = parse_args()
 
-    # parse all the files and train/dev split as necessary.
+    # parse all the files
     authors_dict = tokenize_files(args.authorlist)
+
     if args.testfile is None:
         train_dev_dict = train_dev_split(authors_dict)
 
-        bigram_mle_models = generate_list_of_models(train_dev_dict, 2, MLE)
-        print("\nTesting MLE models, ", end="")
-        evaluate_models(train_dev_dict, bigram_mle_models)
+        # Let's generate some ngram language models and evaluate them
+        # bigram_mle_models = generate_list_of_models(train_dev_dict, NGRAM, MLE)
+        # evaluate_models(train_dev_dict, bigram_mle_models)
 
         bigram_laplace_models = generate_list_of_models(train_dev_dict, 2, Laplace)
-        print("\nTesting Laplace models, ", end="")
         evaluate_models(train_dev_dict, bigram_laplace_models)
 
         bigram_lidstone_models = generate_list_of_models(train_dev_dict, 2, Lidstone)
-        print("\nTesting Lidstone models, ", end="")
         evaluate_models(train_dev_dict, bigram_lidstone_models)
 
     else:
-        testfile_evaluation(args.testfile, authors_dict, MLE)
+        generated = generate_testfile(args.authorlist, args.testfile, num_lines=10)
+        testfile_evaluation(
+            args.testfile, authors_dict, generated=generated, model_class=Laplace
+        )
 
 
 if __name__ == "__main__":

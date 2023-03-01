@@ -396,7 +396,7 @@ def main():
     else:
         generated = generate_testfile(args.authorlist, args.testfile, num_lines=10)
         testfile_evaluation(
-            args.testfile, authors_dict, generated=generated, model_class=Laplace
+            args.testfile, authors_dict, generated=generated, model_class=Lidstone
         )
 
 

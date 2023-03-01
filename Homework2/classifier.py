@@ -1,10 +1,19 @@
 import numpy as np
 import argparse, random, os
 from typing import Dict, List, Tuple
+import nltk
 from nltk import pad_sequence
 from nltk.util import everygrams
 from nltk.lm.preprocessing import padded_everygram_pipeline
-from nltk.lm.models import MLE, LanguageModel, Laplace, StupidBackoff, Lidstone
+from nltk.lm.models import (
+    MLE, 
+    LanguageModel, 
+    Laplace, 
+    Lidstone,
+    StupidBackoff,
+    WittenBellInterpolated
+)
+# from nltk.lm import StupidBackoff
 from file_tokenizer import tokenize_files, process_sentence, generate_testfile
 from tqdm import tqdm
 
@@ -140,6 +149,8 @@ def get_valid_ngrams(
     for ngram in test_ngram:
         if model.perplexity([ngram]) != float("inf"):
             valid_ngrams.append(ngram)
+        # else:
+        #     valid_ngrams.append(ngram)
 
     return valid_ngrams
 
@@ -152,10 +163,12 @@ def test_dev_set(
     We should find the perplexity of that sentence in each language model
     and pick the lowest one.  Then we will need to print out the accuracy scores"""
     print("Results on dev set:")
-    total_lines = 0
-    correct_lines = 0
+    # total_lines = 0
+    # correct_lines = 0
     author_names = [model[0] for model in model_list]
     for author in author_names:
+        total_lines = 0
+        correct_lines = 0
         for line in train_dev_dict[author]["dev"]:
             total_lines += 1
             best_author = get_best_perplexity(line, model_list)
@@ -285,6 +298,61 @@ def testfile_evaluation(
             f"{correct_predictions} correct classifications out of {total_lines} lines. Accuracy: {correct_predictions / total_lines}"
         )
 
+def generate_text(list_of_models, text_seed, number_of_words):
+    print()
+    print()
+    for author, model in list_of_models:
+        model_type = type(list_of_models[0][1]).__name__
+        print("Generating ", author, " text from the ", model_type, " model")
+        for i in range(5):
+            text = model.generate(number_of_words, text_seed=text_seed, random_seed=i)
+            full = []
+            for word in text_seed:
+                full.append(word)
+            for word in text:
+                full.append(word)
+            for word in full:
+                print(word, end=" ")
+            print()
+
+            for author2, model2 in list_of_models:
+                ngrams = get_valid_ngrams(full, model2, NGRAM)
+                print("The perplexity of that sentence on the ", author2, " model is : ", model2.perplexity(ngrams))
+            # ngrams = get_valid_ngrams(full, model, NGRAM)
+            # print("perplexity : ", model.perplexity(ngrams))
+            print()
+        print()
+        print()
+
+def find_best(list_of_models, text_seed, number_of_words, number_of_iters):
+    print()
+    print()
+    for author, model in list_of_models:
+        model_type = type(list_of_models[0][1]).__name__
+        print("Generating best sentence from ", author, " on the ", model_type, " model")
+        best_perp = float('inf')
+        best_sent = ""
+        for i in range(number_of_iters):
+            text = model.generate(number_of_words, text_seed=text_seed, random_seed=i)
+            full = []
+            for word in text_seed:
+                full.append(word)
+            for word in text:
+                full.append(word)
+            ngrams = get_valid_ngrams(full, model, NGRAM)
+            if model.perplexity(ngrams) < best_perp:
+                best_perp = model.perplexity(ngrams)
+                best_sent = full
+        for word in best_sent:
+            print(word, end = " ")
+        print()
+        print('perplexity: ', best_perp)
+
+            
+        print()
+        print()
+
+
 
 def main():
     # args.authorlist is required, args.testfile is optional (may be None).
@@ -300,11 +368,30 @@ def main():
         # bigram_mle_models = generate_list_of_models(train_dev_dict, NGRAM, MLE)
         # evaluate_models(train_dev_dict, bigram_mle_models)
 
-        bigram_laplace_models = generate_list_of_models(train_dev_dict, 2, Laplace)
-        evaluate_models(train_dev_dict, bigram_laplace_models)
+        # bigram_backoff_models = generate_list_of_models(train_dev_dict, 2, nltk.lm.StupidBackoff)
 
         bigram_lidstone_models = generate_list_of_models(train_dev_dict, 2, Lidstone)
-        evaluate_models(train_dev_dict, bigram_lidstone_models)
+
+        # bigram_interpolated_models = generate_list_of_models(train_dev_dict, 2, WittenBellInterpolated)
+
+        # bigram_MLE_models = generate_list_of_models(train_dev_dict, 2, MLE)
+
+        # bigram_laplace_models = generate_list_of_models(train_dev_dict, 2, Laplace)
+        # test_dev_set(train_dev_dict, bigram_laplace_models)
+        # evaluate_models(train_dev_dict, bigram_MLE_models)
+        # evaluate_models(train_dev_dict, bigram_laplace_models)
+        # evaluate_models(train_dev_dict, bigram_interpolated_models)
+        # evaluate_models(train_dev_dict, bigram_backoff_models)
+        # evaluate_models(train_dev_dict, bigram_backoff_models)
+        evaluate_models(train_dev_dict ,bigram_lidstone_models)
+        # evaluate_models(train_dev_dict, bigram_laplace_models)
+        # generate_text(bigram_laplace_models, ["<s>","i"], 12)
+        generate_text(bigram_lidstone_models, ["<s>","i"], 12)
+        # find_best(bigram_laplace_models,  ["<s>","i"], 12, 50)
+        # find_best(bigram_lidstone_models,  ["<s>","i"], 12, 50)
+
+        # bigram_lidstone_models = generate_list_of_models(train_dev_dict, 2, Lidstone)
+        # evaluate_models(train_dev_dict, bigram_lidstone_models)
 
     else:
         generated = generate_testfile(args.authorlist, args.testfile, num_lines=10)

@@ -69,6 +69,9 @@ def generate_testfile(
 def process_sentence(sentence: str, stop: bool) -> List[str]:
     """Process the string to remove punctuation, make it lower case,
     tokenize it by word, and remove all stopwords."""
+    # print(sentence)
+    # print()
+    
     # code from ChatGPT below to process sentences.
     # Remove punctuation
     sentence = sentence.translate(str.maketrans("", "", string.punctuation))
@@ -76,13 +79,19 @@ def process_sentence(sentence: str, stop: bool) -> List[str]:
     # Lowercase sentence
     sentence = sentence.lower()
 
+    # replace hyphens with spaces
+    # sentence.replace("-", " ")
+
     # Tokenize sentence into words
     words = nltk.word_tokenize(sentence)
 
-    # Remove stopwords
+    # Remove stopwordsd
+    # print("removing stopwords")
     if stop:
         words = [word for word in words if word not in stop_words]
-
+    # print("begin")
+    # print(words)
+    # print("end")
     return words
 
 
@@ -110,6 +119,7 @@ def parse_file(
     with open(filename, encoding=encoding) as f:
         text = f.read()
 
+    # print(text)
     sentences = nltk.sent_tokenize(text)
     if untokenized:
         return sentences

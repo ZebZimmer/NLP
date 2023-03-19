@@ -1,0 +1,424 @@
+Ground Truth: Membership gives the ICC jurisdiction over alleged crimes committed in Palestinian territories since last June .
+Israel and the United States opposed the move, which could open the door to war crimes investigations against Israelis . 
+Greedy Search: the Palestinians became the 123rd member of the international criminal court on Wednesday. the Palestinians signed the ICC's founding Rome Statute in January. they also 
+Beam Search: the Palestinian Authority officially became the 123rd member of the international criminal court on Wednesday. the formal accession was marked with a ceremony at The Hague, in the Netherlands 
+Top-K Sampling: the Palestinian authority became the 123rd member of the International Criminal Court on Tuesday. the Palestinians agreed to the ICC's founding principles when they signed the Rome Statute 
+Top-P Sampling: the Palestinians officially became the 123rd member of the international criminal court on Wednesday. the move gives the court jurisdiction over alleged crimes committed in Palestinian territories. as members 
+
+ 
+Ground Truth: Theia, a bully breed mix, was apparently hit by a car, whacked with a hammer and buried in a field .
+"She's a true miracle dog and she deserves a good life," says Sara Mellado, who is looking for a home for Theia . 
+Greedy Search: a stray dog in Washington State has used up at least three of her own after being hit by a car, apparently whacked on the head with a hammer 
+Beam Search: buried in a field. Theia is one year old and needs surgery to help her breathe. a stray dog was apparently killed by a car and  
+Top-K Sampling: was buried in a field -- and apparently killed. A wild cat in Washington State now has three of her own after suffering from various injuries. the dog has been in care 
+Top-P Sampling: now has seven legs, suffered severe injuries and is in need of surgery to help her breathe. Theia is now one year old and has been a stray for four 
+
+ 
+Ground Truth: Mohammad Javad Zarif has spent more time with John Kerry than any other foreign minister .
+He once participated in a takeover of the Iranian Consulate in San Francisco .
+The Iranian foreign minister tweets in English . 
+Greedy Search: a recent tweet by a woman prompted a hero's welcome in iran. he is the foreign minister of the country. he has been  
+Beam Search: "Long live Zarif," crowds chanted as he arrived in Iran on a sunny friday morning. in September 2013, he tweeted "Happy Rosh Hasha 
+Top-K Sampling: mohammad Javad Zarif is a highly politicized, humorous and jovial man. he attended the 1976 demonstration of the shah. his departure 
+Top-P Sampling: mohammad Javad Zarif tweeted a joke about the Jewish New Year. he's also a guest of the u.s., including a visit from 
+
+ 
+Ground Truth: 17 Americans were exposed to the Ebola virus while in Sierra Leone in March .
+Another person was diagnosed with the disease and taken to hospital in Maryland .
+National Institutes of Health says the patient is in fair condition after weeks of treatment . 
+Greedy Search: a a a a a a a a a a a a a 
+Beam Search: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 a patient's heart. The five were 
+Top-K Sampling: - as a and - - and a and and a - a 1 January 2018. This post contains 61 
+Top-P Sampling: – – to – as key details up 1 a new one – that is, and one of our favorite 
+
+ 
+Ground Truth: Student is no longer on Duke University campus and will face disciplinary review .
+School officials identified student during investigation and the person admitted to hanging the noose, Duke says .
+The noose, made of rope, was discovered on campus about 2 a.m. 
+Greedy Search: of of of of of of of of of Duke University. a. Duke University is a private college with about 15,000 
+Beam Search: 1 1 1 1 1 1 1 1 1 Duke University is a prestigious private college with about 15,000 students in Durham, North Carolina. 
+Top-K Sampling: 1 is on my list of one events and our community is on one. 2 is my world, one for, and in 1. and is my world, 
+Top-P Sampling: it's! it! it!! it!! it!!! the!!.. Duke 
+
+ 
+Ground Truth: College-bound basketball star asks girl with Down syndrome to high school prom .
+Pictures of the two during the "prom-posal" have gone viral . 
+Greedy Search: he was originally going to take his girlfriend to Eastern's prom. "She's great... she listens and she's easy to talk to" he said  
+Beam Search: Ellie Meredith is a high school freshman with Down syndrome. "She's great... she listens and she's easy to talk to" he said  
+Top-K Sampling: the day after but instead made the request to take his girlfriend to Eastern's prom. Trey is a star on the Eastern high school basketball team in Louisville. Ellie 
+Top-P Sampling: was really trying to convince his girlfriend to have an invite to his prom. She's a high school freshman with Down syndrome. Trey was originally going to take his girlfriend to Eastern 
+
+ 
+Ground Truth: Amnesty's annual death penalty report catalogs encouraging signs, but setbacks in numbers of those sentenced to death .
+Organization claims that governments around the world are using the threat of terrorism to advance executions .
+The number of executions worldwide has gone down by almost 22% compared with 2013, but death sentences up by 28% . 
+Greedy Search: terrorism to advance executions, Amnesty International alleges in its annual report on the death penalty. on one hand, the number of executions worldwide has gone down by 
+Beam Search: terrorism to advance executions, Amnesty International alleges in its annual report on the death penalty. on one hand, the number of executions worldwide has gone down by 
+Top-K Sampling: to fund executions the global trend of government-sanctioned killing is now sweeping the globe -- death penalty figures, for instance, are not available in China or 
+Top-P Sampling: at least 607 people were executed in 2014, compared to 778 in 2013. As of 2014, around 2,466 people were confirmed to have been handed the sentence to death 
+
+ 
+Ground Truth: Andrew Getty's death appears to be from natural causes, police say, citing coroner's early assessment .
+In a petition for a restraining order, Getty had written he had a serious medical condition.
+Police say this is not a criminal matter at this time . 
+Greedy Search: a coroner's preliminary assessment is there was no foul play involved in the death of Andrew Getty, a police spokesman said. the coroner's 
+Beam Search: the coroner's preliminary assessment is there was no foul play involved in the death of Andrew Getty, a police spokesman said. Getty is one of three living 
+Top-K Sampling: a coroner's preliminary assessment is there was no foul play involved in the death of Andrew Getty, a police spokesman said. police: there was medication at 
+Top-P Sampling: a police spokesman says he believes there was no foul play involved in the death of his son. the coroner's preliminary assessment is there was no foul play involved 
+
+ 
+Ground Truth: Once a super typhoon, Maysak is now a tropical storm with 70 mph winds .
+It could still cause flooding, landslides and other problems in the Philippines . 
+Greedy Search: of of of of of of of of of of and of of and a tropical storm is expected to hit the Philippines 
+Beam Search: of of of a of a of a of a of a of a of of a of of 
+Top-K Sampling: a highaaaaa ana as and is one of our members. is one of a world 
+Top-P Sampling: of of of of the world of of of service and technology of of and of of provider people were warned to stay away 
+
+ 
+Ground Truth: Bob Barker returned to host "The Price Is Right" on Wednesday .
+Barker, 91, had retired as host in 2007 . 
+Greedy Search: a a a a a a a a a a a a a 
+Beam Search: a a a a a a a a a a a a a 
+Top-K Sampling: a vapor vapor to a to stretch and back a long way. When it comes to health care and as is also where and and 
+Top-P Sampling: . On a lot ofs a quarter of a second on top of me. In the unbundled form of a flat, back in and 
+
+ 
+Ground Truth: London's Metropolitan Police say the man was arrested at Luton airport after landing on a flight from Istanbul .
+He's been charged with terror offenses allegedly committed since the start of November . 
+Greedy Search: a a a a a a a a a a a a a 
+Beam Search: a a a a a a a a a a a a a 
+Top-K Sampling: as as of of of our members as you a a and of-as our team of a low-density 
+Top-P Sampling: one and a nano nano nano nano nano nano nano nano nano nano nano nano nano nano nano nano nano nano nano nano nano nano nano nano nano nano nano nano nano nano nano nano 
+
+ 
+Ground Truth: "Furious 7" pays tribute to star Paul Walker, who died during filming .
+Vin Diesel: "This movie is more than a movie"
+"Furious 7" opens Friday . 
+Greedy Search: he was on break from filming "Furious 7" at the time of the fiery accident. Walker's character, Brian O'Connor, was killed in the 
+Beam Search: he was on break from filming "Furious 7" at the time of the fiery accident. Walker's character, Brian O'Connor, was killed in the 
+Top-K Sampling: this film is truly special to us," military veteran Kyle Upham said. "You'll never forget him and he will always be someone very special to us." a week after 
+Top-P Sampling: in a car crash that also killed the driver of "Furious 7" Paul Walker is hardly the first actor to die during a production. Walker's death in 
+
+ 
+Ground Truth: Museum: Anne Frank died earlier than previously believed .
+Researchers re-examined archives and testimonies of survivors .
+Anne and older sister Margot Frank are believed to have died in February 1945 . 
+Greedy Search: researchers re-examined archives of the red cross, the international training service and the Bergen-Belsen Memorial. they concluded that Anne and her older sister, Margot 
+Beam Search: researchers re-examined archives of the red cross, the international training service and the Bergen-Belsen Memorial. they concluded that Anne and her older sister, Margot 
+Top-K Sampling: researchers discover that Anne and her sister apparently gave way earlier than previously thought. the sister's ages, health and other factors had complicated her fate. a new study finds that 
+Top-P Sampling: researchers: at least margot and Anne Frank died at least a month earlier than previously thought. "the sleep was inscrutable and the water was very hot," one witness said 
+
+ 
+Ground Truth: LZ: Indiana law pushing back LGBT rights, and other states' anti-LGBT moves, bow to far right wing that GOP candidates need for 2016 .
+Cruz, Huckabee, Jindal, Carson, Walker are reviving culture wars, he says.  Equality for LGBT has not yet "won" in America . 
+Greedy Search: john avlon: a year ago, a Bloomberg story with headline: Mike Pence, a Koch Favorite, Mulls 2016 Run for president. 
+Beam Search: john avlon: a year ago, a Bloomberg story with the headline: Mike Pence, a Koch Favorite, Mulls 2016 Run for president  
+Top-K Sampling: julian zelizer: conservatives must look at alleged voter fraud rather than religious freedom. he says the debate will get to the level of an issue of concern in 2016 
+Top-P Sampling: bob greene: if conservatives don't denounce gays, the race will be over. he says a prominent democrat is weighing in on the issue 
+
+ 
+Ground Truth: Singing the national anthem is a risky proposition .
+Whitney Houston nailed it; Roseanne Barr destroyed it . 
+Greedy Search: of of of of of of of of of of of of of of "The Star-Spangled Banner" is 
+Beam Search: aaaaaaaaaaaaaa "The Star-Spangled Banner" is 
+Top-K Sampling: nn wennn servicen 1nonn 1c l and will be and the people gathered here. 
+Top-P Sampling: has to show that has today is a big surprise. time is a company we trust. of of and transport of of will you 
+
+ 
+Ground Truth: While Republican Gov. Asa Hutchinson was weighing an Arkansas religious freedom bill, Walmart voiced its opposition .
+Walmart and other high-profile businesses are showing their support for gay and lesbian rights .
+Their stance puts them in conflict with socially conservative Republicans, traditionally seen as allies . 
+Greedy Search: the Republican Party will have to "be the party of Sam's Club," he said. Walmart's opposition to the religious freedom law in its home state of Arkansas is a 
+Beam Search: Walmart vowed to veto a religious freedom law in its home state of Arkansas. The law would boost pay for about 500,000 workers well above the federal minimum wage  
+Top-K Sampling: a leader of the the governor of Arkansas and many Republican lawmakers have slammed religious freedom laws. it shows growing support for gay rights in the heartland  
+Top-P Sampling: the Republicans must not be "just the country club," he said. Walmart's attack on a religious freedom law in Arkansas is one that resonated the most deeply. 
+
+ 
+Ground Truth: Amnesty International releases its annual review of the death penalty worldwide; much of it makes for grim reading .
+Salil Shetty: Countries that use executions to deal with problems are on the wrong side of history . 
+Greedy Search: a trend that was starkly evident last year around the world -- governments using the death penalty in a knee-jerk reaction to terrorism. In the wake of the horrific 
+Beam Search: a trend that was starkly evident last year around the world -- governments using the death penalty in a misguided attempt to tackle crime and terrorism. a sharp spike 
+Top-K Sampling: in the United States. Iran and Iraq executed people for "terrorism." And some of those executions are likely to be used as a knee-jerk response to terrorism. 
+Top-P Sampling: this is a pattern that has become increasingly evident this year around the world. As the world's criminal justice system continues to evolve, the focus is increasingly on death sentences and death row 
+
+ 
+Ground Truth: Marseille prosecutor says "so far no videos were used in the crash investigation" despite media reports .
+Journalists at Bild and Paris Match are "very confident" the video clip is real, an editor says .
+Andreas Lubitz had informed his Lufthansa training school of an episode of severe depression, airline says . 
+Greedy Search: the prosecutor insisted that "so far no videos were used in the crash investigation." Bild and Bild reported that a cell phone video was recovered from a phone at the wreck 
+Beam Search: "so far no videos were used in the crash investigation," he told CNN. Bild and Bild reported that the video was recovered from a phone at the wreckage site  
+Top-K Sampling: the Paris match and Bild pages claim to have seen the video. "It is very disturbing scene," Bild online reported of a mobile phone video. Bild and Bild also claimed 
+Top-P Sampling: "so far no videos were used in the crash investigation," prosecutor says. Bild and Bild reported that the video was recovered from a phone at the wreckage site. 
+
+ 
+Ground Truth: The Rev. Robert Schuller, 88, had been diagnosed with esophageal cancer in 2013 .
+His TV show, "Hour of Power," was enormously popular in the 1970s and 1980s . 
+Greedy Search: died peacefully early this morning, his family said. He was 88 years old. He was diagnosed with esophageal cancer in August 2013. Schuller was  
+Beam Search: died peacefully early this morning, his family said. He was 88 years old. He had been diagnosed with esophageal cancer in August 2013. "He was 
+Top-K Sampling: died Thursday at home. "He was a great Dad and a great man of God," said Schuller's daughter-in-law. "My father-in- 
+Top-P Sampling: his first radio sermon was delivered in a California drive-in theater in the early 1990s. he married his wife, a church organist, in early 1965 and  
+
+ 
+Ground Truth: Former GOP representative compares President Obama to Andreas Lubitz .
+Bachmann said with possible Iran deal, Obama will fly "entire nation into the rocks"
+Reaction on social media? She was blasted by Facebook commenters . 
+Greedy Search: Michele Bachmann is comparing President Obama to the co-pilot of the doomed Germanwings flight. "With his Iran deal, Barack Obama is for the 300 million 
+Beam Search: Michele Bachmann is comparing President Obama to the co-pilot of the doomed Germanwings flight. "With his Iran deal, Barack Obama is for the 300 million 
+Top-K Sampling: Michelle Bachmann is comparing President Obama to the co-pilot of the doomed Germanwings flight. Bachmann is the former Minnesota Republican and former representative. Bachmann told the 
+Top-P Sampling: you're so silly. "Poor everyone. This is degrading. This is demeaning." Michele Bachmann is comparing President Obama to the co-pilot of 
+
+ 
+Ground Truth: Father: "I know he went through what he went through"
+Louis Jordan was found on his sailboat, which was listing and in bad shape, rescuer says .
+He appears to be in good shape, physically and mentally . 
+Greedy Search: a man on it, signaling for help. "He was moving, walking around, waving to us and in surprisingly good condition," he said. Jordan had been missing 
+Beam Search: they saw a man on it, signaling for help. "He was moving, walking around, waving to us and in surprisingly good condition," he said. Jordan 
+Top-K Sampling: a boat in good shape, waving, waving to them. it changed. He was in good shape. He wasn't badly sunburned like I thought  
+Top-P Sampling: an alert person turned up, alerting the crew and asking for help. "He was moving, walking around, waving to us and in surprisingly good condition," the captain said. 
+
+ 
+Ground Truth: Richard Klass: Iran framework agreement on nukes is strong, but opponents will cast doubts on this and try to obscure its facts .
+He says the deal would cut uranium stockpile, centrifuges, implement rigorous inspections; it should be judged on merits, not disinformation . 
+Greedy Search: a new framework agreement limits Iran's nuclear program in such a way as to effectively block it from building a nuclear weapon. aaron miller: the debate that 
+Beam Search: the new framework agreement limits Iran's nuclear program in such a way as to effectively block it from building a nuclear weapon. the debate that has already begun since the announcement of the 
+Top-K Sampling: in a few months, u.s. lawmakers and senators have warned against nuclear deal. the latest debate will result in more heat than light, authors say. 
+Top-P Sampling: the deal limits Iran's nuclear program so it blocks it from building a nuclear weapon. the debate about the deal is likely to result in more heat than light. fd 
+
+ 
+Ground Truth: Americans paid more for some fruits and vegetables last year because of the drought .
+Tourists will now have to ask for a glass of water at a California restaurant .
+Perhaps the only good thing is another "great" wine grape harvest last year . 
+Greedy Search: drought in the most populous state hurts the rest of the union, too. agribusiness professor at agribusiness school: "the drought in California does have the potential 
+Beam Search: the historic drought in the most populous state hurts the rest of the union, too. the drought is a slowly expanding natural disaster now in its fourth year. 
+Top-K Sampling: price for fresh fruits and vegetables rose. agribusiness is helping to make sure consumers are getting sufficient food. a drought is not the only problem in the united states. 
+Top-P Sampling: the historic drought hurts the rest of the union, too. but it's not just one state's internal problem. it's more than just one state's internal 
+
+ 
+Ground Truth: The FBI cites social media messages sent by Keonna Thomas, 30 .
+She's accused of trying to travel overseas to join ISIS .
+Thomas is one of three women facing federal terror charges this week . 
+Greedy Search: of of of of of of of of of three women in Philadelphia. Two New York women were also taken into custody this week. is  
+Beam Search: of of of of of of of of of three women in Philadelphia. Two New York women were also taken into custody this week on terror charges. 
+Top-K Sampling: service service service service work service fahuas service service to do family and friends are in in Philadelphia 10,  
+Top-P Sampling: and to know and be aware of is and of and care a of care hospital care and attention is our priority. Philadelphia woman Keonna Thomas 
+
+ 
+Ground Truth: Iranian sports official: The ban will be lifted for some events in the coming year .
+But he says "families are not interested in attending" some sports matches . 
+Greedy Search: "women and families" will be allowed to enter sports stadiums, a top official said. The ban on women attending men's sports events was reinstated in 2005 
+Beam Search: a plan to allow "women and families" to enter sports stadiums will come into effect in the next year, Deputy Sports Minister Abdolhamid Ahmadi 
+Top-K Sampling: "women and families" will be allowed into sports stadiums in the next year," an official said on Saturday. a plan to allow "women and families" 
+Top-P Sampling: "women and families" will be allowed to enter sports stadiums, a top official said. Deputy sports minister abdolhamid Ahmadi said the ban 
+
+ 
+Ground Truth: Going online has become the path of least resistance if you want to make yourself heard .
+But where there is the restrictive rule of law, journalists are vulnerable to the anger of officialdom .
+From China to Malaysia, journalists and bloggers have been jailed -- even killed . 
+Greedy Search: amos Yee, a dissident blogger in Singapore, was arrested and held pending bail on sunday. five editors and executives from the msni were 
+Beam Search: online activity has become the path of least resistance if you want to make yourself heard. it is not unique to Asia, but it might seem more pronounced if you live there  
+Top-K Sampling: the legal issue of going online is not just limited to Singapore; it comes with long string of precedent. bloggers in places like Singapore are frequently arrested for their illegal behavior. the ban on 
+Top-P Sampling: despite the ban, dissident voices can still post online without the government's approval. jim nathan has been arrested in hong kong for his 2011 
+
+ 
+Ground Truth: The singer had been off the scene for a while .
+She says she was bedridden for months .
+Lavigne was sometimes too weak to shower . 
+Greedy Search: . and and and and and and and and and a number of and a number of other things that. What happened 
+Beam Search: and and and and and and and and a a million and a number of a number of other things that 
+Top-K Sampling: health care baby dna. A we and your health. 1. The health the last days the great news. Lavigne recently admitted 
+Top-P Sampling: online we oa health a and is a key and a our many and much more. Our we teas 
+
+ 
+Ground Truth: Here are six of CNN's best videos of the week .
+Clips include a look at Mike Tyson's abandoned mansion . 
+Greedy Search: a trip to a former heavyweight champ's gaudy, abandoned mansion. a dramatic interview with a famed spiritual leader. a tearful 
+Beam Search: a trip to a former heavyweight champ's gaudy, abandoned mansion. a dramatic interview with a famed spiritual leader -- and the tearful reaction 
+Top-K Sampling: celebrities talk about the rise of the faith and how they are seen in the media. a documentary on itv's "silent trail" examining the story of the  
+Top-P Sampling: "the final seconds of Germanwings Flight 9525," says one witness. magician and comedian Penn Jillette is avowed atheist and libertarian. in 
+
+ 
+Ground Truth: Netanyahu says third option is "standing firm" to get a better deal .
+Political sparring continues in U.S. over the deal with Iran . 
+Greedy Search: has criticized the deal six world powers struck to thwart Iran's nuclear ambitions. "I think there's a third alternative, and that's standing 
+Beam Search: has criticized the deal six world powers struck to thwart Iran's nuclear ambitions. "I think there's a third alternative, and that's standing 
+Top-K Sampling: says there are better options than "the bad deal" or "war." Israeli prime minister says he doesn't see the option of "sisting in that place. " This 
+Top-P Sampling: has spoken out against the Iran nuclear deal, a deal six world powers struck to thwart its nuclear ambitions. "I think there's a third alternative, 
+
+ 
+Ground Truth: Indiana town's Memories Pizza is shut down after online threat .
+Its owners say they'd refuse to cater a same-sex couple's wedding . 
+Greedy Search: "if a gay couple was to come and they wanted us to bring pizzas to their wedding, we'd have to say no," owner says. "dear #Me 
+Beam Search: "if a gay couple was to come and they wanted us to bring pizzas to their wedding, we'd have to say no," owner says. "dear #Me 
+Top-K Sampling: "if a gay couple was to come and they wanted us to bring pizzas to their wedding, we'd have to say no," owner says. Memories Pizza in the town 
+Top-P Sampling: "I don't like your religious bigotry," tweeted a loyal fan of the family-run pizzeria. "please don't threaten them for their ignorance,"  
+
+ 
+Ground Truth: Authorities in the Indian city of Malegaon have asked residents to take a 'mugshot' of their cattle .
+Cows are revered by the majority Hindu population, and many parts of the country have laws banning the slaughter of cattle .
+Officials in Malegaon believe this is the best way to solve cow slaughter cases and enforce the law . 
+Greedy Search: residents to take a'mugshot' of their cattle and submit it to police. residents have to give information about their animal's 'unique features' such as 
+Beam Search: residents to take a'mugshot' of their cattle and submit it to police. residents have to give information about their animal's 'unique features' such as 
+Top-K Sampling: is requiring identity cards for residents in the Indian city of Malegaon, in the western state of Maharashtra. Following a recent state-wide ban on the sale and 
+Top-P Sampling: 'cattle'. authorities have asked residents to take a'mugshot' of their cattle and submit it to police. authorities believe this is the only way to 
+
+ 
+Ground Truth: A South Carolina man says he spent 66 days alone at sea before being rescued .
+Other sole survivor stories include a Japanese man washed away by a tsunami .
+An El Salvador man says he drifted from Mexico to Marshall Islands over a year . 
+Greedy Search: sailor Louis Jordan says he was stranded at sea for days, weeks, if not months. he says he was able to get back on 
+Beam Search: "all is lost" and "Life of Pi" are good movies, but in real life, it's hard to swallow the idea. much rarer are cases in which individuals become 
+Top-K Sampling: eliot morrison: "i had only a single person to cry for, and it was so frustrating" elsewhere, he says, people have more "incred 
+Top-P Sampling: a man in a yacht capsizes after being let down by faltering winds. he isn't the first to discover how he survived after a ship 
+
+ 
+Ground Truth: The Large Hadron Collider (LHC) begins again after a two-year shutdown .
+The restart was delayed in March . 
+Greedy Search: the first beams are circulating Sunday inside the LHC's 17 mile (27 km) ring. The LHC generates up to 600 million particles per second. 
+Beam Search: the first beams are circulating Sunday inside the LHC's 17 mile (27 km) ring. The LHC generates up to 600 million particles per second. 
+Top-K Sampling: it made at approximately the speed of light, traveling 10 hours a second, as a proton moves almost 2 million times at near-light-speed. "Today, 
+Top-P Sampling: Sunday, April 8, 2018. CERN completed its final tests to restart the LHC after a two-year shutdown in March. The LHC is the world's biggest and most 
+
+ 
+Ground Truth: FBI agents and a suspected serial robber exchange gunfire in an FBI stakeout .
+Two FBI agents are injured and the suspect is shot during the gunfight . 
+Greedy Search: two agents were injured in a crash and the suspect was shot before being captured. Kevone Charleston, 36, of Austell, Georgia, was following him as he pulled 
+Beam Search: two agents were injured in a crash and the suspect was shot before being captured. Kevone Charleston is suspected of involvement in 32 commercial robberies dating to November 2013  
+Top-K Sampling: six government vehicles and 12 FBI agents followed Kevone Charleston as he pulled into a store. he plowed the hood as if there were something wrong and 
+Top-P Sampling: an armed robbery suspect killed two FBI agents and police, and he was shot. two agents were injured in a crash and the suspect was shot before being captured 
+
+ 
+Ground Truth: The total eclipse will only last 4 minutes and 43 seconds .
+People west of the Mississippi River will have the best view .
+Parts of South America, India, China and Russia also will see the eclipse . 
+Greedy Search: of of of of of of of of and of of of and a... 
+Beam Search: of of a of a of a of a of a of a of a a of a of 
+Top-K Sampling: of the of the of the of the of the of of the of the of a of we of medical and dental care 
+Top-P Sampling: risk and and ands and and the and making our beloved place the best in the world. The delivery of and one and one 
+
+ 
+Ground Truth: Terrorist group Al-Shabaab has attacked a Kenyan college, killing and taking hostages .
+It is a clear indicator the security situation in East Africa is deteriorating, says Stefan Wolff .
+More than military action aloe is needed to combat terrorism in the region, he says . 
+Greedy Search: many more have been taken hostage. Al-Shabaab has claimed an attack on Garissa University College in eastern Kenya. The attack is another step in the ongoing  
+Beam Search: many more have been taken hostage. The attack is another step in the ongoing escalation of the terrorist group's activities in East Africa. Al-Shabaa 
+Top-K Sampling: many have been treated as innocents, it also took hostage. Earlier this year, Ethiopia attacked the University of Nairobi as part of an African Union mission. the attack shows 
+Top-P Sampling: at Garissa University College in eastern Kenya. Al-Shabaab Al-Qaeda and Islamic State, but Al-Shabaab has also been involved in 
+
+ 
+Ground Truth: Easter is a key event in the Christian faith, but where did the Easter Bunny come from?
+Why is the date different every year, and what does it have to do with the moon? 
+Greedy Search: the sun sank on Easter Sunday. he died on Palm Sunday and resurrected on Sunday. But the Romans turned on him in the course of the week 
+Beam Search: Easter is surrounded by interesting quirks. Like Christmas, Easter is a cornerstone event in the Christian faith. It celebrates the completion of Christ's mission of salvation 
+Top-K Sampling: not for long but for spring. a red moon fell on Easter Sunday. Francis said that the Holy One is dying. This week, Francis washed the feet of believers 
+Top-P Sampling: he is rewarded with a red moon. It's a fascinating event. Like Christmas, Easter has its unique quirks. It celebrates the completion of Christ' 
+
+ 
+Ground Truth: In response to lawsuit, NCAA says it doesn't control quality of education for student-athletes .
+But its website emphasizes importance of education, "opportunities to learn"
+Lawsuit claims students didn't get an education because of academic fraud at UNC . 
+Greedy Search: the NCAA is taking a very different position in response to a lawsuit filed by former athletes. the lawsuit claims the students didn't get an education because they were caught up in fraud 
+Beam Search: the NCAA is taking a very different position in response to a lawsuit filed by former UNC athletes. the lawsuit claims the students didn't get an education because they were caught up 
+Top-K Sampling: the NCAA is taking a very different position in response to a lawsuit filed by former North Carolina athletes. a lawsuit alleges the students don't get an education because of the 
+Top-P Sampling: the NCAA is taking a very different position in response to a lawsuit filed by former athletes. former member institutions say the suit misunderstands its role with respect to its member schools 
+
+ 
+Ground Truth: Judge won't allow teen leave hospital before her last chemotherapy treatment .
+Attorneys for the teen are deciding whether to appeal .
+Cassandra C. is now in remission and is no longer opposed to the chemotherapy treatments . 
+Greedy Search: a judge denied a motion to let the teen go home. the teen is in remission after nearly six months of forced chemo treatments. she is in 
+Beam Search: a judge denied a motion to let the teen go home. the 17-year-old is in remission after nearly six months of forced chemo treatments. 
+Top-K Sampling: "we're disappointed in this ruling," says attorney, who represents teen's parents. cassandra began chemo in July and is in remission after 
+Top-P Sampling: a judge denied a motion to let the teen go home. her lawyer says the decision is "disappointed" teen is in remission after nearly six months of 
+
+ 
+Ground Truth: The song rules the chart for 13th week .
+It passes Robin Thicke's "Blurred Lines"
+Song three weeks from potentially tying "One Sweet Day" for record . 
+Greedy Search: "Funk" is the longest-leading single on the 2010 Billboard Hot 100. it's the 10th single in the chart's entire history to spend at least 13 weeks 
+Beam Search: "Funk" is the longest-leading single of the 2010s, ruling the chart for a 13th week. it's also just the 10th single in the chart' 
+Top-K Sampling: "Funk" is the highest-selling single on the 2010 list. "Funk" becomes the 10th hit to top the hot 100 for at least 13 weeks. "F 
+Top-P Sampling: "Funk" is the longest-leading single of the 2010s, ruling the chart for a 13th week. "Say Yes" is just the 10th single in 
+
+ 
+Ground Truth: High temperatures are recorded on the northern tip of the Antarctica Peninsula .
+The World Meteorological Organization will make the final determination . 
+Greedy Search: a a a a a a a a a a a a a 
+Beam Search: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 a new report has been released. March 
+Top-K Sampling: health and we and we have our the into the will a one our doctors and engineers a a and it Lord Lord 
+Top-P Sampling: super to and a one of the many health benefits of dental implants. Air is doctor 1 1 a few minutes tea leaves and air 
+
+ 
+Ground Truth: A Native American from a tribe not recognized by the feds wins the return of his eagle feathers .
+An IRS accountant is fired for insisting on carrying a symbolic Sikh knife to work .
+A group of Chicago pastors takes on City Hall over its permits for new churches and loses . 
+Greedy Search: a federal judge ruled in a case involving a man who was a Native american with eagle feathers. the federal government argued that the feathers 
+Beam Search: in 2006, a native american and his wife were found to be in possession of eagle feathers. they sued the federal government, saying they were not from a recognized 
+Top-K Sampling: states' alleged faith violates religious freedom. Several states have cited the federal laws, but not the federal ones. a 2011 case involves an arrest of a bir 
+Top-P Sampling: the controversy centers on an Indian powwow in 2006. the feds refused to refund the feathers, saying they were from a recognized tribe. a state ruled 
+
+ 
+Ground Truth: Robert Lewis Burns Jr. was part of Lynyrd Skynyrd's original lineup .
+His car hit a mailbox and a tree just before midnight . 
+Greedy Search: of of of of of of of 1 of 1 1 1 Bob Lewis Burns died in a car crash in Cartersville, 
+Beam Search: of of of of of of of 1 of.......... 
+Top-K Sampling: members you and a the foundation we all need and can share with you. Our team and we promise to give people and We hope people come to understand 
+Top-P Sampling: of of of of of of of 3. 11 May 5 -- Bob Lewis Burns Jr. Burns Avatar. We have 
+
+ 
+Ground Truth: Kim Ki-Jong is charged with attempted murder and assaulting a foreign envoy .
+He's accused of stabbing U.S. Ambassador Mark Lippert in the face and arm .
+Police said Kim opposed the joint U.S.-South Korean military drills . 
+Greedy Search: of of of of of of of of of. a a slew of other medical devices. a  
+Beam Search: 1 1 1 1 1 1 1 1 1... Kim Ki-Jong has been charged with attempted murder and assaulting 
+Top-K Sampling: and, and is a safe. and to care for! 1 to care for! What is? to care. to care. This story 
+Top-P Sampling: 1 2 1 1 1 2 1 1 1 1 2 2 2 1 1. and love for others. Reno-Sili 
+
+ 
+Ground Truth: Hong Kong banker alleged murder case adjourned until May .
+The 29-year-old Rurik Jutting is accused of killing two Indonesian domestic workers . 
+Greedy Search: Hong Kong police found a woman lying on the floor with cuts to her neck and buttocks and another body hidden in a suitcase on the balcony. it's  
+Beam Search: Hong Kong police found a woman lying on the floor with cuts to her neck and buttocks. During a search of the apartment, officers uncovered another body hidden 
+Top-K Sampling: Hong Kong police shook the city for four days. Authorities say Briton, 29, is charged in one murder-related crime. Jutting is accused of murdering a man 
+Top-P Sampling: a body. Hong Kong police uncovered another body hidden in a suitcase on the balcony. It's alleged 25-year-old Sumarti Ningsi 
+
+ 
+Ground Truth: Thai Airways subsidiary Thai Smile features Cartoon Network paint job on A320 jet .
+Overhead bins, head rests and air sick bags feature characters from Cartoon Network . 
+Greedy Search: a a a a a a a a a a a a a 
+Beam Search: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 April 4 at the Suvarnab 
+Top-K Sampling: on atom a He a of of a! It is important to know that of is a a  
+Top-P Sampling: - is - building and details of 1 one 1.01s 1 how and - there are other. What we 
+
+ 
+Ground Truth: Manning is serving a 35-year sentence for leaking thousands of classified documents .
+She says she will be using a voice phone to dictate her tweets . 
+Greedy Search: and and and and and and and and and and and and a number of things that make up the and The New 
+Beam Search: of and of of of of of of of of and a number of things that make you and a number of things 
+Top-K Sampling: to health our lii you are able to work. cans l we think of where we stand in the world and more. Discover 
+Top-P Sampling: detail a n and our Health December 1 health of that can be seen below. And we hope you will find a health or 
+
+ 
+Ground Truth: Frida Ghitis: President Barack Obama is right to want a deal, but this one gives Iran too much .
+She says the framework agreement starts lifting Iran sanctions much too soon . 
+Greedy Search: the United States is the more eager, even desperate, side in these talks. a nuclear deal with Iran is a worthy, desirable goal. But the process has unfolded 
+Beam Search: he has a huge political stake in these negotiations. a nuclear deal with Iran is a worthy, desirable goal. But the process has unfolded under the destructive influence 
+Top-K Sampling: so many people think he is not able to impose morality on foreign policy. This has created a sense of utter uncertainty that has no real political stake in the deal 
+Top-P Sampling: the White House may be more interested in it than the United States. the negotiations have started under the destructive influence of political considerations. a plan B. political d 
+
+ 
+Ground Truth: The final film featuring the late Paul Walker, "Furious 7" is opening around the globe this weekend .
+It's worldwide debut may approach or cross $300 million by the end of Easter Sunday . 
+Greedy Search: "Furious 7" is expected to make the biggest opening of 2015 to date. ''Furious 7'' is expected to make the biggest opening of 2015 to date 
+Beam Search: "Furious 7" continues to build momentum at the Friday box office for a weekend debut in the $135 million-$138 million range. "Furious 7" 
+Top-K Sampling: a projected $100 million to $50 million for the Friday weekend opening. last year's top April opening was $216 million, but canceled in February 2013 because of Walker' 
+Top-P Sampling: is anticipated to be in the $200 million-$180 million range this weekend. "Furious 7" is getting the biggest opening of 2015 to date. "Furious 
+
+ 
+Ground Truth: Deion Sanders calls out son for "hood doughnuts" comments .
+"You're a Huxtable with a million $ trust fund. Stop the hood stuff!" 
+Greedy Search: a a a a a a a a a a a a a 
+Beam Search: a a a a a a a a a a a a a 
+Top-K Sampling: a a computer a computer a and and making as and even a little bit more you first and to the world. 
+Top-P Sampling: today. According to health care industry newswires health a to the world. is the first to begin working is a-as- 
+
+ 

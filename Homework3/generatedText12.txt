@@ -1,0 +1,674 @@
+Ground Truth: Membership gives the ICC jurisdiction over alleged crimes committed in Palestinian territories since last June .
+Israel and the United States opposed the move, which could open the door to war crimes investigations against Israelis . 
+Greedy Search: The Palestinian Authority becomes the 123rd member of the International Criminal Court. The move gives the court jurisdiction over alleged crimes in Palestinian territories. Israel and the United States opposed the Palestinians' efforts to join the body. But Palestinian Foreign Minister Riad al-Malki says it is a move toward greater justice. 
+Beam Search: Palestinian Authority becomes 123rd member of the International Criminal Court. The move gives the court jurisdiction over alleged crimes in Palestinian territories. Israel and the United States opposed the Palestinians' efforts to join the body. But Palestinian Foreign Minister Riad al-Malki said it was a move toward greater justice. 
+Top-K Sampling: The Palestinian Authority becomes the 123rd member of the International Criminal Court. The move gives the court jurisdiction over alleged crimes in Palestinian territories. Israel and the United States opposed the Palestinians' efforts to join the body. But Palestinian Foreign Minister Riad al-Malki said it was a move toward greater justice. 
+Top-P Sampling: The Palestinian Authority becomes the 123rd member of the International Criminal Court. The move gives the court jurisdiction over alleged crimes in Palestinian territories. Israel and the United States, neither of which is an ICC member, opposed the Palestinians' efforts to join the body. But Palestinian Foreign Minister Riad al-Malki said it was a move toward greater justice. 
+Meteor Score: [[{'meteor': 0.48948113949950156}], [{'meteor': 0.4920107577914886}], [{'meteor': 0.48948113949950156}], [{'meteor': 0.5136795086543829}]] 
+Bert Score: [{'precision': [0.5288366079330444, 0.5350161194801331, 0.534045398235321, 0.5241563320159912], 'recall': [0.6322993636131287, 0.631795346736908, 0.6370641589164734, 0.6533994078636169], 'f1': [0.5759584903717041, 0.57939213514328, 0.5810236930847168, 0.5816852450370789], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.441860465116279, 0.4523809523809524, 0.441860465116279, 0.4516129032258065], 'rouge2': [0.30952380952380953, 0.3170731707317074, 0.30952380952380953, 0.26373626373626374], 'rougeL': [0.39534883720930236, 0.40476190476190477, 0.39534883720930236, 0.3655913978494624], 'rougeLsum': [0.39534883720930236, 0.40476190476190477, 0.39534883720930236, 0.3655913978494624]}] 
+Perplexty: [{'perplexities': [486137.53125, 1428497.125, 468752.78125, 333998.9375], 'mean_perplexity': 679346.59375}] 
+Ground Perplexity [{'perplexities': [3460804.5], 'mean_perplexity': 3460804.5}] 
+
+ 
+Ground Truth: Theia, a bully breed mix, was apparently hit by a car, whacked with a hammer and buried in a field .
+"She's a true miracle dog and she deserves a good life," says Sara Mellado, who is looking for a home for Theia . 
+Greedy Search: A dog apparently hit by a car and buried in a field survives. The dog, now named Theia, was found emaciated and dirt-covered. She suffered a dislocated jaw, leg injuries and a caved-in sinus cavity. A fundraising page has raised more than $10,000 for TheIA's care. 
+Beam Search: Theia, a bully breed mix, was hit by a car and buried in a field. She was found emaciated and dirt-covered four days later. The dog suffered a dislocated jaw, leg injuries and a caved-in sinus cavity. A fundraising page has raised more than $10,000 for her care. 
+Top-K Sampling: A bully breed mix was hit by a car and buried in a field. She was found emaciated and dirt-covered four days later. The dog, now named Theia, suffered a dislocated jaw, leg injuries and a caved-in sinus cavity. A fundraising page has raised more than $10,000 for her care. 
+Top-P Sampling: Theia was apparently hit by a car and buried in a field. She was found emaciated and covered in dirt four days later. The bully breed mix suffered a dislocated jaw, leg injuries and a caved-in sinus cavity. A fundraising page has raised more than $10,000 for Theia's care. 
+Meteor Score: [[{'meteor': 0.3948020678422208}], [{'meteor': 0.3940486287814532}], [{'meteor': 0.39255034502182795}], [{'meteor': 0.3832603098604273}]] 
+Bert Score: [{'precision': [0.5308243036270142, 0.5749536156654358, 0.5398802161216736, 0.570788562297821], 'recall': [0.5746899843215942, 0.6204927563667297, 0.5958879590034485, 0.6085599064826965], 'f1': [0.5518868565559387, 0.5968557596206665, 0.56650310754776, 0.5890693664550781], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.4731182795698925, 0.46808510638297873, 0.45833333333333337, 0.4842105263157894], 'rouge2': [0.19780219780219782, 0.2826086956521739, 0.25531914893617025, 0.27956989247311825], 'rougeL': [0.38709677419354843, 0.44680851063829785, 0.4166666666666667, 0.4], 'rougeLsum': [0.40860215053763443, 0.44680851063829785, 0.4166666666666667, 0.4]}] 
+Perplexty: [{'perplexities': [114075.2109375, 210231.4375, 229638.40625, 398282.75], 'mean_perplexity': 238056.951171875}] 
+Ground Perplexity [{'perplexities': [126883.5703125], 'mean_perplexity': 126883.5703125}] 
+
+ 
+Ground Truth: Mohammad Javad Zarif has spent more time with John Kerry than any other foreign minister .
+He once participated in a takeover of the Iranian Consulate in San Francisco .
+The Iranian foreign minister tweets in English . 
+Greedy Search: Mohammad Javad Zarif is the Iranian foreign minister. He has been John Kerry's opposite number in securing a breakthrough in nuclear discussions. But there are some facts about Zar if that are less well-known. The feds investigated him over his alleged role in controlling the Alavi Foundation. 
+Beam Search: Mohammad Javad Zarif is the Iranian foreign minister. He has been John Kerry's opposite number in securing a breakthrough in nuclear discussions. But there are some facts about him that are less well-known. The feds investigated him over his alleged role in controlling the Alavi Foundation. 
+Top-K Sampling: Mohammad Javad Zarif is the Iranian foreign minister. He has been John Kerry's opposite number in securing a breakthrough in nuclear discussions. But there are some facts about him that are less well-known. In September 2013, he tweeted "Happy Rosh Hashanah," referring to the Jewish New Year. 
+Top-P Sampling: Mohammad Javad Zarif is the Iranian foreign minister. He has been U.S. Secretary of State John Kerry's opposite number in the nuclear talks. But there are some facts about him that are less well-known. His official biography cannot agree with itself on when he was born. 
+Meteor Score: [[{'meteor': 0.38577274069491124}], [{'meteor': 0.3867543507221247}], [{'meteor': 0.39651381909547734}], [{'meteor': 0.3708012157673748}]] 
+Bert Score: [{'precision': [0.4941304326057434, 0.5060466527938843, 0.49135255813598633, 0.45610085129737854], 'recall': [0.5619490146636963, 0.5654510259628296, 0.5661529302597046, 0.5370302200317383], 'f1': [0.5258621573448181, 0.5341020822525024, 0.5261073112487793, 0.49326810240745544], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.3809523809523809, 0.38554216867469876, 0.3809523809523809, 0.35714285714285715], 'rouge2': [0.17073170731707318, 0.1728395061728395, 0.17073170731707318, 0.17073170731707318], 'rougeL': [0.26190476190476186, 0.26506024096385544, 0.23809523809523808, 0.21428571428571427], 'rougeLsum': [0.3809523809523809, 0.38554216867469876, 0.35714285714285715, 0.30952380952380953]}] 
+Perplexty: [{'perplexities': [140409.6875, 115277.328125, 152876.765625, 61807.3984375], 'mean_perplexity': 117592.794921875}] 
+Ground Perplexity [{'perplexities': [880586.125], 'mean_perplexity': 880586.125}] 
+
+ 
+Ground Truth: 17 Americans were exposed to the Ebola virus while in Sierra Leone in March .
+Another person was diagnosed with the disease and taken to hospital in Maryland .
+National Institutes of Health says the patient is in fair condition after weeks of treatment . 
+Greedy Search: The five were exposed to Ebola in Sierra Leone in March. None developed the deadly virus. They are clinicians for Partners in Health, a Boston-based aid group. All had contact with a colleague who was diagnosed with the disease. The last of 17 patients being monitored are expected to be released by Thursday. 
+Beam Search: The five were exposed to Ebola in Sierra Leone in March, but none developed the deadly virus. They are clinicians for Partners in Health, a Boston-based aid group. One of the five had a heart-related issue on Saturday and has been discharged but hasn't left the area. 
+Top-K Sampling: The five were exposed to Ebola in Sierra Leone in March. None developed the deadly virus. They are clinicians for Partners in Health, a Boston-based aid group. All had contact with a colleague who was diagnosed with the disease and is being treated at the National Institutes of Health in Maryland. 
+Top-P Sampling: The five were exposed to Ebola in Sierra Leone in March, but none developed the deadly virus. They are clinicians for Partners in Health, a Boston-based aid group. One of the five had a heart-related issue on Saturday and has been discharged but hasn't left the area. 
+Meteor Score: [[{'meteor': 0.4510080850846766}], [{'meteor': 0.2775109170305676}], [{'meteor': 0.5538546457192527}], [{'meteor': 0.2775109170305676}]] 
+Bert Score: [{'precision': [0.5157321095466614, 0.47243133187294006, 0.5779699683189392, 0.47243133187294006], 'recall': [0.5799307823181152, 0.544219434261322, 0.6379450559616089, 0.544219434261322], 'f1': [0.5459506511688232, 0.5057907700538635, 0.6064783930778503, 0.5057907700538635], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.4583333333333333, 0.36956521739130443, 0.5531914893617021, 0.36956521739130443], 'rouge2': [0.2127659574468085, 0.13333333333333333, 0.32608695652173914, 0.13333333333333333], 'rougeL': [0.3333333333333333, 0.2826086956521739, 0.42553191489361697, 0.2826086956521739], 'rougeLsum': [0.375, 0.2826086956521739, 0.4680851063829788, 0.2826086956521739]}] 
+Perplexty: [{'perplexities': [281418.96875, 208797.015625, 288636.84375, 208797.015625], 'mean_perplexity': 246912.4609375}] 
+Ground Perplexity [{'perplexities': [287208.75], 'mean_perplexity': 287208.75}] 
+
+ 
+Ground Truth: Student is no longer on Duke University campus and will face disciplinary review .
+School officials identified student during investigation and the person admitted to hanging the noose, Duke says .
+The noose, made of rope, was discovered on campus about 2 a.m. 
+Greedy Search: The student admitted to hanging the noose, Duke University says. The student is no longer on campus and will face student conduct review. Officials are still trying to determine if other people were involved. Criminal investigations are ongoing.. "This is not the Duke we're here to experience," the president says at a forum. 
+Beam Search: The student is no longer on campus and will face student conduct review. Officials are still trying to determine if other people were involved. The incident is one of several recent racist events to affect college students. Last month a fraternity at the University of Oklahoma had its charter removed after a video surfaced showing members using the N-word. 
+Top-K Sampling: The student was identified during an investigation by campus police and the office of student affairs. Officials are still trying to determine if other people were involved. The incident is one of several recent racist events to affect college students. Last month a fraternity at the University of Oklahoma had its charter removed after a video surfaced. 
+Top-P Sampling: A student has admitted to hanging a noose from a tree near a student union, university officials say. The prestigious private school didn't identify the student, citing federal privacy laws. Students and faculty members marched Wednesday afternoon chanting "We are not afraid. We stand together" 
+Meteor Score: [[{'meteor': 0.44786727538742344}], [{'meteor': 0.2960443436633913}], [{'meteor': 0.22567019985806192}], [{'meteor': 0.26701680672268907}]] 
+Bert Score: [{'precision': [0.5771122574806213, 0.4341166615486145, 0.41381704807281494, 0.4615592658519745], 'recall': [0.6447175741195679, 0.47016641497612, 0.41146132349967957, 0.509301483631134], 'f1': [0.6090445518493652, 0.4514229893684387, 0.41263580322265625, 0.4842565357685089], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.5, 0.37254901960784315, 0.3434343434343434, 0.29545454545454547], 'rouge2': [0.3191489361702127, 0.16, 0.020618556701030927, 0.046511627906976744], 'rougeL': [0.3333333333333333, 0.3137254901960784, 0.2222222222222222, 0.13636363636363635], 'rougeLsum': [0.4166666666666667, 0.3137254901960784, 0.2828282828282828, 0.22727272727272724]}] 
+Perplexty: [{'perplexities': [53591.8125, 75776.625, 178533.609375, 177981.453125], 'mean_perplexity': 121470.875}] 
+Ground Perplexity [{'perplexities': [187776.421875], 'mean_perplexity': 187776.421875}] 
+
+ 
+Ground Truth: College-bound basketball star asks girl with Down syndrome to high school prom .
+Pictures of the two during the "prom-posal" have gone viral . 
+Greedy Search: Trey Moses, a star basketball player, asked Ellie Meredith, who has Down syndrome, to prom. Photos of the two have gone viral. "That's the kind of person Trey is," Ellie's mom says. Trey's future coach at Ball State, James Whitford, said he felt great about the prom-posal. 
+Beam Search: Trey Moses asked Ellie Meredith to be his prom date. He made the prom-posal in the gym during Ellie's P.E. class. "She's great... she listens and she's easy to talk to," he said. Photos of Trey and Ellie on Twitter have gone viral. 
+Top-K Sampling: Trey Moses asked Ellie Meredith to be his prom date. "She's great... she listens and she's easy to talk to," he said. Photos of the couple have gone viral on Twitter. Ellie's mom: "You just feel numb to those moments raising a special needs child" 
+Top-P Sampling: Trey Moses, a basketball star at Eastern High School in Kentucky, asked Ellie Meredith to be his prom date. "She's great... she listens and she's easy to talk to," he said. Photos of Trey and Ellie have gone viral on social media. Ellie's mom: "You just feel numb to those moments raising a special needs child" 
+Meteor Score: [[{'meteor': 0.44871615508734625}], [{'meteor': 0.386159169550173}], [{'meteor': 0.2920471841704719}], [{'meteor': 0.39482695810564666}]] 
+Bert Score: [{'precision': [0.428603857755661, 0.3956589698791504, 0.345426470041275, 0.3384864926338196], 'recall': [0.6624272465705872, 0.5503395795822144, 0.48774346709251404, 0.5312269926071167], 'f1': [0.520459771156311, 0.4603533446788788, 0.404430091381073, 0.41349977254867554], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.4, 0.3055555555555555, 0.19444444444444448, 0.24096385542168672], 'rouge2': [0.2191780821917808, 0.11428571428571427, 0.0857142857142857, 0.09876543209876543], 'rougeL': [0.2933333333333333, 0.2222222222222222, 0.19444444444444448, 0.21686746987951805], 'rougeLsum': [0.2933333333333333, 0.2222222222222222, 0.19444444444444448, 0.21686746987951805]}] 
+Perplexty: [{'perplexities': [293309.1875, 220970.015625, 148466.46875, 161669.28125], 'mean_perplexity': 206103.73828125}] 
+Ground Perplexity [{'perplexities': [1967580.75], 'mean_perplexity': 1967580.75}] 
+
+ 
+Ground Truth: Amnesty's annual death penalty report catalogs encouraging signs, but setbacks in numbers of those sentenced to death .
+Organization claims that governments around the world are using the threat of terrorism to advance executions .
+The number of executions worldwide has gone down by almost 22% compared with 2013, but death sentences up by 28% . 
+Greedy Search: Amnesty International says governments are using the threat of terrorism to advance executions. The organization's annual report catalogs the use of state-sanctioned killing as a punitive measure. At least 607 people were executed around the world in 2014, compared to 778 in 2013. 
+Beam Search: Amnesty International's annual report catalogs the use of state-sanctioned killing as a punitive measure. The number of executions worldwide has gone down by almost 22% on the previous year. At least 2,466 people globally are confirmed to have been handed the sentence last year, an increase of 28%. 
+Top-K Sampling: Amnesty International's annual report catalogs the use of state-sanctioned killing as a punitive measure. At least 607 people were executed around the world in 2014, compared to 778 in 2013. The U.S. remains one of the worst offenders for imposing capital punishment, with only Iran, Iraq and Saudi Arabia executing more people. 
+Top-P Sampling: Amnesty International's annual report catalogs the use of state-sanctioned killing as a punitive measure. The number of executions worldwide has gone down by almost 22% on the previous year. At least 2,466 people globally are confirmed to have been handed the sentence last year, an increase of 28% compared with 2013. 
+Meteor Score: [[{'meteor': 0.36608641542781545}], [{'meteor': 0.46541574687270054}], [{'meteor': 0.2980963874182498}], [{'meteor': 0.5052169137836354}]] 
+Bert Score: [{'precision': [0.6705425977706909, 0.6403374671936035, 0.5224210619926453, 0.6410070061683655], 'recall': [0.6089048385620117, 0.6514767408370972, 0.5380978584289551, 0.6573525667190552], 'f1': [0.6382390260696411, 0.6458590626716614, 0.5301435589790344, 0.6490768790245056], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.505050505050505, 0.43809523809523804, 0.3119266055045872, 0.48148148148148145], 'rouge2': [0.26804123711340205, 0.23300970873786409, 0.07476635514018692, 0.2641509433962264], 'rougeL': [0.303030303030303, 0.36190476190476195, 0.2385321100917431, 0.3888888888888889], 'rougeLsum': [0.42424242424242425, 0.43809523809523804, 0.27522935779816515, 0.46296296296296297]}] 
+Perplexty: [{'perplexities': [537035.75, 149515.515625, 179263.65625, 145391.59375], 'mean_perplexity': 252801.62890625}] 
+Ground Perplexity [{'perplexities': [670489.1875], 'mean_perplexity': 670489.1875}] 
+
+ 
+Ground Truth: Andrew Getty's death appears to be from natural causes, police say, citing coroner's early assessment .
+In a petition for a restraining order, Getty had written he had a serious medical condition.
+Police say this is not a criminal matter at this time . 
+Greedy Search: Andrew Getty, 47, was found dead in his home. He was the grandson of oil tycoon J. Paul Getty. The Gettys are estimated to be worth about $5 billion. Andrew Getty had "several health issues," police say.. A hearing in the case had been scheduled for next week. 
+Beam Search: Andrew Getty appears to have died of natural causes, police say. He was found on his side near a bathroom in his home, KTLA reports. Andrew Getty, 47, had "several health issues," a police spokesman says. His parents have released a statement confirming their son's death. 
+Top-K Sampling: Andrew Getty, 47, had "several health issues," police say. He was found on his side near a bathroom in his home, KTLA reports. The coroner's preliminary assessment is there was no foul play involved in the death, a police spokesman says. There is no criminal investigation underway, he adds. 
+Top-P Sampling: Andrew Getty appears to have died of natural causes, police say. The coroner's preliminary assessment is there was no foul play involved in the death. Andrew Getty, 47, had "several health issues," a police spokesman says. Getty was found on his side near a bathroom in his home, KTLA reports. 
+Meteor Score: [[{'meteor': 0.2618245541472335}], [{'meteor': 0.30051968503937004}], [{'meteor': 0.2624681260850694}], [{'meteor': 0.3539894600591716}]] 
+Bert Score: [{'precision': [0.4788816571235657, 0.5810570120811462, 0.570140540599823, 0.6117605566978455], 'recall': [0.5025302171707153, 0.5652992725372314, 0.5874925255775452, 0.6219861507415771], 'f1': [0.49042099714279175, 0.5730698108673096, 0.5786864757537842, 0.6168309450149536], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.2826086956521739, 0.39560439560439564, 0.3404255319148936, 0.4], 'rouge2': [0.08888888888888888, 0.1348314606741573, 0.06521739130434782, 0.1290322580645161], 'rougeL': [0.19565217391304346, 0.3076923076923077, 0.2553191489361702, 0.35789473684210527], 'rougeLsum': [0.2391304347826087, 0.32967032967032966, 0.29787234042553196, 0.35789473684210527]}] 
+Perplexty: [{'perplexities': [156534.828125, 198250.109375, 134435.75, 184041.265625], 'mean_perplexity': 168315.48828125}] 
+Ground Perplexity [{'perplexities': [338863.5], 'mean_perplexity': 338863.5}] 
+
+ 
+Ground Truth: Once a super typhoon, Maysak is now a tropical storm with 70 mph winds .
+It could still cause flooding, landslides and other problems in the Philippines . 
+Greedy Search: Maysak gained super typhoon status just a few days ago. It's now a tropical storm, but still packing winds of more than 70 mph. Authorities are barring outdoor activities like swimming, surfing, diving and boating. The storm is expected to make landfall Sunday morning. 
+Beam Search: Maysak gained super typhoon status just a few days ago. It has since lost steam and is now classified as a tropical storm. The storm is expected to make landfall Sunday morning on the southeastern coast of Isabela province. Authorities are barring outdoor activities like swimming, surfing, diving and boating. 
+Top-K Sampling: Maysak gained super typhoon status just a few days ago. It has since lost steam and is now classified as a tropical storm. Authorities are barring outdoor activities like swimming, surfing, diving and boating in some locales. The storm is expected to make landfall Sunday morning. 
+Top-P Sampling: Maysak gained super typhoon status just a few days ago. It's now classified as a tropical storm. The storm is expected to make landfall Sunday morning on the southeastern coast of Isabela province. Authorities have barred outdoor activities like swimming, surfing, diving and boating in some locales. 
+Meteor Score: [[{'meteor': 0.462111801242236}], [{'meteor': 0.32639953987730064}], [{'meteor': 0.3466117904962496}], [{'meteor': 0.3444722115425691}]] 
+Bert Score: [{'precision': [0.5648980736732483, 0.5325044393539429, 0.5454702377319336, 0.5240072011947632], 'recall': [0.6626231074333191, 0.6127280592918396, 0.6027806401252747, 0.608553409576416], 'f1': [0.6098705530166626, 0.5698064565658569, 0.572695255279541, 0.5631245970726013], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.4507042253521127, 0.3157894736842105, 0.3611111111111111, 0.35135135135135137], 'rouge2': [0.14492753623188406, 0.10810810810810809, 0.1142857142857143, 0.08333333333333333], 'rougeL': [0.2816901408450704, 0.2105263157894737, 0.27777777777777773, 0.21621621621621623], 'rougeLsum': [0.3380281690140845, 0.2631578947368421, 0.3055555555555556, 0.24324324324324323]}] 
+Perplexty: [{'perplexities': [2669313.25, 3766245.5, 1854222.0, 3678295.25], 'mean_perplexity': 2992019.0}] 
+Ground Perplexity [{'perplexities': [592700.9375], 'mean_perplexity': 592700.9375}] 
+
+ 
+Ground Truth: Bob Barker returned to host "The Price Is Right" on Wednesday .
+Barker, 91, had retired as host in 2007 . 
+Greedy Search: Bob Barker returned to "The Price Is Right" for the first time in eight years. Barker hosted the show for 35 years before stepping down in 2007. He handled the classic "Lucky Seven" game. Drew Carey finished up the April 1 edition.. The show airs on ABC. 
+Beam Search: Bob Barker returned to "The Price Is Right" for the first time in eight years. The 91-year-old hosted the show for 35 years before stepping down in 2007. Drew Carey finished up hosting duties on the April 1 edition of the game show, which was Barker's last. 
+Top-K Sampling: Bob Barker returned to "The Price Is Right" for the first time in eight years. Barker hosted the TV game show for 35 years before stepping down in 2007. The 91-year-old looked spry at 91 on the April 1 edition of the show. He handled the classic "Lucky Seven" game before handing over to Drew Carey. 
+Top-P Sampling: Bob Barker returned to host "The Price Is Right" for the first time in eight years. The 91-year-old hosted the show for 35 years before stepping down in 2007. Drew Carey finished up hosting duties on the April 1 edition of the game show.angler: Jeff Pearlman. 
+Meteor Score: [[{'meteor': 0.5230331613491116}], [{'meteor': 0.5952203655715406}], [{'meteor': 0.505521380665556}], [{'meteor': 0.5057899141818545}]] 
+Bert Score: [{'precision': [0.5260829329490662, 0.5452337265014648, 0.4956609606742859, 0.5396796464920044], 'recall': [0.6934027671813965, 0.7443312406539917, 0.7401634454727173, 0.7504165172576904], 'f1': [0.5982642769813538, 0.6294130086898804, 0.5937253832817078, 0.6278361678123474], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.3636363636363636, 0.37681159420289856, 0.33766233766233766, 0.3823529411764706], 'rouge2': [0.21875000000000003, 0.208955223880597, 0.18666666666666665, 0.2727272727272727], 'rougeL': [0.3333333333333333, 0.3188405797101449, 0.2857142857142857, 0.3529411764705882], 'rougeLsum': [0.3636363636363636, 0.37681159420289856, 0.3116883116883117, 0.3823529411764706]}] 
+Perplexty: [{'perplexities': [174152.5625, 123711.0859375, 130602.0390625, 207516.40625], 'mean_perplexity': 158995.5234375}] 
+Ground Perplexity [{'perplexities': [329333.875], 'mean_perplexity': 329333.875}] 
+
+ 
+Ground Truth: London's Metropolitan Police say the man was arrested at Luton airport after landing on a flight from Istanbul .
+He's been charged with terror offenses allegedly committed since the start of November . 
+Greedy Search: Yahya Rashid, 19, was arrested at Luton airport on Tuesday. He's charged with engaging in conduct in preparation of acts of terrorism. RashID is due to appear in court on Wednesday. The charges relate to the period between November 1 and March 31. 
+Beam Search: Yahya Rashid, 19, was arrested at Luton airport on Tuesday, police say. He's charged with engaging in conduct in preparation of acts of terrorism and assisting others to commit such acts. Both charges relate to the period between November 1 and March 31, according to police. 
+Top-K Sampling: Yahya Rashid, 19, was arrested at Luton airport on Tuesday, police say. He's charged with engaging in conduct in preparation of acts of terrorism. The 19-year-old is due to appear in court on Wednesday, according to London police. 
+Top-P Sampling: Yahya Rashid, 19, was detained at Luton airport on Tuesday after he arrived on a flight from Istanbul. He's been charged with engaging in conduct in preparation of acts of terrorism, police say. RashID is due to appear in Westminster Magistrates' Court on Wednesday. 
+Meteor Score: [[{'meteor': 0.40266388586054885}], [{'meteor': 0.4324407510003077}], [{'meteor': 0.42474607571560474}], [{'meteor': 0.531088002866905}]] 
+Bert Score: [{'precision': [0.5101003646850586, 0.5297989845275879, 0.5368210077285767, 0.5723357200622559], 'recall': [0.5769284963607788, 0.6079794764518738, 0.612237274646759, 0.6835758686065674], 'f1': [0.5414602160453796, 0.5662031769752502, 0.5720542073249817, 0.623029351234436], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.36363636363636365, 0.375, 0.40540540540540543, 0.4615384615384615], 'rouge2': [0.15999999999999998, 0.1794871794871795, 0.19444444444444442, 0.3157894736842105], 'rougeL': [0.3116883116883117, 0.29999999999999993, 0.2972972972972973, 0.41025641025641024], 'rougeLsum': [0.3116883116883117, 0.29999999999999993, 0.2972972972972973, 0.41025641025641024]}] 
+Perplexty: [{'perplexities': [1037006.3125, 677198.8125, 627993.75, 1395869.125], 'mean_perplexity': 934517.0}] 
+Ground Perplexity [{'perplexities': [858518.8125], 'mean_perplexity': 858518.8125}] 
+
+ 
+Ground Truth: "Furious 7" pays tribute to star Paul Walker, who died during filming .
+Vin Diesel: "This movie is more than a movie"
+"Furious 7" opens Friday . 
+Greedy Search: Paul Walker died in a car crash in November 2013. The film "Furious 7" is released Friday. There have been multiple tributes to Walker leading up to the release. "You'll feel it when you see it," said co-star Vin Diesel. 'It's bittersweet, but I think Paul would be proud," says Walker's brother. 
+Beam Search: Paul Walker's death in November 2013 after a car crash was especially eerie given his rise to fame in the "Fast and Furious" film franchise. "He was a person of humility, integrity, and compassion," military veteran Kyle Upham said in an email to CNN. There have been multiple tributes to Walker leading up to the release. 
+Top-K Sampling: Paul Walker died in a car crash in November 2013. The film "Furious 7" is out Friday. There have been multiple tributes to Walker leading up to the film's release. "You'll feel it when you see it," said co-star Vin Diesel. 
+Top-P Sampling: Paul Walker died in a car crash in November 2013. His character in "Furious 7" was not killed off. Co-star Vin Diesel: "You'll feel it when you see it" "It's bittersweet, but I think Paul would be proud," says Walker's brother. 
+Meteor Score: [[{'meteor': 0.35863021384027793}], [{'meteor': 0.2094240837696335}], [{'meteor': 0.3603094280400625}], [{'meteor': 0.33025862953394464}]] 
+Bert Score: [{'precision': [0.5018729567527771, 0.40350744128227234, 0.540759265422821, 0.5030274391174316], 'recall': [0.653108537197113, 0.5214080810546875, 0.658253014087677, 0.624553382396698], 'f1': [0.5675891637802124, 0.4549432396888733, 0.5937494039535522, 0.5572416186332703], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.2962962962962962, 0.12195121951219512, 0.34782608695652173, 0.2571428571428571], 'rouge2': [0.0759493670886076, 0.025, 0.08955223880597014, 0.08823529411764705], 'rougeL': [0.17283950617283952, 0.09756097560975609, 0.2028985507246377, 0.17142857142857146], 'rougeLsum': [0.22222222222222224, 0.09756097560975609, 0.2028985507246377, 0.2]}] 
+Perplexty: [{'perplexities': [146704.75, 261312.828125, 87411.4609375, 168531.796875], 'mean_perplexity': 165990.208984375}] 
+Ground Perplexity [{'perplexities': [1209540.0], 'mean_perplexity': 1209540.0}] 
+
+ 
+Ground Truth: Museum: Anne Frank died earlier than previously believed .
+Researchers re-examined archives and testimonies of survivors .
+Anne and older sister Margot Frank are believed to have died in February 1945 . 
+Greedy Search: Anne Frank died of typhus in a Nazi concentration camp at the age of 15. The date of death had previously been determined by Dutch authorities. Researchers re-examined archives of the Red Cross, the International Training Service and the Bergen-Belsen Memorial. 
+Beam Search: Anne Frank died of typhus in a Nazi concentration camp at the age of 15. Researchers re-examined archives of the Red Cross, the International Training Service and the Bergen-Belsen Memorial. They concluded that Anne and Margot probably did not survive to March 1945. 
+Top-K Sampling: Researchers re-examined archives of the Red Cross, the International Training Service and the Bergen-Belsen Memorial. They concluded that Anne and Margot probably did not survive to March 1945 -- contradicting the date of death. Days at the camp were filled with terror and dread, witnesses said. 
+Top-P Sampling: Anne Frank died of typhus in a Nazi concentration camp at the age of 15. The date of death had previously been determined by Dutch authorities. Researchers re-examined archives of the Red Cross, the International Training Service and the Bergen-Belsen Memorial. They concluded that Anne and Margot probably did not survive to March 1945. 
+Meteor Score: [[{'meteor': 0.28046306241794966}], [{'meteor': 0.40727850647783054}], [{'meteor': 0.2604060395837584}], [{'meteor': 0.4269507298702108}]] 
+Bert Score: [{'precision': [0.42951151728630066, 0.48896172642707825, 0.4443436563014984, 0.4691542983055115], 'recall': [0.5212341547012329, 0.5939522981643677, 0.569832980632782, 0.6177224516868591], 'f1': [0.47094836831092834, 0.5363674759864807, 0.49932458996772766, 0.5332843065261841], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.30136986301369856, 0.4, 0.2857142857142857, 0.37209302325581395], 'rouge2': [0.1408450704225352, 0.16438356164383564, 0.10666666666666666, 0.14285714285714285], 'rougeL': [0.273972602739726, 0.3466666666666666, 0.2597402597402597, 0.32558139534883723], 'rougeLsum': [0.273972602739726, 0.3466666666666666, 0.2857142857142857, 0.32558139534883723]}] 
+Perplexty: [{'perplexities': [401535.5625, 634692.0, 143492.1875, 273456.8125], 'mean_perplexity': 363294.140625}] 
+Ground Perplexity [{'perplexities': [838289.0], 'mean_perplexity': 838289.0}] 
+
+ 
+Ground Truth: LZ: Indiana law pushing back LGBT rights, and other states' anti-LGBT moves, bow to far right wing that GOP candidates need for 2016 .
+Cruz, Huckabee, Jindal, Carson, Walker are reviving culture wars, he says.  Equality for LGBT has not yet "won" in America . 
+Greedy Search: Mike Pence is drawing huge heat for his controversial decision to sign a religious freedom law. Julian Zelizer: The issue of LGBT rights will be a bit player in the 2016 general election. He says the GOP primary will turn numerous Americans into single-issue voters. Zelizers: Republicans want the Supreme Court to rule in favor of same-sex marriage. 
+Beam Search: Mike Pence signed a religious freedom law that opens the door to discrimination against gays and lesbians. Julian Zelizer: Pence has scored a lot of points this week among ultraconservatives. He says there is no way a Republican can get through the pending primary without denouncing LGBT rights. Zelizers: The issue will turn numerous Americans into single-issue voters. 
+Top-K Sampling: Mike Pence is drawing huge heat for his controversial decision to sign a religious freedom law that opens the door to discrimination against gays and lesbians. Frida Ghitis: There's a very powerful wing of his party that wants a conservative as its 2016 candidate and this bill was Pence's way of shoring up his street cred. She says there is no way a Republican can get through the pending primary without denouncing LGBT rights. 
+Top-P Sampling: Mike Pence signed a religious freedom law that opens the door to discrimination against gays and lesbians. Julian Zelizer: Pence has scored a lot of points this week among ultraconservatives. But the very public debate that now embroils him is more than enough to drag the entire Republican field farther to the right, he says. 
+Meteor Score: [[{'meteor': 0.1630537803292894}], [{'meteor': 0.1542846139033314}], [{'meteor': 0.14333895446880268}], [{'meteor': 0.18570026178010474}]] 
+Bert Score: [{'precision': [0.446010023355484, 0.4360494017601013, 0.4364962875843048, 0.435721755027771], 'recall': [0.4201352596282959, 0.42617860436439514, 0.4401193857192993, 0.4225853383541107], 'f1': [0.4326861500740051, 0.43105748295783997, 0.43830037117004395, 0.42905300855636597], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.1923076923076923, 0.17475728155339806, 0.16666666666666666, 0.1616161616161616], 'rouge2': [0.0392156862745098, 0.039603960396039604, 0.01694915254237288, 0.020618556701030927], 'rougeL': [0.13461538461538464, 0.09708737864077668, 0.11666666666666667, 0.12121212121212122], 'rougeLsum': [0.13461538461538464, 0.09708737864077668, 0.11666666666666667, 0.12121212121212122]}] 
+Perplexty: [{'perplexities': [362161.90625, 5388974.0, 171307.125, 2730405.25], 'mean_perplexity': 2163212.0703125}] 
+Ground Perplexity [{'perplexities': [950779.5625], 'mean_perplexity': 950779.5625}] 
+
+ 
+Ground Truth: Singing the national anthem is a risky proposition .
+Whitney Houston nailed it; Roseanne Barr destroyed it . 
+Greedy Search: Mötley Crüe's Vince Neil butcheered the song at an Arena Football League game. The late Whitney Houston set the modern standard for the national anthem at Super Bowl XXV. Jimi Hendrix inflamed mainstream America with his psychedelic take on the anthem. 
+Beam Search: Mötley Crüe's Vince Neil reminded us of the dangers of tackling "The Star-Spangled Banner" The late Whitney Houston set the modern standard for the national anthem at Super Bowl XXV. Jimi Hendrix inflamed mainstream America with his psychedelic take on the anthem. 
+Top-K Sampling: Mötley Crüe's Vince Neil reminded us of the dangers of tackling "The Star-Spangled Banner" The late Whitney Houston set the modern standard for the national anthem at Super Bowl XXV. Jimi Hendrix inflamed mainstream America with his psychedelic take on the anthem. 
+Top-P Sampling: Mötley Crüe's Vince Neil reminded us of the dangers of tackling "The Star-Spangled Banner" The late Whitney Houston set the modern standard for the national anthem at Super Bowl XXV. President George H. W. Bush called Roseanne Barr's rendition "disgraceful" 
+Meteor Score: [[{'meteor': 0.22203325774754343}], [{'meteor': 0.2199962553828871}], [{'meteor': 0.2199962553828871}], [{'meteor': 0.34403669724770647}]] 
+Bert Score: [{'precision': [0.4216291904449463, 0.40163150429725647, 0.40163150429725647, 0.40031909942626953], 'recall': [0.5647152066230774, 0.5713776350021362, 0.5713776350021362, 0.5851622223854065], 'f1': [0.4827936589717865, 0.4716980755329132, 0.4716980755329132, 0.4754054844379425], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.16666666666666666, 0.16129032258064516, 0.16129032258064516, 0.2295081967213115], 'rouge2': [0.10344827586206895, 0.1, 0.1, 0.13559322033898305], 'rougeL': [0.09999999999999999, 0.09677419354838708, 0.09677419354838708, 0.1639344262295082], 'rougeLsum': [0.16666666666666666, 0.16129032258064516, 0.16129032258064516, 0.2295081967213115]}] 
+Perplexty: [{'perplexities': [2369610.25, 1346450.875, 1346450.875, 1068854.625], 'mean_perplexity': 1532841.65625}] 
+Ground Perplexity [{'perplexities': [82512336.0], 'mean_perplexity': 82512336.0}] 
+
+ 
+Ground Truth: While Republican Gov. Asa Hutchinson was weighing an Arkansas religious freedom bill, Walmart voiced its opposition .
+Walmart and other high-profile businesses are showing their support for gay and lesbian rights .
+Their stance puts them in conflict with socially conservative Republicans, traditionally seen as allies . 
+Greedy Search: Walmart's opposition to a religious freedom law in Arkansas puts the company at odds with many in the Republican Party. The company's political action committee has tended to support the GOP. It has been a gradual transformation for Walmart, which has added protections for gender identity. 
+Beam Search: Walmart is emerging as a bellwether for shifting public opinion on hot-button political issues. Former Minnesota Gov. Tim Pawlenty says Walmart's actions "foreshadow where the Republican Party will need to move" The backlash over the religious freedom measures in Indiana and Arkansas this week is shining a bright light on the broader business community's overwhelming support for workplace policies that promote gay equality. 
+Top-K Sampling: Walmart is emerging as a bellwether for shifting public opinion on hot-button political issues. Former Minnesota Gov. Tim Pawlenty says Walmart's actions "foreshadow where the Republican Party will need to move" The backlash over the religious freedom measures in Indiana and Arkansas this week is shining a bright light on the broader business community's overwhelming support for workplace policies that promote gay equality. 
+Top-P Sampling: Walmart's opposition to a religious freedom law in its home state of Arkansas resonated most deeply. The company is emerging as a bellwether for shifting public opinion on hot-button political issues. Former Minnesota Gov. Tim Pawlenty said Walmart's actions "foreshadow where the Republican Party will need to move" 
+Meteor Score: [[{'meteor': 0.1974799762886172}], [{'meteor': 0.22459639126305794}], [{'meteor': 0.22459639126305794}], [{'meteor': 0.18630105198019803}]] 
+Bert Score: [{'precision': [0.5283403396606445, 0.4541723430156708, 0.4541723430156708, 0.4675884246826172], 'recall': [0.4739096164703369, 0.5005435347557068, 0.5005435347557068, 0.48711371421813965], 'f1': [0.49964699149131775, 0.47623181343078613, 0.47623181343078613, 0.47715139389038086], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.2580645161290323, 0.2342342342342342, 0.2342342342342342, 0.25], 'rouge2': [0.02197802197802198, 0.03669724770642202, 0.03669724770642202, 0.02127659574468085], 'rougeL': [0.08602150537634409, 0.12612612612612611, 0.12612612612612611, 0.08333333333333333], 'rougeLsum': [0.17204301075268819, 0.16216216216216214, 0.16216216216216214, 0.14583333333333334]}] 
+Perplexty: [{'perplexities': [4265583.0, 1035384.6875, 1035384.6875, 15785256.0], 'mean_perplexity': 5530402.09375}] 
+Ground Perplexity [{'perplexities': [3921971.75], 'mean_perplexity': 3921971.75}] 
+
+ 
+Ground Truth: Amnesty International releases its annual review of the death penalty worldwide; much of it makes for grim reading .
+Salil Shetty: Countries that use executions to deal with problems are on the wrong side of history . 
+Greedy Search: Amnesty International releases its annual review of the death penalty worldwide. Amnesty International: Governments using death penalties to tackle crime and terrorism. In Pakistan, the government lifted a six-year moratorium on the execution of civilians. Jordan ended an eight- years moratorium in December, putting 11 murder convicts to death. 
+Beam Search: Amnesty International releases its annual review of the death penalty worldwide. In Pakistan, the government lifted a six-year moratorium on the execution of civilians. Iran and Iraq executed people for "terrorism," and other countries expanded the scope of capital crimes. There is no evidence that the threat of execution is more of a deterrent to crime than a prison sentence. 
+Top-K Sampling: Amnesty International releases its annual review of the death penalty worldwide. In Pakistan, the government lifted a six-year moratorium on the execution of civilians. Iran and Iraq executed people for "terrorism," and other countries expanded the scope of capital crimes. There is no evidence that the threat of execution is more of a deterrent to crime than a prison sentence. 
+Top-P Sampling: Amnesty International releases its annual review of the death penalty worldwide. In Pakistan, the government lifted a six-year moratorium on the execution of civilians. Iran and Iraq executed people for "terrorism," and other countries expanded the scope of capital crimes. There is no evidence that the threat of execution is more of a deterrent to crime than a prison sentence. 
+Meteor Score: [[{'meteor': 0.4071253071253071}], [{'meteor': 0.44184796544310545}], [{'meteor': 0.44184796544310545}], [{'meteor': 0.44184796544310545}]] 
+Bert Score: [{'precision': [0.5284276604652405, 0.4769011437892914, 0.4769011437892914, 0.4769011437892914], 'recall': [0.581307053565979, 0.5416162610054016, 0.5416162610054016, 0.5416162610054016], 'f1': [0.5536074638366699, 0.5072027444839478, 0.5072027444839478, 0.5072027444839478], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.3529411764705882, 0.39583333333333337, 0.39583333333333337, 0.39583333333333337], 'rouge2': [0.26506024096385544, 0.23404255319148937, 0.23404255319148937, 0.23404255319148937], 'rougeL': [0.3529411764705882, 0.35416666666666663, 0.35416666666666663, 0.35416666666666663], 'rougeLsum': [0.3529411764705882, 0.35416666666666663, 0.35416666666666663, 0.35416666666666663]}] 
+Perplexty: [{'perplexities': [2149368.5, 296097.75, 296097.75, 296097.75], 'mean_perplexity': 759415.4375}] 
+Ground Perplexity [{'perplexities': [418184.0625], 'mean_perplexity': 418184.0625}] 
+
+ 
+Ground Truth: Marseille prosecutor says "so far no videos were used in the crash investigation" despite media reports .
+Journalists at Bild and Paris Match are "very confident" the video clip is real, an editor says .
+Andreas Lubitz had informed his Lufthansa training school of an episode of severe depression, airline says . 
+Greedy Search: French prosecutor says he's not aware of any video footage from on board the plane. German media reports that they have found cell phone video of the crash. A Gendarmerie spokesman says the reports are "completely wrong" and "unwarranted" German airline Lufthansa says co-pilot Andreas Lubitz had battled depression. 
+Beam Search: French prosecutor says he is not aware of any video footage from on board the plane. Two magazines claim to have found a cell phone video showing the harrowing final seconds. "It is a very disturbing scene," editor-in-chief of Bild online says. German airline Lufthansa confirms co-pilot Andreas Lubitz had battled depression. 
+Top-K Sampling: A French prosecutor says he is not aware of any video footage from on board the plane. German daily Bild and Paris Match claim to have found a cell phone video of the crash. "It is a very disturbing scene," the editor-in-chief of Bild says. Lufthansa confirms co-pilot Andreas Lubitz battled depression years before he took the controls. 
+Top-P Sampling: Prosecutor: "A person who has such a video needs to immediately give it to the investigators" German daily Bild and Paris Match claim to have found a cell phone video of the crash. A French Gendarmerie spokesman says the reports are "completely wrong" and "unwarranted" 
+Meteor Score: [[{'meteor': 0.33132423954037576}], [{'meteor': 0.25399215911264106}], [{'meteor': 0.2984415420531264}], [{'meteor': 0.22104347826086954}]] 
+Bert Score: [{'precision': [0.5666697025299072, 0.5383461713790894, 0.5548557639122009, 0.48469078540802], 'recall': [0.5672329068183899, 0.5691920518875122, 0.584410548210144, 0.47449445724487305], 'f1': [0.5669511556625366, 0.5533395409584045, 0.5692498683929443, 0.4795384407043457], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.4, 0.3653846153846154, 0.38181818181818183, 0.2765957446808511], 'rouge2': [0.10204081632653063, 0.058823529411764705, 0.11111111111111112, 0.08695652173913043], 'rougeL': [0.21999999999999997, 0.21153846153846156, 0.2545454545454546, 0.19148936170212766], 'rougeLsum': [0.24, 0.23076923076923075, 0.27272727272727276, 0.2127659574468085]}] 
+Perplexty: [{'perplexities': [255575.203125, 235438.828125, 183367.8125, 181233.421875], 'mean_perplexity': 213903.81640625}] 
+Ground Perplexity [{'perplexities': [855673.5], 'mean_perplexity': 855673.5}] 
+
+ 
+Ground Truth: The Rev. Robert Schuller, 88, had been diagnosed with esophageal cancer in 2013 .
+His TV show, "Hour of Power," was enormously popular in the 1970s and 1980s . 
+Greedy Search: The Rev. Robert H. Schuller was diagnosed with esophageal cancer in August 2013. He was also the founder of Crystal Cathedral megachurch. His confident, breezy version of Christianity drew hordes of seekers. But his family was beset by a succession of scandals. 
+Beam Search: The Rev. Robert H. Schuller was diagnosed with esophageal cancer in August 2013. He was the founder of the television ministry "Hour of Power" He sold a softer, gentler message, which borrowed heavily from the father of feel-good gospel, Norman Vincent Peale. 
+Top-K Sampling: The Rev. Robert H. Schuller was diagnosed with esophageal cancer in August 2013. He was the founder of "Hour of Power" and the Crystal Cathedral megachurch. His confident, breezy version of Christianity drew hordes of seekers and lapsed Christians. "He was a master at that," a Christian thought professor says. 
+Top-P Sampling: The Rev. Robert H. Schuller was diagnosed with esophageal cancer in August 2013. He was also the founder of Crystal Cathedral megachurch in California. His confident, breezy version of Christianity drew hordes of seekers and lapsed Christians. The church filed for bankruptcy in 2010, citing debts of more than $43 million. 
+Meteor Score: [[{'meteor': 0.37003849727864063}], [{'meteor': 0.5114584070438624}], [{'meteor': 0.443001443001443}], [{'meteor': 0.37565940214205784}]] 
+Bert Score: [{'precision': [0.5330759882926941, 0.5826903581619263, 0.5354318618774414, 0.5010083317756653], 'recall': [0.585163950920105, 0.6633038520812988, 0.6604118347167969, 0.5962485074996948], 'f1': [0.5579068660736084, 0.6203893423080444, 0.5913909077644348, 0.5444949865341187], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.40579710144927533, 0.4285714285714286, 0.4415584415584416, 0.4102564102564103], 'rouge2': [0.17910447761194032, 0.23529411764705882, 0.21333333333333332, 0.15789473684210525], 'rougeL': [0.37681159420289856, 0.4, 0.3896103896103896, 0.3333333333333333], 'rougeLsum': [0.37681159420289856, 0.4, 0.3896103896103896, 0.358974358974359]}] 
+Perplexty: [{'perplexities': [1468296.75, 492217.5625, 555073.1875, 1555844.875], 'mean_perplexity': 1017858.09375}] 
+Ground Perplexity [{'perplexities': [1014520.3125], 'mean_perplexity': 1014520.3125}] 
+
+ 
+Ground Truth: Former GOP representative compares President Obama to Andreas Lubitz .
+Bachmann said with possible Iran deal, Obama will fly "entire nation into the rocks"
+Reaction on social media? She was blasted by Facebook commenters . 
+Greedy Search: Michele Bachmann compared President Obama to the co-pilot of the doomed Germanwings flight. Bachman: "With his Iran deal, Barack Obama is for the 300 million souls of U.S. what Andreas Lubitz was for 150 souls" Many comments posted on her Facebook page blasted the former representative. 
+Beam Search: Michele Bachmann compared President Obama to the co-pilot of the doomed Germanwings flight. The Minnesota Republican and former representative made the comment in a Facebook post. Many comments posted on her Facebook page blasted the former rep. She is no stranger to voicing her opinion on the President's dealing with Iran. 
+Top-K Sampling: Michele Bachmann compared President Obama to the co-pilot of the doomed Germanwings flight. "With his Iran deal, Barack Obama is for the 300 million souls... a deranged pilot flying his entire nation into the rocks," she wrote in a Facebook comment. The former representative from Minnesota is no stranger to voicing her opinion on Iran. 
+Top-P Sampling: Michele Bachmann compares President Obama to the co-pilot of the doomed Germanwings flight. "With his Iran deal, Barack Obama is for the 300 million souls of QUESTIONABLE," she wrote in a Facebook comment. Many comments posted on her Facebook page blasted the former representative. 
+Meteor Score: [[{'meteor': 0.46991315136476425}], [{'meteor': 0.22167487684729065}], [{'meteor': 0.46256395963753827}], [{'meteor': 0.3973931992927922}]] 
+Bert Score: [{'precision': [0.5336118340492249, 0.499545693397522, 0.5008895993232727, 0.5203828811645508], 'recall': [0.6069198250770569, 0.5184392929077148, 0.5859286785125732, 0.5652388334274292], 'f1': [0.5679098963737488, 0.508817195892334, 0.5400822162628174, 0.541884183883667], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.41975308641975306, 0.30232558139534876, 0.40449438202247195, 0.41025641025641024], 'rouge2': [0.10126582278481013, 0.04761904761904762, 0.16091954022988506, 0.10526315789473685], 'rougeL': [0.2469135802469136, 0.13953488372093023, 0.3146067415730337, 0.28205128205128205], 'rougeLsum': [0.32098765432098764, 0.18604651162790697, 0.33707865168539325, 0.30769230769230765]}] 
+Perplexty: [{'perplexities': [1169543.5, 372361.15625, 570482.6875, 787568.0], 'mean_perplexity': 724988.8359375}] 
+Ground Perplexity [{'perplexities': [2551888.25], 'mean_perplexity': 2551888.25}] 
+
+ 
+Ground Truth: Father: "I know he went through what he went through"
+Louis Jordan was found on his sailboat, which was listing and in bad shape, rescuer says .
+He appears to be in good shape, physically and mentally . 
+Greedy Search: Louis Jordan, 37, was found by a container ship hundreds of miles from land. He had been at sea for more than two months. His father says he was expecting his son to look different. "He's got a very strong constitution," his father said. 'He wasn't badly sunburned like I thought he probably would be,' he said of his appearance. 
+Beam Search: Louis Jordan, 37, left Conway, South Carolina, to fish in the ocean. A storm capsized his boat and broke his mast, so he couldn't fix the boat right away. He was given water and pea soup to gain some power again, the ship captain said. 
+Top-K Sampling: Louis Jordan, 37, had been drifting on a sailboat for more than two months. He left Conway, South Carolina, to fish in the ocean after a storm capsized his boat. The Coast Guard says they have found no reason to doubt Jordan's incredible story. "He's got a very strong constitution," his father says. 
+Top-P Sampling: Louis Jordan, 37, was lost at sea for more than two months. He left Conway, South Carolina, to fish in the ocean. A storm capsized his boat and broke his mast. The Coast Guard says they have found no reason to doubt Jordan's story. 
+Meteor Score: [[{'meteor': 0.2645287497802004}], [{'meteor': 0.24747005884654627}], [{'meteor': 0.21645021645021642}], [{'meteor': 0.16703786191536749}]] 
+Bert Score: [{'precision': [0.46156296133995056, 0.4050363302230835, 0.43890881538391113, 0.414946049451828], 'recall': [0.49375948309898376, 0.41203320026397705, 0.4696933329105377, 0.4244384467601776], 'f1': [0.47711867094039917, 0.40850481390953064, 0.45377957820892334, 0.41963857412338257], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.2857142857142857, 0.24390243902439024, 0.26373626373626374, 0.24691358024691357], 'rouge2': [0.0625, 0.025, 0.02247191011235955, 0.02531645569620253], 'rougeL': [0.1836734693877551, 0.14634146341463414, 0.15384615384615383, 0.17283950617283952], 'rougeLsum': [0.2653061224489796, 0.24390243902439024, 0.1978021978021978, 0.22222222222222224]}] 
+Perplexty: [{'perplexities': [103219.578125, 245242.484375, 106223.1640625, 192189.265625], 'mean_perplexity': 161718.623046875}] 
+Ground Perplexity [{'perplexities': [281478.0], 'mean_perplexity': 281478.0}] 
+
+ 
+Ground Truth: Richard Klass: Iran framework agreement on nukes is strong, but opponents will cast doubts on this and try to obscure its facts .
+He says the deal would cut uranium stockpile, centrifuges, implement rigorous inspections; it should be judged on merits, not disinformation . 
+Greedy Search: U.S. and its negotiating partners reached a strong framework agreement with Iran on nuclear program. Peter Bergen: The debate that has already begun will likely result in more heat than light. He says critics are making dubious assumptions and doubtful assertions. Bergin: Iran denies having a nuclear weapons program, and U.N. intelligence says it has not yet. 
+Beam Search: The U.S. and its negotiating partners reached a very strong framework agreement with Iran. Peter Bergen: The debate that has already begun will likely result in more heat than light. He says critics are making dubious assumptions and doubtful assertions about the deal. Berner: If the agreement is rejected by Congress, it could result. in an unraveling of the sanctions on Iran and threaten NATO cohesion in other areas. 
+Top-K Sampling: U.S. and its negotiating partners reached a strong framework agreement with Iran. Peter Bergen: The debate that has already begun will likely result in more heat than light. He says critics of the deal are making dubious assumptions and doubtful assertions. BerGen: If the agreement is rejected by Congress, it could threaten NATO cohesion in other areas. 
+Top-P Sampling: U.S. and its negotiating partners reached a very strong framework agreement with Iran. Peter Bergen: The debate that has already begun will likely result in more heat than light. He says the objective has always been to structure an agreement so that Iran could not covertly develop a nuclear arsenal. 
+Meteor Score: [[{'meteor': 0.23726246806859455}], [{'meteor': 0.2168168880455408}], [{'meteor': 0.21249878741498435}], [{'meteor': 0.23232111855158732}]] 
+Bert Score: [{'precision': [0.46468743681907654, 0.43390771746635437, 0.4531227946281433, 0.44219785928726196], 'recall': [0.48061078786849976, 0.4723201394081116, 0.4679536521434784, 0.45022761821746826], 'f1': [0.4725150167942047, 0.4522998631000519, 0.46041885018348694, 0.4461766183376312], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.25742574257425743, 0.25, 0.26, 0.2580645161290323], 'rouge2': [0.04040404040404041, 0.05454545454545454, 0.06122448979591836, 0.06593406593406592], 'rougeL': [0.15841584158415842, 0.1607142857142857, 0.16, 0.15053763440860216], 'rougeLsum': [0.17821782178217824, 0.17857142857142855, 0.18000000000000002, 0.17204301075268816]}] 
+Perplexty: [{'perplexities': [111640.9375, 135339.828125, 104094.9375, 54371.6328125], 'mean_perplexity': 101361.833984375}] 
+Ground Perplexity [{'perplexities': [1228818.25], 'mean_perplexity': 1228818.25}] 
+
+ 
+Ground Truth: Americans paid more for some fruits and vegetables last year because of the drought .
+Tourists will now have to ask for a glass of water at a California restaurant .
+Perhaps the only good thing is another "great" wine grape harvest last year . 
+Greedy Search: California is a breadbasket to the nation, growing more than a third of its vegetables. The drought is affecting other states, too, as well. A strong dollar and drop in oil prices are helping farmers. But the drought could still affect food prices. It's a big reason why California is getting more wine. 
+Beam Search: California is a breadbasket to the nation, growing more than a third of its vegetables. A strong dollar allows producers to import crops that may be withering under the absence of West Coast rain. The 2014 wine grape harvest was a "third of a great decade," the Wine Institute says. 
+Top-K Sampling: California is a breadbasket to the nation, growing more than a third of its vegetables and nearly two-thirds of fruits and nuts. A strong dollar allows producers to import crops that may be withering under the absence of West Coast rain or other misfortunes elsewhere. 
+Top-P Sampling: California is a breadbasket to the nation, growing more than a third of its vegetables and nearly two-thirds of fruits and nuts. A strong dollar allows producers to import crops that may be withering under the absence of West Coast rain or other misfortunes elsewhere in the U.S. 
+Meteor Score: [[{'meteor': 0.19587628865979378}], [{'meteor': 0.23804687500000002}], [{'meteor': 0.19974953556263272}], [{'meteor': 0.19848529799578057}]] 
+Bert Score: [{'precision': [0.4146646559238434, 0.44683724641799927, 0.3947216272354126, 0.39785218238830566], 'recall': [0.4263204336166382, 0.4555213153362274, 0.3988748788833618, 0.40000367164611816], 'f1': [0.4204117953777313, 0.451137512922287, 0.3967873752117157, 0.3989250063896179], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.2708333333333333, 0.32608695652173914, 0.29545454545454547, 0.2826086956521739], 'rouge2': [0.02127659574468085, 0.04444444444444444, 0.023255813953488372, 0.02222222222222222], 'rougeL': [0.1875, 0.1956521739130435, 0.11363636363636362, 0.13043478260869565], 'rougeLsum': [0.25, 0.2608695652173913, 0.20454545454545456, 0.21739130434782608]}] 
+Perplexty: [{'perplexities': [416244.375, 655156.625, 1416734.5, 1000106.0625], 'mean_perplexity': 872060.390625}] 
+Ground Perplexity [{'perplexities': [308846.65625], 'mean_perplexity': 308846.65625}] 
+
+ 
+Ground Truth: The FBI cites social media messages sent by Keonna Thomas, 30 .
+She's accused of trying to travel overseas to join ISIS .
+Thomas is one of three women facing federal terror charges this week . 
+Greedy Search: Keonna Thomas, 30, is charged with trying to travel overseas to fight for ISIS. She's one of three women arrested this week on terror charges. Two New York women were also taken into custody. In the past 18 months, the Justice Department's National Security Division has prosecuted or is prosecuting more than 30 cases of people attempting to join or provide support to terrorist groups. 
+Beam Search: Keonna Thomas, 30, is charged with trying to travel overseas to fight for ISIS. She's one of three women arrested this week on terror charges. Two New York women were also taken into custody. In the past 18 months, the Justice Department has prosecuted or is prosecuting more than 30 cases of people attempting to join or provide support to terrorist groups. 
+Top-K Sampling: Keonna Thomas, 30, is charged with trying to travel overseas to fight for ISIS. She's one of three women arrested this week on terror charges. Two New York women were also taken into custody. In the past 18 months, the Justice Department's National Security Division has prosecuted or is prosecuting more than 30 cases of people attempting to join or provide support to terrorist groups. 
+Top-P Sampling: Keonna Thomas, 30, is one of three women arrested this week on terror charges. She's charged with knowingly attempting to provide material support and resources to a designated foreign terrorist organization. Two New York women were also taken into custody on Thursday. Of those cases, 18 allegedly involve support to ISIS. 
+Meteor Score: [[{'meteor': 0.4459263239732919}], [{'meteor': 0.47840931392355385}], [{'meteor': 0.4459263239732919}], [{'meteor': 0.4118955918332713}]] 
+Bert Score: [{'precision': [0.5811491012573242, 0.5933578014373779, 0.5811491012573242, 0.5968348383903503], 'recall': [0.6968294382095337, 0.6963124871253967, 0.6968294382095337, 0.6476520299911499], 'f1': [0.6337536573410034, 0.6407257318496704, 0.6337536573410034, 0.6212059259414673], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.45544554455445535, 0.4742268041237113, 0.45544554455445535, 0.41860465116279066], 'rouge2': [0.26262626262626265, 0.27368421052631575, 0.26262626262626265, 0.21428571428571427], 'rougeL': [0.29702970297029707, 0.3092783505154639, 0.29702970297029707, 0.23255813953488372], 'rougeLsum': [0.31683168316831684, 0.32989690721649484, 0.31683168316831684, 0.3488372093023256]}] 
+Perplexty: [{'perplexities': [4139169.75, 4315984.0, 4139169.75, 17868932.0], 'mean_perplexity': 7615813.875}] 
+Ground Perplexity [{'perplexities': [1199927.0], 'mean_perplexity': 1199927.0}] 
+
+ 
+Ground Truth: Iranian sports official: The ban will be lifted for some events in the coming year .
+But he says "families are not interested in attending" some sports matches . 
+Greedy Search: Iranian sports official says women will be allowed to attend some sports events. The ban was imposed after the Islamic Revolution in 1979. FIFA President Sepp Blatter called on Iran to end its "intolerable" ban on women attending soccer matches. Iran had been in the running to host the 2019 edition of soccer's Asian Cup. 
+Beam Search: Women have been barred from attending most sports events involving men in Iran. But a top sports official says the ban will be lifted for some events in the next year. It isn't clear exactly which games women will able to attend. The Iranian government has come under pressure from international sports officials over the restrictions. 
+Top-K Sampling: Iranian sports official says women will be allowed to attend some sports events. The ban was imposed after the Islamic Revolution in 1979. FIFA President Sepp Blatter called on Iran last month to end its "intolerable" ban on women attending soccer matches, saying the situation "cannot continue" 
+Top-P Sampling: Women have been barred from attending most sports events involving men in Iran. A top Iranian sports official says that the ban will be lifted for some events. But it isn't clear exactly which games women will now be able to attend. The Iranian government has come under pressure from international sports officials. 
+Meteor Score: [[{'meteor': 0.4251428571428571}], [{'meteor': 0.4273425844798598}], [{'meteor': 0.4338192419825073}], [{'meteor': 0.4005419075144509}]] 
+Bert Score: [{'precision': [0.4730471968650818, 0.543745219707489, 0.4963390827178955, 0.531291663646698], 'recall': [0.5908311009407043, 0.6554103493690491, 0.5886905789375305, 0.6078810691833496], 'f1': [0.5254191160202026, 0.594378650188446, 0.5385846495628357, 0.5670116543769836], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.3855421686746988, 0.4523809523809524, 0.40540540540540543, 0.4197530864197531], 'rouge2': [0.14814814814814817, 0.24390243902439027, 0.13888888888888887, 0.2278481012658228], 'rougeL': [0.2650602409638554, 0.3333333333333333, 0.29729729729729726, 0.3209876543209876], 'rougeLsum': [0.3132530120481928, 0.40476190476190477, 0.32432432432432434, 0.345679012345679]}] 
+Perplexty: [{'perplexities': [164458.75, 301595.875, 150040.59375, 542764.875], 'mean_perplexity': 289715.0234375}] 
+Ground Perplexity [{'perplexities': [220774.125], 'mean_perplexity': 220774.125}] 
+
+ 
+Ground Truth: Going online has become the path of least resistance if you want to make yourself heard .
+But where there is the restrictive rule of law, journalists are vulnerable to the anger of officialdom .
+From China to Malaysia, journalists and bloggers have been jailed -- even killed . 
+Greedy Search: Online activity has emerged as the alternative to traditional mainstream media in authoritarian countries. But it still brings resistance, some of it legal, and some, like the arrest of a video blogger in Singapore, brings legal and financial pressure. The biggest jailer of journalists in the world is China, where a majority of 44 people behind bars at the end of 2014 were bloggers. 
+Beam Search: Online activity has emerged as the alternative to traditional mainstream media in Asia. But it still brings resistance, some of it legal, others deadly, says Andrew Hammond. Hammond: Lack of access to print and broadcast media is driving force leading disaffected voices to post online. Jailing journalists is one thing, but watching them being killed and doing little about it is another, he says. 
+Top-K Sampling: Online activity has emerged as the alternative to traditional mainstream media in authoritarian countries. Lack of access to print and broadcast media is driving force leading disaffected voices to post online, says Frida Ghitis. But she says it still brings resistance, some of it legal, others deadly. Since 1992, 11% of journalists killed have died for their work online. 
+Top-P Sampling: Online activity has emerged as the alternative to traditional mainstream media in authoritarian countries. Going online has become the path of least resistance if you want to make yourself heard, says Peter Bergen. But it still brings resistance, some of it legal and others deadly, he says. By far the biggest jailer of journalists in the world is China, where a majority of 44 people behind bars at the end of 2014 were bloggers. 
+Meteor Score: [[{'meteor': 0.24361069281129516}], [{'meteor': 0.22514071294559101}], [{'meteor': 0.26453130929791274}], [{'meteor': 0.4879468368841502}]] 
+Bert Score: [{'precision': [0.4561924636363983, 0.38998857140541077, 0.410786896944046, 0.5274862051010132], 'recall': [0.4747128188610077, 0.4314396381378174, 0.4460720419883728, 0.6130654811859131], 'f1': [0.46526840329170227, 0.4096682369709015, 0.427702933549881, 0.5670651793479919], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.3119266055045872, 0.25688073394495414, 0.3076923076923077, 0.47058823529411764], 'rouge2': [0.0, 0.0, 0.0, 0.2564102564102564], 'rougeL': [0.20183486238532108, 0.1834862385321101, 0.19230769230769232, 0.3865546218487395], 'rougeLsum': [0.22018348623853212, 0.1834862385321101, 0.21153846153846156, 0.40336134453781514]}] 
+Perplexty: [{'perplexities': [45748.44921875, 137797.15625, 128485.4296875, 45127.625], 'mean_perplexity': 89289.6650390625}] 
+Ground Perplexity [{'perplexities': [125858.703125], 'mean_perplexity': 125858.703125}] 
+
+ 
+Ground Truth: The singer had been off the scene for a while .
+She says she was bedridden for months .
+Lavigne was sometimes too weak to shower . 
+Greedy Search: Avril Lavigne says she was bedridden for five months after contracting Lyme disease. "I felt like I couldn't breathe, I can't talk, and I cannot move," she tells People magazine. Lavigna is releasing a new single this month to support the 2015 Special Olympics. 
+Beam Search: Avril Lavigne says she was bedridden for five months after contracting Lyme disease. "I thought I was dying," she told People magazine. The singer is releasing a new single this month to support the 2015 Special Olympics. She says being ill was a "wake-up call" that has given her new perspective. 
+Top-K Sampling: Avril Lavigne says she was bedridden for five months after contracting Lyme disease. "It felt like having all your life sucked out of you," she tells People magazine. The singer is releasing a new single this month to support the 2015 Special Olympics. She says being ill was a "wake-up call" that has given her new perspective. 
+Top-P Sampling: Avril Lavigne says she was bedridden for five months after contracting Lyme disease. "I thought I was dying," the singer tells People magazine. The singer is releasing a new single this month to support the 2015 Special Olympics. After her direct message about her health went viral, Lavagree was inundated with concern. 
+Meteor Score: [[{'meteor': 0.2817251061498424}], [{'meteor': 0.36834652323363826}], [{'meteor': 0.39652411507149987}], [{'meteor': 0.38643512788778883}]] 
+Bert Score: [{'precision': [0.44759654998779297, 0.43816235661506653, 0.42418918013572693, 0.45020973682403564], 'recall': [0.582319438457489, 0.5979028344154358, 0.6004472970962524, 0.5828174948692322], 'f1': [0.5061464309692383, 0.5057181715965271, 0.4971582591533661, 0.5080023407936096], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.3142857142857143, 0.3684210526315789, 0.34146341463414637, 0.34210526315789475], 'rouge2': [0.11764705882352941, 0.16216216216216217, 0.15, 0.13513513513513514], 'rougeL': [0.2, 0.21052631578947367, 0.17073170731707318, 0.21052631578947367], 'rougeLsum': [0.2571428571428572, 0.34210526315789475, 0.3170731707317073, 0.34210526315789475]}] 
+Perplexty: [{'perplexities': [308894.375, 213601.578125, 175766.03125, 429459.4375], 'mean_perplexity': 281930.35546875}] 
+Ground Perplexity [{'perplexities': [1894421.125], 'mean_perplexity': 1894421.125}] 
+
+ 
+Ground Truth: Here are six of CNN's best videos of the week .
+Clips include a look at Mike Tyson's abandoned mansion . 
+Greedy Search: Mike Tyson lived in a gaudy, abandoned mansion in Ohio in the 1980s and '90s. The home featured an indoor swimming pool, a marble-and-gold Jacuzzi and an entertainment room. A professor of physics at a British university asked 100 people to create a composite with facial features they thought were beautiful. 
+Beam Search: Former heavyweight champ Mike Tyson lived in a gaudy, abandoned mansion in Ohio. CNN's Karl Penhaul spoke to a shepherd who witnessed the final seconds of Germanwings Flight 9525. A professor of physics at a British university asked 100 people to create a composite with facial features. 
+Top-K Sampling: Former heavyweight champ Mike Tyson lived in a gaudy, abandoned mansion in Ohio. CNN's Karl Penhaul spoke to a shepherd who witnessed the final seconds of Germanwings Flight 9525. A professor of physics asked 100 people to create a composite with facial features they thought were beautiful. 
+Top-P Sampling: Mike Tyson lived in a gaudy, abandoned mansion in Ohio in the 1980s and '90s. The house featured an indoor swimming pool, a marble-and-gold Jacuzzi and an entertainment room. CNN's Karl Penhaul spoke to a shepherd who witnessed the final seconds of Germanwings Flight 9525. 
+Meteor Score: [[{'meteor': 0.28288973384030414}], [{'meteor': 0.3498891960430422}], [{'meteor': 0.3292578292578292}], [{'meteor': 0.3095970273560125}]] 
+Bert Score: [{'precision': [0.3669949769973755, 0.3874305188655853, 0.3831835389137268, 0.3845941126346588], 'recall': [0.47124922275543213, 0.516878068447113, 0.5246948599815369, 0.5183591842651367], 'f1': [0.41263893246650696, 0.44288939237594604, 0.44291049242019653, 0.4415685832500458], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.21621621621621623, 0.31884057971014496, 0.28985507246376807, 0.26086956521739124], 'rouge2': [0.05555555555555555, 0.08955223880597013, 0.08955223880597013, 0.08955223880597013], 'rougeL': [0.10810810810810811, 0.14492753623188404, 0.11594202898550725, 0.11594202898550725], 'rougeLsum': [0.13513513513513511, 0.2028985507246377, 0.2028985507246377, 0.2028985507246377]}] 
+Perplexty: [{'perplexities': [512680.1875, 1603592.375, 1336265.875, 1291667.375], 'mean_perplexity': 1186051.453125}] 
+Ground Perplexity [{'perplexities': [5451946.0], 'mean_perplexity': 5451946.0}] 
+
+ 
+Ground Truth: Netanyahu says third option is "standing firm" to get a better deal .
+Political sparring continues in U.S. over the deal with Iran . 
+Greedy Search: Israeli Prime Minister Benjamin Netanyahu says he sees better options than "this bad deal or war" His comments come as Democrats and Republicans spar over the framework announced last week. One Senate Democrat said Netanyahu needs to "contain himself" And a top Republican said almost any of Obama's successors as president "could do better" 
+Beam Search: Israeli Prime Minister Benjamin Netanyahu says he sees better options than "this bad deal or war" "I think there's a third alternative, and that is standing firm, ratcheting up the pressure until you get a better deal," he says. His comments come as Democrats and Republicans spar over the framework announced last week. 
+Top-K Sampling: Israeli Prime Minister Benjamin Netanyahu says he sees better options than "this bad deal or war" "I think there's a third alternative, and that is standing firm, ratcheting up the pressure until you get a better deal," he says. His comments come as Democrats and Republicans spar over the framework announced last week. 
+Top-P Sampling: Israeli Prime Minister Benjamin Netanyahu criticized the deal six world powers struck to thwart Iran's nuclear ambitions. "I think there's a third alternative, and that is standing firm, ratcheting up the pressure until you get a better deal," he said. His comments come as Democrats and Republicans spar over the framework announced last week. 
+Meteor Score: [[{'meteor': 0.2836286541643684}], [{'meteor': 0.48233955436171494}], [{'meteor': 0.48233955436171494}], [{'meteor': 0.4993288590604027}]] 
+Bert Score: [{'precision': [0.44254040718078613, 0.47645774483680725, 0.47645774483680725, 0.4624272584915161], 'recall': [0.5541946887969971, 0.6439363956451416, 0.6439363956451416, 0.6517720222473145], 'f1': [0.49211379885673523, 0.5476795434951782, 0.5476795434951782, 0.5410112142562866], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.23076923076923078, 0.36363636363636365, 0.36363636363636365, 0.379746835443038], 'rouge2': [0.05263157894736842, 0.18666666666666665, 0.18666666666666665, 0.18181818181818182], 'rougeL': [0.15384615384615385, 0.3116883116883117, 0.3116883116883117, 0.27848101265822783], 'rougeLsum': [0.1794871794871795, 0.33766233766233766, 0.33766233766233766, 0.30379746835443033]}] 
+Perplexty: [{'perplexities': [187602.96875, 99745.5625, 99745.5625, 222470.671875], 'mean_perplexity': 152391.19140625}] 
+Ground Perplexity [{'perplexities': [77957.703125], 'mean_perplexity': 77957.703125}] 
+
+ 
+Ground Truth: Indiana town's Memories Pizza is shut down after online threat .
+Its owners say they'd refuse to cater a same-sex couple's wedding . 
+Greedy Search: Memories Pizza in Indiana refused to cater a same-sex couple's wedding. Critics said the new law would allow businesses to discriminate against gays and lesbians. Supporters rallied to a GoFundMe page in support of Memories Pizza. By the end of the week, they had donated more than $842,000 for the business. 
+Beam Search: Memories Pizza in Walkerton, Indiana, refused to cater a same-sex couple's wedding. Critics said the new law would allow businesses to discriminate against gays and lesbians. Supporters rallied to a GoFundMe page in support of the pizzeria. By the end of Friday, more than $842,000 had been raised. 
+Top-K Sampling: Memories Pizza in Walkerton, Indiana, refused to cater a same-sex couple's wedding. Critics said the new law would allow businesses to discriminate against gays and lesbians. Supporters rallied to a GoFundMe page in support of Memories Pizza. By the end of the week, more than $842,000 had been raised. 
+Top-P Sampling: Family-run Memories Pizza in Walkerton, Indiana, refused to cater a same-sex couple's wedding. Critics said the new law would allow businesses to discriminate against gays and lesbians. Supporters rallied to a GoFundMe page and raised more than $842,000 for the pizzeria. 
+Meteor Score: [[{'meteor': 0.4124048706240488}], [{'meteor': 0.3934357248053861}], [{'meteor': 0.39208834218618943}], [{'meteor': 0.4059921841076856}]] 
+Bert Score: [{'precision': [0.4557405710220337, 0.4419627785682678, 0.4471851587295532, 0.47364160418510437], 'recall': [0.6315072178840637, 0.637887716293335, 0.6284525394439697, 0.6464483737945557], 'f1': [0.5294165015220642, 0.5221512913703918, 0.5225451588630676, 0.546714723110199], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.3037974683544304, 0.2894736842105263, 0.2857142857142857, 0.3142857142857143], 'rouge2': [0.20779220779220778, 0.21621621621621623, 0.21333333333333332, 0.23529411764705885], 'rougeL': [0.2531645569620253, 0.2631578947368421, 0.25974025974025977, 0.2857142857142857], 'rougeLsum': [0.27848101265822783, 0.2368421052631579, 0.2857142857142857, 0.2571428571428571]}] 
+Perplexty: [{'perplexities': [162221.71875, 167802.234375, 147242.546875, 12609683.0], 'mean_perplexity': 3271737.375}] 
+Ground Perplexity [{'perplexities': [1105533.125], 'mean_perplexity': 1105533.125}] 
+
+ 
+Ground Truth: Authorities in the Indian city of Malegaon have asked residents to take a 'mugshot' of their cattle .
+Cows are revered by the majority Hindu population, and many parts of the country have laws banning the slaughter of cattle .
+Officials in Malegaon believe this is the best way to solve cow slaughter cases and enforce the law . 
+Greedy Search: Police in Malegaon, India, are requiring identity cards for residents of the city. The order follows a recent state-wide ban on the sale and consumption of beef. Cows are considered holy and revered by that state's majority Hindu population. So far over 100 owners have complied with the police order. 
+Beam Search: Police in Malegaon, in the western state of Maharashtra, are requiring identity cards for an unusual group of residents: Cattle. Following a recent state-wide ban on the sale and consumption of beef, authorities have asked residents to take a'mugshot' of their cattle and submit it to the police. 
+Top-K Sampling: Police in Malegaon, in the western state of Maharashtra, are requiring identity cards for an unusual group of residents: Cattle. Following a recent state-wide ban on the sale and consumption of beef, authorities have asked residents to take a'mugshot' of their cattle and submit it to the police. 
+Top-P Sampling: Police in Malegaon, in the western state of Maharashtra, are requiring identity cards for an unusual group of residents: Cattle. Following a recent state-wide ban on the sale and consumption of beef, authorities have asked residents to take a'mugshot' of their cattle and submit it to the police. 
+Meteor Score: [[{'meteor': 0.3453263225730857}], [{'meteor': 0.30712806419352556}], [{'meteor': 0.30712806419352556}], [{'meteor': 0.30712806419352556}]] 
+Bert Score: [{'precision': [0.5707958936691284, 0.5870831608772278, 0.5870831608772278, 0.5870831608772278], 'recall': [0.5660589933395386, 0.5715258121490479, 0.5715258121490479, 0.5715258121490479], 'f1': [0.5684175491333008, 0.579200029373169, 0.579200029373169, 0.579200029373169], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.38888888888888895, 0.47169811320754723, 0.47169811320754723, 0.47169811320754723], 'rouge2': [0.11320754716981131, 0.21153846153846156, 0.21153846153846156, 0.21153846153846156], 'rougeL': [0.2592592592592593, 0.30188679245283023, 0.30188679245283023, 0.30188679245283023], 'rougeLsum': [0.3148148148148148, 0.4528301886792452, 0.4528301886792452, 0.4528301886792452]}] 
+Perplexty: [{'perplexities': [231149.859375, 228301.15625, 228301.15625, 228301.15625], 'mean_perplexity': 229013.33203125}] 
+Ground Perplexity [{'perplexities': [8157620.0], 'mean_perplexity': 8157620.0}] 
+
+ 
+Ground Truth: A South Carolina man says he spent 66 days alone at sea before being rescued .
+Other sole survivor stories include a Japanese man washed away by a tsunami .
+An El Salvador man says he drifted from Mexico to Marshall Islands over a year . 
+Greedy Search: It's hard to swallow the idea of a single person being stranded at sea for days, weeks, if not months. Miracles do happen, though, and not just in Hollywood. Louis Jordan says he used laundry to trap and scoop up fish, rigged a makeshift mast and sail. Jose Salvador Alvarenga says his journey began in Paredon Viejo, Mexico's Pacific coast. 
+Beam Search: It's hard to swallow the idea of a single person being stranded at sea for days, weeks, if not months. Miracles do happen, though, and not just in Hollywood. Louis Jordan says he used laundry to trap and scoop up fish. Jose Salvador Alvarenga says his journey began in Paredon Viejo, Mexico. 
+Top-K Sampling: It's hard to swallow the idea of a single person being stranded at sea for days, weeks, if not months. Miracles do happen, though, and not just in Hollywood. Louis Jordan says that he set off on his 35-foot sailboat from South Carolina in late January. 
+Top-P Sampling: It's hard to swallow the idea of a single person being stranded at sea for days, weeks, if not months. Miracles do happen, though, and not just in Hollywood. Louis Jordan says he set off on his 35-foot sailboat from South Carolina in late January. 
+Meteor Score: [[{'meteor': 0.18317329675354374}], [{'meteor': 0.1763741210770022}], [{'meteor': 0.21619183285849955}], [{'meteor': 0.23897216274089939}]] 
+Bert Score: [{'precision': [0.405012309551239, 0.4097774922847748, 0.4249810576438904, 0.4253285229206085], 'recall': [0.48831331729888916, 0.4849880039691925, 0.48040130734443665, 0.48388245701789856], 'f1': [0.44277897477149963, 0.4442218244075775, 0.45099496841430664, 0.452720046043396], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.22857142857142856, 0.22916666666666669, 0.24175824175824176, 0.24444444444444444], 'rouge2': [0.038834951456310676, 0.0425531914893617, 0.04494382022471909, 0.06818181818181818], 'rougeL': [0.13333333333333333, 0.125, 0.13186813186813184, 0.13333333333333333], 'rougeLsum': [0.11428571428571428, 0.125, 0.13186813186813184, 0.13333333333333333]}] 
+Perplexty: [{'perplexities': [1825434.875, 1675360.875, 1678950.125, 1861995.875], 'mean_perplexity': 1760435.4375}] 
+Ground Perplexity [{'perplexities': [345852.9375], 'mean_perplexity': 345852.9375}] 
+
+ 
+Ground Truth: The Large Hadron Collider (LHC) begins again after a two-year shutdown .
+The restart was delayed in March . 
+Greedy Search: The Large Hadron Collider (LHC) is the largest particle accelerator in the world. The purpose of the project is to recreate the conditions that existed moments after the "Big Bang" Scientists hope to uncover how the universe evolved. At near light-speed, a proton in LHC makes 11,245 circuits per second. 
+Beam Search: The Large Hadron Collider (LHC), a particle accelerator and the largest machine in the world, is ready for action following a two-year shutdown. The purpose of the lengthy project is to recreate the conditions that existed moments after the "Big Bang" Scientists hope to uncover how the universe evolved. 
+Top-K Sampling: The Large Hadron Collider (LHC) is a particle accelerator and the largest machine in the world. The purpose of the lengthy project is to recreate the conditions that existed moments after the "Big Bang" The LHC generates up to 600 million particles per second, with a beam circulating for 10 hours, traveling more than 6 billion miles (more than 10 billion kilometers) 
+Top-P Sampling: The Large Hadron Collider (LHC), a particle accelerator and the largest machine in the world, is ready for action following a two-year shutdown. The purpose of the lengthy project is to recreate the conditions that existed moments after the "Big Bang" Scientists hope to uncover how the universe evolved. 
+Meteor Score: [[{'meteor': 0.40653522746328724}], [{'meteor': 0.5787714543812105}], [{'meteor': 0.327991452991453}], [{'meteor': 0.5787714543812105}]] 
+Bert Score: [{'precision': [0.4521636664867401, 0.5135204792022705, 0.4246048033237457, 0.5135204792022705], 'recall': [0.592665433883667, 0.7054969668388367, 0.5899291634559631, 0.7054969668388367], 'f1': [0.5129676461219788, 0.5943920016288757, 0.4937966763973236, 0.5943920016288757], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.2571428571428571, 0.3529411764705882, 0.22500000000000003, 0.3529411764705882], 'rouge2': [0.11764705882352941, 0.24242424242424243, 0.10256410256410256, 0.24242424242424243], 'rougeL': [0.2285714285714286, 0.29411764705882354, 0.19999999999999998, 0.29411764705882354], 'rougeLsum': [0.2571428571428571, 0.3235294117647059, 0.22500000000000003, 0.3235294117647059]}] 
+Perplexty: [{'perplexities': [214633.390625, 242400.8125, 375431.28125, 242400.8125], 'mean_perplexity': 268716.57421875}] 
+Ground Perplexity [{'perplexities': [343136.9375], 'mean_perplexity': 343136.9375}] 
+
+ 
+Ground Truth: FBI agents and a suspected serial robber exchange gunfire in an FBI stakeout .
+Two FBI agents are injured and the suspect is shot during the gunfight . 
+Greedy Search: Kevone Charleston, 36, is suspected of 32 commercial robberies dating to November 2013. He was shot and wounded by FBI agents and task force officers. Two agents were injured in a crash and the suspect was captured. The two agents are fine, an FBI special agent says. 
+Beam Search: Kevone Charleston, 36, is suspected of 32 commercial robberies dating to November 2013. FBI agents and task force officers were following him as he pulled into a CVS. When agents confronted him, Charleston ran, got in his car and traveled about 75 yards. He collided with the first government vehicle, the Taurus, then the second. 
+Top-K Sampling: Kevone Charleston, 36, is suspected of 32 commercial robberies dating to November 2013. He was shot and wounded by FBI agents and task force officers, but his injuries are not life threatening. Two agents were injured in a crash and were treated at an area hospital and released. 
+Top-P Sampling: Kevone Charleston, 36, is suspected of 32 commercial robberies dating to November 2013. He pulled into a CVS pharmacy in Forsyth County, Georgia, early Saturday. When agents confronted him, Charleston ran, got in his car and traveled about 75 yards as agents opened fire. 
+Meteor Score: [[{'meteor': 0.4529003267973856}], [{'meteor': 0.2488193679652063}], [{'meteor': 0.3074576184640523}], [{'meteor': 0.14754098360655737}]] 
+Bert Score: [{'precision': [0.5088549256324768, 0.3571363389492035, 0.4531686007976532, 0.35206088423728943], 'recall': [0.6255309581756592, 0.48266154527664185, 0.5899782180786133, 0.4564068913459778], 'f1': [0.5611926913261414, 0.41051778197288513, 0.5126020908355713, 0.3975001275539398], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.4931506849315068, 0.2716049382716049, 0.3783783783783784, 0.19999999999999998], 'rouge2': [0.16901408450704222, 0.05063291139240506, 0.05555555555555556, 0.0], 'rougeL': [0.273972602739726, 0.19753086419753085, 0.1891891891891892, 0.1142857142857143], 'rougeLsum': [0.3561643835616438, 0.2222222222222222, 0.24324324324324323, 0.0857142857142857]}] 
+Perplexty: [{'perplexities': [940587.625, 414122.46875, 695168.8125, 1382934.25], 'mean_perplexity': 858203.2890625}] 
+Ground Perplexity [{'perplexities': [1694311.125], 'mean_perplexity': 1694311.125}] 
+
+ 
+Ground Truth: The total eclipse will only last 4 minutes and 43 seconds .
+People west of the Mississippi River will have the best view .
+Parts of South America, India, China and Russia also will see the eclipse . 
+Greedy Search: The total lunar eclipse will last nearly five minutes. It will be visible west of the Mississippi River. The eclipse is the third in a series of four in the row. NASA says it will only last four minutes and 43 seconds. Watch it live on NASA TV. 
+Beam Search: The total lunar eclipse will only last four minutes and 43 seconds. People west of the Mississippi River will have the best view. Parts of South America, India, China and Russia also will be able to see the eclipse. It won't be visible in Greenland, Iceland, Europe, Africa or the Middle East. 
+Top-K Sampling: The total lunar eclipse started at 3:16 a.m. Pacific Daylight Time. It will only last four minutes and 43 seconds, which is the shortest one of the century. Parts of South America, India, China and Russia also will be able to see the eclipse. 
+Top-P Sampling: The total lunar eclipse started at 3:16 a.m. Pacific Daylight Time. People west of the Mississippi River will have the best view. Parts of South America, India, China and Russia will also be able to see the eclipse. It won't be visible in Greenland, Iceland, Europe, Africa or the Middle East. 
+Meteor Score: [[{'meteor': 0.5067015774316949}], [{'meteor': 0.8970749407582937}], [{'meteor': 0.768578506097561}], [{'meteor': 0.6526847350059383}]] 
+Bert Score: [{'precision': [0.5809013843536377, 0.7522860765457153, 0.6170815229415894, 0.6389784812927246], 'recall': [0.5845611095428467, 0.8997722864151001, 0.7615573406219482, 0.7859420776367188], 'f1': [0.5827255249023438, 0.819445788860321, 0.681749165058136, 0.704881489276886], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.5060240963855421, 0.7727272727272727, 0.6419753086419753, 0.6067415730337079], 'rouge2': [0.2962962962962963, 0.6976744186046512, 0.4556962025316456, 0.48275862068965514], 'rougeL': [0.3373493975903615, 0.7727272727272727, 0.617283950617284, 0.5842696629213483], 'rougeLsum': [0.4578313253012048, 0.7727272727272727, 0.6419753086419753, 0.6067415730337079]}] 
+Perplexty: [{'perplexities': [190437.03125, 164263.140625, 165811.0625, 255028.359375], 'mean_perplexity': 193884.8984375}] 
+Ground Perplexity [{'perplexities': [609783.3125], 'mean_perplexity': 609783.3125}] 
+
+ 
+Ground Truth: Terrorist group Al-Shabaab has attacked a Kenyan college, killing and taking hostages .
+It is a clear indicator the security situation in East Africa is deteriorating, says Stefan Wolff .
+More than military action aloe is needed to combat terrorism in the region, he says . 
+Greedy Search: Al-Shabaab has claimed an attack on Garissa University College in eastern Kenya. The attack is another step in the ongoing escalation of the terrorist group's activities. It is a clear indicator that the security situation in East Africa is deteriorating fast, writes Peter Bergen. 
+Beam Search: Somalia-based Al-Shabaab has been behind a string of recent attacks in Kenya. It is predominantly driven by the same radical interpretation of the Koran as al-Qaeda and ISIS. The group employs more opportunistic approaches to shoring up local support. 
+Top-K Sampling: Al-Shabaab has claimed an attack on Garissa University College in eastern Kenya. The attack is another step in the ongoing escalation of the terrorist group's activities. It is a clear indicator that the security situation in East Africa is deteriorating fast, writes Frida Ghitis. But there won't be any lasting solution to the region's problems without a more comprehensive effort, she says. 
+Top-P Sampling: Somalia-based Al-Shabaab has been behind a string of recent attacks in Kenya. It is predominantly driven by the same radical interpretation of the Koran as al-Qaeda and ISIS. But the group employs more opportunistic approaches to shoring up local support. 
+Meteor Score: [[{'meteor': 0.4213907785336356}], [{'meteor': 0.24180149784014526}], [{'meteor': 0.5205643078512396}], [{'meteor': 0.24130190796857465}]] 
+Bert Score: [{'precision': [0.7003573179244995, 0.5055289268493652, 0.6233553290367126, 0.49895626306533813], 'recall': [0.6405026316642761, 0.4586978554725647, 0.6763962507247925, 0.4590413570404053], 'f1': [0.6690940856933594, 0.4809761345386505, 0.6487935781478882, 0.4781672954559326], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.4888888888888889, 0.3023255813953489, 0.49090909090909096, 0.29885057471264365], 'rouge2': [0.3409090909090909, 0.07142857142857142, 0.2962962962962963, 0.07058823529411765], 'rougeL': [0.37777777777777777, 0.20930232558139536, 0.38181818181818183, 0.20689655172413796], 'rougeLsum': [0.4222222222222222, 0.23255813953488372, 0.4, 0.22988505747126436]}] 
+Perplexty: [{'perplexities': [1411258.25, 805575.9375, 1007478.125, 751820.875], 'mean_perplexity': 994033.296875}] 
+Ground Perplexity [{'perplexities': [1026184.5625], 'mean_perplexity': 1026184.5625}] 
+
+ 
+Ground Truth: Easter is a key event in the Christian faith, but where did the Easter Bunny come from?
+Why is the date different every year, and what does it have to do with the moon? 
+Greedy Search: Easter is a cornerstone event in the Christian faith, but it's surrounded by interesting quirks. Unlike Christmas, it doesn't fall on the same day every year but shifts around in spring. And that blood moon we just had -- is it pure coincidence that it fell around Easter? (No.) 
+Beam Search: Easter is a cornerstone event in the Christian faith, but it's surrounded by interesting quirks. Unlike Christmas, it doesn't fall on the same day every year but shifts around in spring. And that blood moon we just had -- is it pure coincidence that it fell around Easter? (No.) 
+Top-K Sampling: Easter is a cornerstone event in the Christian faith, but it's surrounded by interesting quirks. Unlike Christmas, it doesn't fall on the same day every year but shifts around in spring. And that blood moon we just had -- is it pure coincidence that it fell around Easter? (No.) 
+Top-P Sampling: Easter is a cornerstone event in the Christian faith, but it's surrounded by interesting quirks. Unlike Christmas, it doesn't fall on the same day every year but shifts around in spring. And that blood moon we just had -- is it pure coincidence that it fell around Easter? (No.) 
+Meteor Score: [[{'meteor': 0.4361025602345743}], [{'meteor': 0.4361025602345743}], [{'meteor': 0.4361025602345743}], [{'meteor': 0.4361025602345743}]] 
+Bert Score: [{'precision': [0.48902225494384766, 0.48902225494384766, 0.48902225494384766, 0.48902225494384766], 'recall': [0.6007851362228394, 0.6007851362228394, 0.6007851362228394, 0.6007851362228394], 'f1': [0.539172887802124, 0.539172887802124, 0.539172887802124, 0.539172887802124], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.40476190476190477, 0.40476190476190477, 0.40476190476190477, 0.40476190476190477], 'rouge2': [0.1951219512195122, 0.1951219512195122, 0.1951219512195122, 0.1951219512195122], 'rougeL': [0.3333333333333333, 0.3333333333333333, 0.3333333333333333, 0.3333333333333333], 'rougeLsum': [0.38095238095238104, 0.38095238095238104, 0.38095238095238104, 0.38095238095238104]}] 
+Perplexty: [{'perplexities': [97247.90625, 97247.90625, 97247.90625, 97247.90625], 'mean_perplexity': 97247.90625}] 
+Ground Perplexity [{'perplexities': [28417.671875], 'mean_perplexity': 28417.671875}] 
+
+ 
+Ground Truth: In response to lawsuit, NCAA says it doesn't control quality of education for student-athletes .
+But its website emphasizes importance of education, "opportunities to learn"
+Lawsuit claims students didn't get an education because of academic fraud at UNC . 
+Greedy Search: The NCAA says it has no legal responsibility to ensure the academic integrity of courses offered to student-athletes. The NCAA has been repeating for years that the education of athletes is paramount. "It's nonsense. It's double talk," says a former athletic-academic director. 
+Beam Search: The NCAA says it has no legal responsibility "to ensure the academic integrity of the courses offered to student-athletes at its member institutions" "It's nonsense. It's double talk," says Gerald Gurney, a former athletic-academic director who is now president of The Drake Group. 
+Top-K Sampling: The NCAA says it has no legal responsibility "to ensure the academic integrity of the courses offered to student-athletes" "It's nonsense. It's double talk," says Gerald Gurney, a former athletic-academic director. The NCAA's claim that it's hands-off when it comes to athletics seems to be a direct contradiction. 
+Top-P Sampling: The NCAA says it has no legal responsibility "to ensure the academic integrity" of courses offered to student-athletes. "It's nonsense. It's double talk," says Gerald Gurney, a former athletic-academic director. The NCAA's claim that it's hands-off when it comes to athletics seems to be a direct contradiction. 
+Meteor Score: [[{'meteor': 0.22846951483647393}], [{'meteor': 0.19650655021834063}], [{'meteor': 0.19313304721030042}], [{'meteor': 0.19313304721030042}]] 
+Bert Score: [{'precision': [0.5195929408073425, 0.4600973129272461, 0.4808177351951599, 0.48515796661376953], 'recall': [0.4982869029045105, 0.48971468210220337, 0.49436312913894653, 0.48733431100845337], 'f1': [0.5087169408798218, 0.4744442105293274, 0.48749634623527527, 0.48624369502067566], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.27906976744186046, 0.2758620689655172, 0.1894736842105263, 0.19148936170212766], 'rouge2': [0.07142857142857144, 0.07058823529411765, 0.06451612903225808, 0.06521739130434784], 'rougeL': [0.20930232558139536, 0.18390804597701152, 0.14736842105263157, 0.14893617021276598], 'rougeLsum': [0.18604651162790697, 0.2068965517241379, 0.16842105263157894, 0.1702127659574468]}] 
+Perplexty: [{'perplexities': [122200.453125, 131538.015625, 98065.328125, 110564.8515625], 'mean_perplexity': 115592.162109375}] 
+Ground Perplexity [{'perplexities': [594500.5625], 'mean_perplexity': 594500.5625}] 
+
+ 
+Ground Truth: Judge won't allow teen leave hospital before her last chemotherapy treatment .
+Attorneys for the teen are deciding whether to appeal .
+Cassandra C. is now in remission and is no longer opposed to the chemotherapy treatments . 
+Greedy Search: A Connecticut teen who has been forced to have chemotherapy will remain in temporary custody. The 17-year-old is in remission after nearly six months of forced chemo treatments. A judge denied a motion to let the teen, identified in court documents as "Cassandra C.," go home. 
+Beam Search: Cassandra C. is in remission after nearly six months of forced chemo treatments. A Connecticut juvenile court judge issued a written decision denying a motion to let the teen go home. The 17-year-old is said to spend her days reading, watching TV and drawing. 
+Top-K Sampling: A Connecticut teen has been forced to have chemotherapy to treat Hodgkin lymphoma. A judge denied a motion to let the teen, identified in court documents as "Cassandra C.," go home. The 17-year-old is in remission after nearly six months of forced chemo treatments. 
+Top-P Sampling: Cassandra C. is in remission after nearly six months of forced chemo treatments. She started chemotherapy in November but ran away after two days. In December, a judge ordered the young woman to be under the custody of the Connecticut Department of Children and Families.Trustee Joette Katz: "We understand how difficult this has been for Cassandra and her family" 
+Meteor Score: [[{'meteor': 0.27035736814678707}], [{'meteor': 0.37293233082706767}], [{'meteor': 0.3563553424015655}], [{'meteor': 0.1923076923076923}]] 
+Bert Score: [{'precision': [0.519076406955719, 0.5385580062866211, 0.5137953758239746, 0.4689179062843323], 'recall': [0.5828753113746643, 0.6189086437225342, 0.5852108001708984, 0.5590092539787292], 'f1': [0.5491290092468262, 0.5759443640708923, 0.5471827387809753, 0.510015606880188], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.3333333333333333, 0.3658536585365854, 0.34146341463414637, 0.2916666666666667], 'rouge2': [0.07317073170731707, 0.1, 0.075, 0.06382978723404256], 'rougeL': [0.1904761904761905, 0.17073170731707318, 0.24390243902439024, 0.14583333333333334], 'rougeLsum': [0.21428571428571427, 0.2926829268292683, 0.24390243902439024, 0.20833333333333334]}] 
+Perplexty: [{'perplexities': [177273.359375, 308789.8125, 407466.5625, 63834.54296875], 'mean_perplexity': 239341.0693359375}] 
+Ground Perplexity [{'perplexities': [3503643.5], 'mean_perplexity': 3503643.5}] 
+
+ 
+Ground Truth: The song rules the chart for 13th week .
+It passes Robin Thicke's "Blurred Lines"
+Song three weeks from potentially tying "One Sweet Day" for record . 
+Greedy Search: "Uptown Funk!" is the longest-leading Billboard Hot 100 of the 2010s. It's also just the 10th single in the Hot100's entire history to spend at least 13 weeks at No. 1. "Funk" is now just three weeks from potentially tying "One Sweet Day" for the record. 
+Beam Search: "Uptown Funk!," featuring Bruno Mars, is the longest-leading Billboard Hot 100 of the 2010s. It's also just the 10th single in the chart's entire history to spend at least 13 weeks at No. 1. "Funk" is now just three weeks from potentially tying "One Sweet Day" for the record. 
+Top-K Sampling: "Uptown Funk!" is the longest-leading Billboard Hot 100 of the 2010s. It's also just the 10th single to spend at least 13 weeks at No. 1. "Funk" is just three weeks from potentially tying "One Sweet Day" for the record. 
+Top-P Sampling: "Uptown Funk!" is the longest-leading Billboard Hot 100 of the 2010s. It's also just the 10th single in the Hot Spectacular's history to spend at least 13 weeks at No. 1. "Funk" is just three weeks from potentially tying "One Sweet Day" for the record. 
+Meteor Score: [[{'meteor': 0.5943804034582132}], [{'meteor': 0.6070093658704245}], [{'meteor': 0.6066176470588237}], [{'meteor': 0.5960982658959537}]] 
+Bert Score: [{'precision': [0.5435959696769714, 0.5420145988464355, 0.5668099522590637, 0.5271293520927429], 'recall': [0.6237536668777466, 0.6399297118186951, 0.6244510412216187, 0.6253634691238403], 'f1': [0.5809227824211121, 0.5869163870811462, 0.5942359566688538, 0.5720599293708801], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.3733333333333333, 0.3846153846153846, 0.41176470588235287, 0.3783783783783784], 'rouge2': [0.2191780821917808, 0.2368421052631579, 0.24242424242424243, 0.22222222222222224], 'rougeL': [0.3733333333333333, 0.3589743589743589, 0.41176470588235287, 0.3783783783783784], 'rougeLsum': [0.3733333333333333, 0.3846153846153846, 0.41176470588235287, 0.3783783783783784]}] 
+Perplexty: [{'perplexities': [134395.625, 93220.7109375, 209330.75, 187311.03125], 'mean_perplexity': 156064.529296875}] 
+Ground Perplexity [{'perplexities': [6331187.5], 'mean_perplexity': 6331187.5}] 
+
+ 
+Ground Truth: High temperatures are recorded on the northern tip of the Antarctica Peninsula .
+The World Meteorological Organization will make the final determination . 
+Greedy Search: The temperature was recorded at Argentina's Esperanza Base. The World Meteorological Organization is setting up an ad-hoc committee. Researchers watch weather changes in the Antarctic region for evidence of climate change.. A U.N. agency official will make an official finding by late summer or early fall. 
+Beam Search: The temperature was recorded at Argentina's Esperanza Base on the northern tip of the Antarctica Peninsula. The World Meteorological Organization is in the process of setting up an international ad-hoc committee to begin collecting relevant evidence. Researchers who study climate change carefully watch weather changes for evidence that the Earth is getting warmer. 
+Top-K Sampling: The temperature was recorded at Argentina's Esperanza Base on the northern tip of the Antarctica Peninsula. The World Meteorological Organization is in the process of setting up an international ad-hoc committee to begin collecting relevant evidence. Researchers who study climate change carefully watch weather changes for evidence that the Earth is getting warmer. 
+Top-P Sampling: The temperature was recorded at Argentina's Esperanza Base on the northern tip of the Antarctica Peninsula. The World Meteorological Organization is in the process of setting up an international ad-hoc committee to begin collecting relevant evidence. Researchers who study climate change carefully watch weather changes for evidence that the Earth is getting warmer. 
+Meteor Score: [[{'meteor': 0.42027888628961974}], [{'meteor': 0.5214178825289937}], [{'meteor': 0.5214178825289937}], [{'meteor': 0.5214178825289937}]] 
+Bert Score: [{'precision': [0.4563351273536682, 0.4678296744823456, 0.4678296744823456, 0.4678296744823456], 'recall': [0.6674687266349792, 0.7066622376441956, 0.7066622376441956, 0.7066622376441956], 'f1': [0.5420686602592468, 0.5629627108573914, 0.5629627108573914, 0.5629627108573914], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.2857142857142857, 0.3684210526315789, 0.3684210526315789, 0.3684210526315789], 'rouge2': [0.11764705882352941, 0.2972972972972973, 0.2972972972972973, 0.2972972972972973], 'rougeL': [0.2, 0.3684210526315789, 0.3684210526315789, 0.3684210526315789], 'rougeLsum': [0.2571428571428572, 0.3684210526315789, 0.3684210526315789, 0.3684210526315789]}] 
+Perplexty: [{'perplexities': [917704.25, 979692.8125, 979692.8125, 979692.8125], 'mean_perplexity': 964195.671875}] 
+Ground Perplexity [{'perplexities': [548325.5], 'mean_perplexity': 548325.5}] 
+
+ 
+Ground Truth: A Native American from a tribe not recognized by the feds wins the return of his eagle feathers .
+An IRS accountant is fired for insisting on carrying a symbolic Sikh knife to work .
+A group of Chicago pastors takes on City Hall over its permits for new churches and loses . 
+Greedy Search: The U.S. Religious Freedom Restoration Act was passed in 1993. 20 states have some version of the law, but claims under those are "exceedingly rare," experts say. A Brazilian church uses a tea from the Amazon that is considered an illegal drug. 
+Beam Search: 20 states have some version of the religious liberty law, and the legal controversies have grown. The law was designed partly to protect the Native Americans' use of peyote. A tea used by a Brazilian faith is like wine to them, but U.S. agents considered the brew an illegal drug. 
+Top-K Sampling: 20 states have some version of the religious liberty law, and the legal controversies have grown, too. Claims under those state RFRAs are "exceedingly rare," and victories involved mostly religious minorities, not Christian denominations. The federal law was designed partly to protect the Native Americans' use of peyote, CNN legal analyst Jeffrey Toobin said. 
+Top-P Sampling: The U.S. Religious Freedom Restoration Act became law in 1993. So far, 20 states have some version of the religious liberty law. But claims under those state RFRAs are "exceedingly rare," experts say. The law was designed partly to protect the Native Americans' use of peyote. 
+Meteor Score: [[{'meteor': 0.14231499051233396}], [{'meteor': 0.18599427410297525}], [{'meteor': 0.14552719491691957}], [{'meteor': 0.13843287471336255}]] 
+Bert Score: [{'precision': [0.36312568187713623, 0.370859831571579, 0.3076755702495575, 0.3024611175060272], 'recall': [0.3636052906513214, 0.37716373801231384, 0.36320772767066956, 0.3333728015422821], 'f1': [0.3633653521537781, 0.3739852011203766, 0.33314332365989685, 0.3171655833721161], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.17204301075268816, 0.2376237623762376, 0.15384615384615383, 0.12371134020618556], 'rouge2': [0.0, 0.0, 0.0, 0.0], 'rougeL': [0.08602150537634408, 0.099009900990099, 0.07692307692307691, 0.08247422680412371], 'rougeLsum': [0.1075268817204301, 0.1584158415841584, 0.1346153846153846, 0.10309278350515465]}] 
+Perplexty: [{'perplexities': [422804.09375, 426534.5, 1275452.0, 775172.3125], 'mean_perplexity': 724990.7265625}] 
+Ground Perplexity [{'perplexities': [2382076.5], 'mean_perplexity': 2382076.5}] 
+
+ 
+Ground Truth: Robert Lewis Burns Jr. was part of Lynyrd Skynyrd's original lineup .
+His car hit a mailbox and a tree just before midnight . 
+Greedy Search: Robert Lewis Burns Jr. was part of the genre-defining band's original lineup. He died after his car hit a mailbox and a tree in Cartersville, Georgia. No other cars were involved in the crash. Lynyrd SkynyrD still tours with Gary Rossington, the only original member still in it. 
+Beam Search: Robert Lewis Burns Jr. was part of the genre-defining band's original lineup. Burns, 64, died after his car hit a mailbox and a tree in Cartersville, Georgia. No other cars were involved in the crash, which occurred shortly before midnight. 
+Top-K Sampling: Robert Lewis Burns Jr. was part of the genre-defining band's original lineup. He died after his car hit a mailbox and a tree in Cartersville, Georgia. No other cars were involved in the crash, which occurred shortly before midnight. The band was inducted into the Rock and Roll Hall of Fame in 2006. 
+Top-P Sampling: Robert Lewis Burns Jr. was part of the genre-defining band's original lineup. He was not involved in the 1977 plane crash that killed three members, including Ronnie Van Zant. The band was inducted into the Rock and Roll Hall of Fame in 2006. 
+Meteor Score: [[{'meteor': 0.7668240850059033}], [{'meteor': 0.7928813610631793}], [{'meteor': 0.7236842105263158}], [{'meteor': 0.4207035567982314}]] 
+Bert Score: [{'precision': [0.6220855116844177, 0.6108660101890564, 0.5472390651702881, 0.4789077043533325], 'recall': [0.8133425116539001, 0.6905162930488586, 0.6871224641799927, 0.5521011352539062], 'f1': [0.7049723863601685, 0.6482536792755127, 0.6092546582221985, 0.5129063725471497], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.547945205479452, 0.6153846153846153, 0.5128205128205129, 0.32352941176470584], 'rouge2': [0.45070422535211263, 0.5079365079365079, 0.42105263157894735, 0.24242424242424246], 'rougeL': [0.4931506849315068, 0.6153846153846153, 0.5128205128205129, 0.32352941176470584], 'rougeLsum': [0.4931506849315068, 0.6153846153846153, 0.5128205128205129, 0.32352941176470584]}] 
+Perplexty: [{'perplexities': [322508.75, 510297.34375, 262344.09375, 355991.59375], 'mean_perplexity': 362785.4453125}] 
+Ground Perplexity [{'perplexities': [1942994.875], 'mean_perplexity': 1942994.875}] 
+
+ 
+Ground Truth: Kim Ki-Jong is charged with attempted murder and assaulting a foreign envoy .
+He's accused of stabbing U.S. Ambassador Mark Lippert in the face and arm .
+Police said Kim opposed the joint U.S.-South Korean military drills . 
+Greedy Search: Kim Ki-Jong is charged with attempted murder, assault and business obstruction. U.S. Ambassador Mark Lippert was stabbed March 5. Police say Kim stabbed Lipper because he opposed joint South Korean-U.N. military drills. South Korea's president condemns the attack. 
+Beam Search: Kim Ki-Jong is accused of stabbing U.S. Ambassador Mark Lippert in Seoul last month. He has also been charged with assaulting a foreign envoy and business obstruction. Kim's trial must begin within 14 days of receiving today's indictment, a court official says. 
+Top-K Sampling: Kim Ki-Jong is accused of stabbing U.S. Ambassador Mark Lippert last month. He has also been charged with assaulting a foreign envoy and business obstruction. Kim's trial must begin within 14 days of receiving today's indictment, a court official says. The attacker has a history of unpredictable behavior, police say. 
+Top-P Sampling: Kim Ki-Jong is charged with attempted murder, assaulting a foreign envoy and business obstruction. U.S. Ambassador Mark Lippert was stabbed March 5 during an event in Seoul. Police say Kim stabbed L Pinkert with a 10-inch knife because he opposed the joint military drills. 
+Meteor Score: [[{'meteor': 0.5679012345679012}], [{'meteor': 0.5151491442542787}], [{'meteor': 0.5321148072849655}], [{'meteor': 0.6778592773702798}]] 
+Bert Score: [{'precision': [0.7176053524017334, 0.6618620157241821, 0.6217752695083618, 0.711638331413269], 'recall': [0.7394132018089294, 0.7199125289916992, 0.7171519994735718, 0.7838990688323975], 'f1': [0.728346049785614, 0.6896678805351257, 0.6660666465759277, 0.7460229396820068], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.6265060240963854, 0.5581395348837209, 0.5319148936170213, 0.6206896551724138], 'rouge2': [0.3209876543209877, 0.3571428571428571, 0.30434782608695654, 0.39999999999999997], 'rougeL': [0.5301204819277109, 0.37209302325581395, 0.3191489361702128, 0.5747126436781609], 'rougeLsum': [0.5542168674698795, 0.5116279069767442, 0.4468085106382979, 0.5747126436781609]}] 
+Perplexty: [{'perplexities': [1904629.125, 607867.875, 509108.84375, 810830.25], 'mean_perplexity': 958109.0234375}] 
+Ground Perplexity [{'perplexities': [1531682.75], 'mean_perplexity': 1531682.75}] 
+
+ 
+Ground Truth: Hong Kong banker alleged murder case adjourned until May .
+The 29-year-old Rurik Jutting is accused of killing two Indonesian domestic workers . 
+Greedy Search: Rurik Jutting, 29, is charged with two counts of murder in Hong Kong. A court hearing to determine whether there was enough evidence to proceed to trial was adjourned. The bodies of two women were found in a Hong Hong apartment in November. Jutsting is a former banker who worked for Bank of America Merrill Lynch. 
+Beam Search: Former banker Rurik Jutting, 29, charged with two counts of murder in Hong Kong. Court hearing to determine if there was enough evidence to proceed to trial was adjourned until May. Police found bodies of two women at J Residence in Wan Chai. 
+Top-K Sampling: Former banker Rurik Jutting, 29, charged with two counts of murder in Hong Kong. Court hearing to determine whether there was enough evidence to proceed to trial was adjourned until May. Police found bodies of two women at J Residence in Wan Chai, an inner-city suburb. 
+Top-P Sampling: Rurik Jutting, 29, has been charged with two counts of murder in Hong Kong. A court hearing that was to determine whether there was enough evidence to proceed to trial was adjourned until May. Police found the bodies of two women and seized a knife during a search of the premises. 
+Meteor Score: [[{'meteor': 0.293218362992455}], [{'meteor': 0.45040027845457703}], [{'meteor': 0.4434442895981357}], [{'meteor': 0.43669988975633894}]] 
+Bert Score: [{'precision': [0.5245746374130249, 0.5482936501502991, 0.5312551259994507, 0.5135736465454102], 'recall': [0.6370395421981812, 0.6613880395889282, 0.6701694130897522, 0.6405129432678223], 'f1': [0.5753628015518188, 0.599554181098938, 0.5926812887191772, 0.5700621604919434], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.30379746835443033, 0.36363636363636365, 0.3428571428571428, 0.32432432432432434], 'rouge2': [0.05194805194805195, 0.125, 0.1176470588235294, 0.1111111111111111], 'rougeL': [0.15189873417721517, 0.21212121212121213, 0.19999999999999998, 0.21621621621621623], 'rougeLsum': [0.20253164556962025, 0.2727272727272727, 0.2571428571428572, 0.24324324324324328]}] 
+Perplexty: [{'perplexities': [635854.625, 807904.8125, 947079.1875, 752744.9375], 'mean_perplexity': 785895.890625}] 
+Ground Perplexity [{'perplexities': [2166769.75], 'mean_perplexity': 2166769.75}] 
+
+ 
+Ground Truth: Thai Airways subsidiary Thai Smile features Cartoon Network paint job on A320 jet .
+Overhead bins, head rests and air sick bags feature characters from Cartoon Network . 
+Greedy Search: Thai Smile unveils colorful new livery featuring Jake, Finn and Princess Bubblegum. The interior of the plane also has an Adventure Time theme. Inaugural flight takes place on April 4, heading from Bangkok to Phuket. It's the result of a partnership between Thai Airways subsidiary Thai Smile and Cartoon Network Amazone. 
+Beam Search: Thai Smile unveils colorful new livery featuring Jake, Finn and the beloved Princess Bubblegum. The interior of the plane also has an Adventure Time theme, with overhead bins, head rests and even air sickness bags covered in the faces of characters. Inaugural flight takes place on April 4, heading from Bangkok to Phuket. 
+Top-K Sampling: Thai Smile unveils colorful new livery featuring Jake, Finn and the beloved Princess Bubblegum. The interior of the plane also has an Adventure Time theme, with overhead bins, head rests and even air sickness bags covered in the faces of characters from the show. Inaugural flight takes place on April 4, heading from Bangkok to Phuket. 
+Top-P Sampling: Thai Airways subsidiary unveils colorful new livery for "Adventure Time" The inaugural flight takes place on April 4, heading from Bangkok to Phuket. The Adventure Time plane is the result of a partnership between Thai Airways and Cartoon Network Amazone. Fundamental to the partnership is a water park near the Thai resort city of Pattaya. 
+Meteor Score: [[{'meteor': 0.41943573667711603}], [{'meteor': 0.4578576895299076}], [{'meteor': 0.45361826647870473}], [{'meteor': 0.31184534529016134}]] 
+Bert Score: [{'precision': [0.4603024125099182, 0.4882473945617676, 0.4901638627052307, 0.3878268599510193], 'recall': [0.5313782095909119, 0.6261182427406311, 0.6409214735031128, 0.475265771150589], 'f1': [0.49329325556755066, 0.5486540794372559, 0.5554956793785095, 0.42711713910102844], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.2564102564102564, 0.30379746835443033, 0.2926829268292683, 0.2222222222222222], 'rouge2': [0.13157894736842105, 0.12987012987012989, 0.15, 0.0759493670886076], 'rougeL': [0.20512820512820515, 0.2784810126582279, 0.26829268292682923, 0.1728395061728395], 'rougeLsum': [0.23076923076923078, 0.30379746835443033, 0.2926829268292683, 0.1728395061728395]}] 
+Perplexty: [{'perplexities': [1337497.5, 749483.5625, 647993.3125, 462766.625], 'mean_perplexity': 799435.25}] 
+Ground Perplexity [{'perplexities': [16729413.0], 'mean_perplexity': 16729413.0}] 
+
+ 
+Ground Truth: Manning is serving a 35-year sentence for leaking thousands of classified documents .
+She says she will be using a voice phone to dictate her tweets . 
+Greedy Search: Manning is serving a 35-year prison sentence for leaking thousands of classified documents. She said she will be using a voice phone to dictate her tweets. Manning said in August of that year, she wanted to transition to a female. The Fort Leavenworth Disciplinary Barracks in Kansas has authorized hormone therapy. 
+Beam Search: Manning is serving a 35-year prison sentence for leaking thousands of classified documents. In August of that year, she said she wanted to transition to a female. The Fort Leavenworth Disciplinary Barracks has authorized hormone therapy for her treatment. She is not allowed Internet access in prison, according to The Guardian. 
+Top-K Sampling: Manning is serving a 35-year prison sentence for leaking thousands of classified documents. In a series of tweets, the prisoner formerly known as Bradley Manning said she will be using a voice phone to dictate her tweets. She is not allowed Internet access in prison, according to The Guardian. 
+Top-P Sampling: Manning is serving a 35-year prison sentence for leaking thousands of classified documents. She said she will be using a voice phone to dictate her tweets to a communications firm. The former Army intelligence analyst was convicted of stealing and disseminating 750,000 pages of documents and videos to WikiLeaks. 
+Meteor Score: [[{'meteor': 0.7903115552068853}], [{'meteor': 0.51432350718065}], [{'meteor': 0.8145007459136402}], [{'meteor': 0.8514566041245264}]] 
+Bert Score: [{'precision': [0.6256710290908813, 0.5216474533081055, 0.6684214472770691, 0.6801785230636597], 'recall': [0.9108796715736389, 0.7231542468070984, 0.8946712017059326, 0.9116608500480652], 'f1': [0.7418056130409241, 0.6060910224914551, 0.765172004699707, 0.7790888547897339], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.6410256410256411, 0.46153846153846156, 0.6578947368421052, 0.6493506493506493], 'rouge2': [0.5789473684210527, 0.2894736842105263, 0.5675675675675675, 0.5866666666666667], 'rougeL': [0.6410256410256411, 0.4358974358974359, 0.631578947368421, 0.6493506493506493], 'rougeLsum': [0.6410256410256411, 0.4358974358974359, 0.631578947368421, 0.6493506493506493]}] 
+Perplexty: [{'perplexities': [363920.71875, 234162.25, 215174.453125, 524571.875], 'mean_perplexity': 334457.32421875}] 
+Ground Perplexity [{'perplexities': [747926.3125], 'mean_perplexity': 747926.3125}] 
+
+ 
+Ground Truth: Frida Ghitis: President Barack Obama is right to want a deal, but this one gives Iran too much .
+She says the framework agreement starts lifting Iran sanctions much too soon . 
+Greedy Search: President Obama has a huge political stake in the Iran nuclear talks, says Peter Bergen. He says the President's political standing and legacy are deeply intertwined with reaching an accord. Bergin: The framework agreement announced on Thursday does not look promising. Iran will be allowed to keep one-third of its more than 6,000 centrifuges, he says. 
+Beam Search: Reaching a good, solid agreement with Iran is a worthy, desirable goal. But the process has unfolded under the destructive influence of political considerations, weakening America's hand and strengthening Iran. Obama's political standing and his historic legacy in foreign policy are deeply intertwined with reaching an accord. If the deal ultimately collapses, he may fear that historians will conclude his legacy collapsed with it. 
+Top-K Sampling: President Barack Obama tied himself to the mast of a nuclear deal with Iran even before he became the Democratic candidate for president. Peter Bergen: The process has unfolded under the destructive influence of political considerations. He says the notion that Obama is not handling the Iranian threat effectively is contributing to a new war in Yemen. 
+Top-P Sampling: Frida Ghitis: Reaching a good, solid agreement with Iran is a worthy, desirable goal. But the process has unfolded under the destructive influence of political considerations, she says. She says Obama's political standing and his historic legacy in foreign policy are deeply intertwined with reaching an accord. 
+Meteor Score: [[{'meteor': 0.27345345345345345}], [{'meteor': 0.18421052631578946}], [{'meteor': 0.17711171662125338}], [{'meteor': 0.4046971717793509}]] 
+Bert Score: [{'precision': [0.40830016136169434, 0.3541715145111084, 0.4168996512889862, 0.46991825103759766], 'recall': [0.49384114146232605, 0.42968010902404785, 0.47773879766464233, 0.5776209831237793], 'f1': [0.4470151364803314, 0.3882889151573181, 0.44525060057640076, 0.5182328820228577], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.24719101123595508, 0.18749999999999997, 0.22988505747126434, 0.28205128205128205], 'rouge2': [0.06896551724137931, 0.0, 0.09411764705882353, 0.05263157894736841], 'rougeL': [0.20224719101123598, 0.10416666666666666, 0.20689655172413793, 0.17948717948717952], 'rougeLsum': [0.20224719101123598, 0.12500000000000003, 0.20689655172413793, 0.17948717948717952]}] 
+Perplexty: [{'perplexities': [76944.171875, 3104953.25, 206017.59375, 170956.078125], 'mean_perplexity': 889717.7734375}] 
+Ground Perplexity [{'perplexities': [441577.9375], 'mean_perplexity': 441577.9375}] 
+
+ 
+Ground Truth: The final film featuring the late Paul Walker, "Furious 7" is opening around the globe this weekend .
+It's worldwide debut may approach or cross $300 million by the end of Easter Sunday . 
+Greedy Search: "Furious 7" is getting the widest release in Universal's history. It has booked more than 10,500 screens in 63 territories. The movie enjoys massive awareness and interest. "F Furious 7's" opening will easily beat the $121.9 million launch of "The Hunger Games Mockingjay — Part 1" 
+Beam Search: "Furious 7" is getting the widest release in Universal's history. Domestically, it will be playing in 4,003 theaters by Good Friday. It has booked more than 10,500 screens in 63 territories, although it won't open in China, Japan and Russia until later. 
+Top-K Sampling: "Furious 7" is getting the widest release in Universal's history. Domestically, it will be playing in 4,003 theaters by Good Friday. It has booked more than 10,500 screens in 63 territories, although it won't open in China, Japan and Russia until later. 
+Top-P Sampling: "Furious 7" is getting the widest release in Universal's history. The film has booked more than 10,500 screens in 63 territories. It earned a record-breaking $60 million internationally on Wednesday and Thursday. "Fast & Furious 6" debuted to a franchise-best $117 million over the four-day Memorial Day weekend. 
+Meteor Score: [[{'meteor': 0.2423837361782049}], [{'meteor': 0.2840937863979338}], [{'meteor': 0.2840937863979338}], [{'meteor': 0.20731707317073172}]] 
+Bert Score: [{'precision': [0.4963530898094177, 0.4892936050891876, 0.4892936050891876, 0.5167895555496216], 'recall': [0.517389178276062, 0.5310055017471313, 0.5310055017471313, 0.5648393034934998], 'f1': [0.5066528916358948, 0.5092969536781311, 0.5092969536781311, 0.5397471785545349], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.29268292682926833, 0.17721518987341772, 0.17721518987341772, 0.25882352941176473], 'rouge2': [0.05, 0.051948051948051945, 0.051948051948051945, 0.04819277108433735], 'rougeL': [0.1951219512195122, 0.1518987341772152, 0.1518987341772152, 0.16470588235294117], 'rougeLsum': [0.24390243902439027, 0.1518987341772152, 0.1518987341772152, 0.18823529411764706]}] 
+Perplexty: [{'perplexities': [738144.6875, 455111.375, 455111.375, 731816.75], 'mean_perplexity': 595046.046875}] 
+Ground Perplexity [{'perplexities': [339474.1875], 'mean_perplexity': 339474.1875}] 
+
+ 
+Ground Truth: Deion Sanders calls out son for "hood doughnuts" comments .
+"You're a Huxtable with a million $ trust fund. Stop the hood stuff!" 
+Greedy Search: Deion Sanders Jr. tweeted that he only eats "hood doughnuts" His father responded, reminding him he has a trust fund, condo and clothing line. Sanders' son is a wide receiver at Southern Methodist University. He retweeted his father's comments. At least he knew better than to delete them. 
+Beam Search: Deion Sanders Jr. tweeted that he only eats "hood doughnuts" His father reminded him he has a trust fund, a condo and his own clothing line. "You're a Huxtable with a million $ trust Fund. Stop the hood stuff!" Sanders tweeted. 
+Top-K Sampling: Deion Sanders Jr. tweeted that he only eats "hood doughnuts" His father reminded him he has a trust fund, a condo and his own clothing line. "You're a Huxtable with a million $ trust Fund. Stop the hood stuff!" Sanders tweeted. 
+Top-P Sampling: Deion Sanders Jr. tweeted that he only eats "hood doughnuts" His father reminded him he has a trust fund, a condo and his own clothing line. "You're a Huxtable with a million $ trust funds. Stop the hood stuff!" the elder Sanders tweeted. 
+Meteor Score: [[{'meteor': 0.2924340467894475}], [{'meteor': 0.7702679127725858}], [{'meteor': 0.7702679127725858}], [{'meteor': 0.7492260061919506}]] 
+Bert Score: [{'precision': [0.4268229007720947, 0.6569700241088867, 0.6569700241088867, 0.648023784160614], 'recall': [0.5749058723449707, 0.8141630291938782, 0.8141630291938782, 0.8156552910804749], 'f1': [0.4899190366268158, 0.7271683812141418, 0.7271683812141418, 0.7222403287887573], 'hashcode': 't5-base_L11_no-idf_version=0.3.12(hug_trans=4.26.1)'}] 
+Rouge Score: [{'rouge1': [0.2816901408450704, 0.5396825396825397, 0.5396825396825397, 0.523076923076923], 'rouge2': [0.08695652173913043, 0.4590163934426229, 0.4590163934426229, 0.41269841269841273], 'rougeL': [0.19718309859154928, 0.5396825396825397, 0.5396825396825397, 0.49230769230769234], 'rougeLsum': [0.22535211267605632, 0.5396825396825397, 0.5396825396825397, 0.49230769230769234]}] 
+Perplexty: [{'perplexities': [658727.125, 773229.0, 773229.0, 731098.25], 'mean_perplexity': 734070.84375}] 
+Ground Perplexity [{'perplexities': [1024591.625], 'mean_perplexity': 1024591.625}] 
+
+ 

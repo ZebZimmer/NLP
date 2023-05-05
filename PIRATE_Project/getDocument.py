@@ -23,10 +23,8 @@ def get_paperId_from_query(paper_to_search_for: str) -> str:
         try:
             content = json.loads(response.content.decode("utf-8"))["data"]
         except Exception as e:
-            print(f"error is {e}")
             return None
     else:
-        print('Request failed.')
         return None
 
     return content[0]["paperId"]

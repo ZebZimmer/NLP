@@ -21,6 +21,8 @@ def on_search_click():
 def on_text_click(event):
     index = text.index(f"@{event.x},{event.y}")
     tags = text.tag_names(index)
+    if section in globals():
+        section.delete(1.0, tk.END) #TODO check to see if this works
 
     if "clickable" in tags:
         clicked_text = text.get(f"{index} linestart", f"{index} lineend")
@@ -37,6 +39,7 @@ def setResultFrameWithSectionScores(index):
         return
     print(f"Here is the index passed in {index}")
     sectionSimilarityScores = fromSectionIndexGetTopRelevantSectionDetails(listOfCorpusComparison[:50], index)
+    global section
     for i in sectionSimilarityScores:
         section = tk.Text(results_frame, wrap=tk.WORD, height=10)
         section.pack(side=tk.TOP, fill=tk.X, padx=5, pady=5) # Adjust as needed
@@ -70,6 +73,7 @@ def show_cited_papers_in_new_window(search_query):
     new_window = tk.Toplevel(root)
     new_window.title("Papers with their similarity score")
 
+    global textCitedWindow
     textCitedWindow = tk.Text(new_window, wrap=tk.WORD, yscrollcommand=scrollbar.set)
     textCitedWindow.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
     textCitedWindow.tag_configure("red", foreground="red")

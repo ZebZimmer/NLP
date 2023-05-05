@@ -29,7 +29,7 @@ def fromQueryReturnCorpusComparison(searchQuery: str) -> tuple((list[list], list
 
     listOfSearchedPapers = [] # For speed purposes, took 4min 20sec before
 
-    for embedding, title in zip(defaultPaper[0], defaultPaper[1][:5]): #TODO remove this cap
+    for embedding, title in zip(defaultPaper[0], defaultPaper[1]): #TODO maybe add the cap back
         if title not in listOfSearchedPapers:
             listOfSearchedPapers.append(title)
             subPaper = get_paper_and_references_embedding_and_titles_from_query(title)
@@ -60,13 +60,19 @@ def fromSectionIndexGetTopRelevantSectionDetails(similarityScoresWithTitle: list
     model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
     embeddings = {}
     #Try parsing the top 10 things (that will include the main paper) and then see how long it takes to get and parse the pdfs
+    totalCount = 0
+    goodPDFCount = 0
     for i in similarityScoresWithTitle:
         listOfSections = get_text(get_paperId_from_query(i[1]))
         if(listOfSections):
+            goodPDFCount += 1
             embeddings[i[1]] = []
             for index, value in enumerate(listOfSections):
                 # print(f"{type(i[1])} and {type(index)} and {type(listOfSections)} and {type(value)}")
                 embeddings[i[1]].append((model.encode(value), index, value, i[1]))
+        totalCount += 1
+
+    print(f"The number of good PDF downloads was {goodPDFCount} out of the {totalCount} tries so {goodPDFCount/totalCount}%")
 
     newCosineSimilarity = torch.nn.CosineSimilarity(dim=0)
     sectionSimilarityScores = []
@@ -80,6 +86,6 @@ def fromSectionIndexGetTopRelevantSectionDetails(similarityScoresWithTitle: list
 
     # Sort the sections 
     sectionSimilarityScores.sort(reverse=True, key=getKeySecondSort)
-    
+
     return sectionSimilarityScores
 

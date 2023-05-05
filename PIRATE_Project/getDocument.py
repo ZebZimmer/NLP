@@ -8,17 +8,26 @@ import torch
 
 Paper_to_search_for = "BERT Rediscovers the Classical NLP Pipeline"
 
+params = {
+    "api_key": "Wz3YEvwO1c5VRXaETxxmK6bWSxmWLTzZ6GrTvD5e"
+}
+
 # Input the title (as exact as possible) of the paper 
 # returns the paper's ID in the S2ORC database
 def get_paperId_from_query(paper_to_search_for: str) -> str:
     url = 'https://api.semanticscholar.org/graph/v1/paper/search?query=' + paper_to_search_for
 
-    response = requests.get(url)
+    response = requests.get(url, params=params)
 
     if response.status_code == 200:
-        content = json.loads(response.content.decode("utf-8"))["data"]
+        try:
+            content = json.loads(response.content.decode("utf-8"))["data"]
+        except Exception as e:
+            print(f"error is {e}")
+            return None
     else:
         print('Request failed.')
+        return None
 
     return content[0]["paperId"]
 
@@ -30,7 +39,7 @@ def get_paper_embedding_and_title_from_paperId(paperId_to_search_with: str) -> t
     embedding = ""
     title = ""
 
-    response = requests.get(url)
+    response = requests.get(url, params=params)
 
     if response.status_code == 200:
         # print(response.content)
@@ -51,7 +60,7 @@ def get_paper_and_references_embedding_and_titles_from_paperId(paperId_to_search
     references = ""
     titles = []
 
-    response = requests.get(url)
+    response = requests.get(url, params=params)
     if response.status_code == 200:
         # print(response.content)
         embeddings.append(json.loads(response.content.decode("utf-8"))["embedding"]["vector"])

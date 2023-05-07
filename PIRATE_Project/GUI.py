@@ -7,7 +7,6 @@ import math
 
 def on_search_click():
     search_query = search_entry.get()
-    print(f"Searching for: {search_query}")
     retVal = update_displayed_text(search_query)
 
     if retVal is None:
@@ -16,7 +15,7 @@ def on_search_click():
     search_frame.pack_forget()
     results_frame.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
 
-    print(f"Starting the new window stuff with query: {search_query}")
+    print(f"Starting the PIRATE Score window with query: {search_query}\n Please wait while it loads")
     show_cited_papers_thread = threading.Thread(target=show_cited_papers_in_new_window, args=(search_query,))
     show_cited_papers_thread.start()
 
@@ -34,7 +33,7 @@ def on_text_click(event):
         print(f"Index clicked: {index}")
 
     # Do section comparsion
-    print(f"Please wait while the section comparison completes, you clicked on section {index}")
+    print(f"Please wait while the section comparison completes, you clicked on section {math.floor(float(index) - 1)}")
     setResultFrame_thread = threading.Thread(target=setResultFrameWithSectionScores, args=(math.floor(float(index) - 1),))
     setResultFrame_thread.start()
 
@@ -42,7 +41,6 @@ def setResultFrameWithSectionScores(index):
     if("listOfCorpusComparison" not in globals()):
         print("Please wait until the cited paper's thread returns to click")
         return
-    print(f"Here is the index passed in {index}")
     sectionSimilarityScores = fromSectionIndexGetTopRelevantSectionDetails(listOfCorpusComparison[:50], index)
     global section
     for i in sectionSimilarityScores:

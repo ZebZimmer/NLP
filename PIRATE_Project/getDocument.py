@@ -5,6 +5,7 @@
 import requests
 import json
 import torch
+import concurrent.futures
 
 Paper_to_search_for = "BERT Rediscovers the Classical NLP Pipeline"
 
@@ -15,6 +16,8 @@ params = {
 # Input the title (as exact as possible) of the paper 
 # returns the paper's ID in the S2ORC database
 def get_paperId_from_query(paper_to_search_for: str) -> str:
+    if paper_to_search_for is None:
+        return None
     url = 'https://api.semanticscholar.org/graph/v1/paper/search?query=' + paper_to_search_for
 
     response = requests.get(url, params=params)
@@ -70,11 +73,31 @@ def get_paper_and_references_embedding_and_titles_from_paperId(paperId_to_search
         print('Request failed.')
         print(response.content)
 
-    for i in range(len(references) - 1):
-        if references[i]["paperId"]:
-            temp = get_paper_embedding_and_title_from_paperId(references[i]["paperId"])
-            embeddings.append(temp[0])
-            titles.append(temp[1])
+    # for i in range(len(references) - 1):
+    #     if references[i]["paperId"]:
+    #         temp = get_paper_embedding_and_title_from_paperId(references[i]["paperId"])
+    #         embeddings.append(temp[0])
+    #         titles.append(temp[1])
+
+    return get_embeddings_and_titles(references)
+
+# GPT4 helped me create this function that may speed up the searches
+def get_embeddings_and_titles(references):
+    def fetch_data(index, paper_id, embeddings, titles):
+        temp = get_paper_embedding_and_title_from_paperId(paper_id)
+        embeddings[index] = temp[0]
+        titles[index] = temp[1]
+
+    embeddings = [None] * (len(references) - 1)
+    titles = [None] * (len(references) - 1)
+
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        futures = [
+            executor.submit(fetch_data, i, references[i]["paperId"], embeddings, titles)
+            for i in range(len(references) - 1)
+            if references[i]["paperId"]
+        ]
+        concurrent.futures.wait(futures)
 
     return (embeddings, titles)
 

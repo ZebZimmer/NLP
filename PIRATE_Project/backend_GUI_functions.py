@@ -17,13 +17,49 @@ def fromQueryReturnText(searchQuery: str) -> list:
     mainPaperSections = get_text(get_paperId_from_query(searchQuery))
     return mainPaperSections
 
-def fillOutTitleAndEmbeddingDict(title_embedding_dict, defaultPaper):
-    listOfSearchedPapers = [] # For speed purposes, took 4min 20sec before
-    def getSubPaperData(embedding, title):
+    # Here lies an attempt at threading
+# def fillOutTitleAndEmbeddingDict(title_embedding_dict, defaultPaper):
+#     listOfSearchedPapers = [] # For speed purposes, took 4min 20sec before
+#     def getSubPaperData(embedding, title):
+#         if title not in listOfSearchedPapers:
+#             listOfSearchedPapers.append(title)
+#             subPaper = get_paper_and_references_embedding_and_titles_from_query(title)
+
+#             # First depth, all of the main paper's references
+#             if title not in title_embedding_dict:
+#                 title_embedding_dict[title] = embedding
+
+#             # Second depth, all of the referenced paper's references
+#             for sub_embedding, sub_title in zip(subPaper[0], subPaper[1]):
+#                 if sub_title not in title_embedding_dict:
+#                     title_embedding_dict[sub_title] = sub_embedding
+
+#     # Use a ThreadPoolExecutor to parallelize the execution of the loops
+#     with concurrent.futures.ThreadPoolExecutor() as executor:
+#         tasks = [executor.submit(getSubPaperData, embedding, title) for embedding, title in zip(defaultPaper[0], defaultPaper[1])]
+
+#         # Wait for all threads to complete
+#         for future in concurrent.futures.as_completed(tasks):
+#             future.result()
+    
+#     return title_embedding_dict
+# From a query string return a tuple
+# tuple[0] is the sorted list of reference corpus with tuple[0][0] as the cosine similarity to main paper and tuple[0][1] is the title of the compared paper
+# tuple[1] is a list of the titles from the main paper and its references 
+def fromQueryReturnCorpusComparison(searchQuery: str, depth: int) -> tuple((list[list], list)):
+    defaultPaper = get_paper_and_references_embedding_and_titles_from_query(searchQuery)
+
+    newCosineSimilarity = torch.nn.CosineSimilarity(dim=0)
+
+    # Create a dictionary for the purpose of not repreating titles
+    title_embedding_dict = {}
+    listOfSearchedPapers = [] # For speed purposes
+
+    print(f"Searched for paper had {len(defaultPaper[1])} found references but depth was {depth}")
+    for embedding, title in zip(defaultPaper[0], defaultPaper[1][:min(len(defaultPaper[1]), depth)]): #TODO remove this cap
         if title not in listOfSearchedPapers:
             listOfSearchedPapers.append(title)
             subPaper = get_paper_and_references_embedding_and_titles_from_query(title)
-
             # First depth, all of the main paper's references
             if title not in title_embedding_dict:
                 title_embedding_dict[title] = embedding
@@ -33,48 +69,15 @@ def fillOutTitleAndEmbeddingDict(title_embedding_dict, defaultPaper):
                 if sub_title not in title_embedding_dict:
                     title_embedding_dict[sub_title] = sub_embedding
 
-    # Use a ThreadPoolExecutor to parallelize the execution of the loops
-    with concurrent.futures.ThreadPoolExecutor() as executor:
-        tasks = [executor.submit(getSubPaperData, embedding, title) for embedding, title in zip(defaultPaper[0], defaultPaper[1])]
-
-        # Wait for all threads to complete
-        for future in concurrent.futures.as_completed(tasks):
-            future.result()
-    
-    return title_embedding_dict
-# From a query string return a tuple
-# tuple[0] is the sorted list of reference corpus with tuple[0][0] as the cosine similarity to main paper and tuple[0][1] is the title of the compared paper
-# tuple[1] is a list of the titles from the main paper and its references 
-def fromQueryReturnCorpusComparison(searchQuery: str) -> tuple((list[list], list)):
-    defaultPaper = get_paper_and_references_embedding_and_titles_from_query(searchQuery)
-
-    newCosineSimilarity = torch.nn.CosineSimilarity(dim=0)
-
-    # Create a dictionary for the purpose of not repreating titles
-    title_embedding_dict = {}
-
-    # listOfSearchedPapers = [] # For speed purposes, took 4min 20sec before
-
-    # for embedding, title in zip(defaultPaper[0], defaultPaper[1][:5]): #TODO remove this cap
-    #     if title not in listOfSearchedPapers:
-    #         listOfSearchedPapers.append(title)
-    #         subPaper = get_paper_and_references_embedding_and_titles_from_query(title)
-    #         # First depth, all of the main paper's references
-    #         if title not in title_embedding_dict:
-    #             title_embedding_dict[title] = embedding
-
-    #         # Second depth, all of the referenced paper's references
-    #         for sub_embedding, sub_title in zip(subPaper[0], subPaper[1]):
-    #             if sub_title not in title_embedding_dict:
-    #                 title_embedding_dict[sub_title] = sub_embedding
-
-    title_embedding_dict = fillOutTitleAndEmbeddingDict(title_embedding_dict, defaultPaper)
+    # title_embedding_dict = fillOutTitleAndEmbeddingDict(title_embedding_dict, defaultPaper)
 
     mainPaperEmbedding = torch.tensor(defaultPaper[0][0])
 
     similarityScoresWithTitle = []
     # Get the cos similarity between the main paper and all of the subpapers
     for key in title_embedding_dict.keys():
+        if key is None:
+            continue
         compared_paper = torch.tensor(title_embedding_dict[key])
         similarityScoresWithTitle.append([newCosineSimilarity(mainPaperEmbedding, compared_paper), key])
 

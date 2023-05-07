@@ -73,15 +73,17 @@ def get_paper_and_references_embedding_and_titles_from_paperId(paperId_to_search
         print('Request failed.')
         print(response.content)
 
-    # for i in range(len(references) - 1):
-    #     if references[i]["paperId"]:
-    #         temp = get_paper_embedding_and_title_from_paperId(references[i]["paperId"])
-    #         embeddings.append(temp[0])
-    #         titles.append(temp[1])
+    for i in range(len(references) - 1):
+        if references[i]["paperId"]:
+            temp = get_paper_embedding_and_title_from_paperId(references[i]["paperId"])
+            embeddings.append(temp[0])
+            titles.append(temp[1])
 
-    return get_embeddings_and_titles(references)
+    return (embeddings, titles)
+    # return get_embeddings_and_titles(references)
 
 # GPT4 helped me create this function that may speed up the searches
+# This is never called because it didn't work
 def get_embeddings_and_titles(references):
     def fetch_data(index, paper_id, embeddings, titles):
         temp = get_paper_embedding_and_title_from_paperId(paper_id)

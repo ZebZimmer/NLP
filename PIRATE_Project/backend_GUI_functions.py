@@ -29,7 +29,7 @@ def fromQueryReturnCorpusComparison(searchQuery: str) -> tuple((list[list], list
 
     listOfSearchedPapers = [] # For speed purposes, took 4min 20sec before
 
-    for embedding, title in zip(defaultPaper[0], defaultPaper[1]): #TODO maybe add the cap back
+    for embedding, title in zip(defaultPaper[0], defaultPaper[1][:5]): #TODO remove this cap
         if title not in listOfSearchedPapers:
             listOfSearchedPapers.append(title)
             subPaper = get_paper_and_references_embedding_and_titles_from_query(title)

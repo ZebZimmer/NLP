@@ -8,8 +8,10 @@ import math
 def on_search_click():
     search_query = search_entry.get()
     print(f"Searching for: {search_query}")
-    update_displayed_text(search_query)
+    retVal = update_displayed_text(search_query)
 
+    if retVal is None:
+        return
     # Create the new frame
     search_frame.pack_forget()
     results_frame.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
@@ -21,15 +23,18 @@ def on_search_click():
 def on_text_click(event):
     index = text.index(f"@{event.x},{event.y}")
     tags = text.tag_names(index)
-    if section in globals():
-        section.delete(1.0, tk.END) #TODO check to see if this works
+    if "section" in globals():
+        global results_frame
+        results_frame.destroy()
+        results_frame = tk.Frame(root)
+        results_frame.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
 
     if "clickable" in tags:
         clicked_text = text.get(f"{index} linestart", f"{index} lineend")
         print(f"Index clicked: {index}")
 
     # Do section comparsion
-    print(f"Here is the index passed in {index}")
+    print(f"Please wait while the section comparison completes, you clicked on section {index}")
     setResultFrame_thread = threading.Thread(target=setResultFrameWithSectionScores, args=(math.floor(float(index) - 1),))
     setResultFrame_thread.start()
 
@@ -53,9 +58,9 @@ def update_displayed_text(search_query):
 
     returnValueFromSearch = fromQueryReturnText(search_query)
 
-    if(type(returnValueFromSearch) is None):
+    if(returnValueFromSearch is None):
        text.insert(tk.END, "Search failed, please try again\n")
-       return
+       return None
 
     for index, value in enumerate(returnValueFromSearch):
         text.insert(tk.END, value + "\n")
@@ -65,9 +70,10 @@ def update_displayed_text(search_query):
     text.bind("<Button-1>", on_text_click)
 
     print("Done with updating the display text")
+    return 1
 
 def show_cited_papers_in_new_window(search_query):
-    if(type(search_query) == 'NoneType'):
+    if(search_query is None):
         print(f"The cited paper search failed with query: {search_query}")
         return
     new_window = tk.Toplevel(root)
@@ -87,7 +93,7 @@ def show_cited_papers_in_new_window(search_query):
         return
     
     for index, value in enumerate(listOfCorpusComparison):
-        textCitedWindow.insert(tk.END, f"Similarity score: {value[0]:.3f} and it's {'not cited in ' if value[1] not in titles else 'cited in     '}the main paper with title: {value[1]:20s}\n")
+        textCitedWindow.insert(tk.END, f"PIRATE Score: {value[0]:.3f} and it's {'not cited in ' if value[1] not in titles else 'cited in     '}the main paper with title: {value[1]:20s}\n")
         if value[1] in titles:
             textCitedWindow.tag_add("green", f"{1 + index}.28", f"{1 + index}.42")
         else:
@@ -125,9 +131,10 @@ if __name__ == '__main__':
     search_button.pack(side=tk.RIGHT)
 
     # Create the results frame which will display section comparisons
+    global results_frame
     results_frame = tk.Frame(root)
-    scrollbarResults = tk.Scrollbar(results_frame)
-    scrollbarResults.pack(side=tk.RIGHT, fill=tk.Y)
+    # scrollbarResults = tk.Scrollbar(results_frame)
+    # scrollbarResults.pack(side=tk.RIGHT, fill=tk.Y)
 
     sections = []
 

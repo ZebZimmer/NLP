@@ -52,6 +52,8 @@ def get_paper_embedding_and_title_from_paperId(paperId_to_search_with: str) -> t
 
 # Input the paperId in str form and get it's embedding as well as the embeddings of all referenced papers
 def get_paper_and_references_embedding_and_titles_from_paperId(paperId_to_search_with: str) -> tuple[list, list]:
+    if(paperId_to_search_with is None):
+        return None
     url = 'https://api.semanticscholar.org/graph/v1/paper/' + paperId_to_search_with + '?fields=references,embedding,title'
 
     embeddings = []
